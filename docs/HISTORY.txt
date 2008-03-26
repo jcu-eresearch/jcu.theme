@@ -1,0 +1,9 @@
+Changelog for jcu.theme
+
+    (name of developer listed in brackets)
+
+jcu.theme - 0.1 Unreleased
+
+    - Initial package structure.
+      [zopeskel]
+

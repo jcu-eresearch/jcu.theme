@@ -1,0 +1,2 @@
+recursive-include jcu *
+global-exclude *pyc

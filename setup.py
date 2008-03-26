@@ -1,24 +1,23 @@
 from setuptools import setup, find_packages
+import os
 
 version = '0.1'
 
 setup(name='jcu.theme',
       version=version,
-      description="Code that is reusable within Plone.",
-      long_description="""\
-""",
+      description="A Plone theme based on the JCU style",
+      long_description=open("README.txt").read() + "\n" +
+                       open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         "Framework :: Plone",
-        "Framework :: Zope2",
-        "Framework :: Zope3",
         "Programming Language :: Python",
         "Topic :: Software Development :: Libraries :: Python Modules",
         ],
-      keywords='Theme JCU Plone',
+      keywords='plone theme zope web',
       author='Russell Sim',
       author_email='russell.sim@jcu.edu.au',
-      url='',
+      url='http://www.hpc.jcu.edu.au/projects/plone',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['jcu'],
@@ -32,4 +31,3 @@ setup(name='jcu.theme',
       # -*- Entry points: -*-
       """,
       )
-
