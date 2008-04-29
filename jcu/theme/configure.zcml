@@ -8,6 +8,7 @@
 
    <include package=".browser" />
    <!-- include package=".layout" /-->
+   <!--includeOverrides package="jcu.theme" file="overrides.zcml" /-->
 
    <include file="skins.zcml" />
    <include file="profiles.zcml" />
