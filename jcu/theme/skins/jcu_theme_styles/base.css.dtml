@@ -10,9 +10,10 @@
 
 body {
     font: &dtml-fontBaseSize; <dtml-var fontFamily>;
-    background-color: &dtml-backgroundColor;;
+    background-color: #afafaf;
     color: &dtml-fontColor;;
-    margin: 0;
+    width: 900px;
+    margin: 0 auto;
     padding: 0;
 }
 table {
@@ -42,7 +43,7 @@ hr {
     margin: 0.5em 0 1em 0;
 }
 h1, h2, h3, h4, h5, h6 {
-    color: &dtml-fontColor;;
+    color: #846A2A;
     font-family: <dtml-var headingFontFamily>;
     margin: 0.75em 0 0.25em 0;
 }
@@ -52,7 +53,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-    color: &dtml-fontColor; ! important;
+    color: #846A2A ! important;
     text-decoration: none;
 }
 h1 {

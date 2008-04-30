@@ -1,0 +1,7 @@
+<div id="portal-footer" metal:define-macro="portal_footer" i18n:domain="plone">
+
+<p>Copyright © 1995 to 2008, James Cook University. All rights reserved.  <a target="_blank" href="http://www.jcu.edu.au/app/feedback/">Feedback</a>.</p>
+<p><a href="http://www.jcu.edu.au/termsofuse.html">Terms of use</a>. <a href="http://www.jcu.edu.au/privacy/">Privacy statement</a>. <a href="http://www.library.jcu.edu.au/Computing/configuration.shtml">Recommended browsers</a>.</p>
+<p>CRICOS Provider Code 00117J. ABN 46253211955 </p>
+		
+</div>

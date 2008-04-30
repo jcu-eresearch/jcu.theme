@@ -16,15 +16,21 @@
         />
 
     <!-- Viewlets registration -->
-<!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
      <browser:viewlet
-         name="jcu.someviewlet"
+         name="jcu.footer"
          manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-         class=".viewlets.SomeViewlet"
+         layer=".interfaces.IThemeSpecific"
+	 template="footer.pt"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="jcu.global_sections"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".viewlets.GlobalSectionsViewlet"
          layer=".interfaces.IThemeSpecific"
          permission="zope2.View"
          />
--->
 
     <!-- Zope 3 browser resources -->
 

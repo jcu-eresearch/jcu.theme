@@ -1,5 +1,5 @@
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from plone.app.layout.viewlets.common import ViewletBase
+from plone.app.layout.viewlets.common import ViewletBase, GlobalSectionsViewlet
 
 # Sample code for a basic viewlet (In order to use it, you'll have to):
 # - Un-comment the following useable piece of code (viewlet python class).
@@ -19,3 +19,6 @@ from plone.app.layout.viewlets.common import ViewletBase
 #
 #    def update(self):
 #        self.computed_value = 'any output'
+
+class GlobalSectionsViewlet(GlobalSectionsViewlet):
+    render = ViewPageTemplateFile('sections.pt')

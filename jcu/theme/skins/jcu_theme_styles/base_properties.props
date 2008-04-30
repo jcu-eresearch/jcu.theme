@@ -4,36 +4,36 @@ plone_skin:string=JCU Theme
 
 logoName:string=logo.jpg
 
-fontFamily:string="Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
+fontFamily:string=Arial, Helvetica, sans-serif
 fontBaseSize:string=69%
 fontColor:string=Black
 fontSmallSize:string=85%
 
-backgroundColor:string=White
+backgroundColor:string=white
 
-linkColor:string=#436976
+linkColor:string=#187dc0
 linkActiveColor:string=Red
-linkVisitedColor:string=Purple
+linkVisitedColor:string=#808080
 
 borderWidth:string=1px
 borderStyle:string=solid
 borderStyleAnnotations:string=dashed
 
-globalBorderColor:string=#8cacbb
-globalBackgroundColor:string=#dee7ec
+globalBorderColor:string=#94AFC1
+globalBackgroundColor:string=#F6F2E6
 globalFontColor:string=#436976
 
 headingFontFamily:string="Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
 
-contentViewBorderColor:string=#74ae0b
-contentViewBackgroundColor:string=#cde2a7
-contentViewFontColor:string=#578308
+contentViewBorderColor:string=#015883
+contentViewBackgroundColor:string=#D4DFE6
+contentViewFontColor:string=#015883
 
 inputFontColor:string=Black
 
 textTransform:string=lowercase
 
-evenRowBackgroundColor:string=#eef3f5 
+evenRowBackgroundColor:string=#F6F2E6
 oddRowBackgroundColor:string=transparent
 
 notifyBorderColor:string=#ffa500

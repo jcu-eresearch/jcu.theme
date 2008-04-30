@@ -15,10 +15,10 @@ body.smallText { font-size: 60%; }
 /* Padding for the columns */
 
 #portal-column-one .visualPadding {
-    padding: 2em 0em 1em 2em;
+    padding: 2em 0em 1em 0em;
 }
 #portal-column-two .visualPadding {
-    padding: 2em 2em 1em 0em;
+    padding: 2em 0em 1em 0em;
 }
 
 /* Content area */
@@ -45,7 +45,7 @@ h3, h4, h5, h6 {
 .documentContent {
     font-size: 110%;
     padding: 1em 1em 2em 1em !important;
-    background: &dtml-backgroundColor;;
+    background: transparent url(watermark.gif) no-repeat scroll 100% 99%;
 }
 .documentContent ul {
     list-style-image: url(&dtml-portal_url;/bullet.gif);
@@ -101,6 +101,7 @@ h3, h4, h5, h6 {
 #visual-portal-wrapper {
     margin: 0;
     padding: 0;
+    background: white;
 }
 
 /* Logo properties */
@@ -126,38 +127,34 @@ h3, h4, h5, h6 {
 
 /* Site-wide action menu - font size, contact, index, sitemap etc */
 #portal-siteactions {
-    background-color: transparent;
+    background-color: #015883;
     white-space: nowrap;
     list-style-image: none;
     list-style-type: none;
-    margin: 1px 0 0 0;
+    margin: 0 0 0 0;
     height: auto;
     line-height: normal;
-    float: right;
     padding: 3px 2em 3px 0;
+    text-align: right;
 }
 #portal-siteactions li {
     display: inline;
 }
 #portal-siteactions li a {
     background-color: transparent;
-    border: 1px solid &dtml-backgroundColor;;
-    color: &dtml-discreetColor;;
+    color: white;
     height: auto;
     padding: 0.2em;
     margin-right: 0.2em;
     text-decoration: none;
-    text-transform: &dtml-textTransform;;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 #portal-siteactions li.selected a {
-    background-color: &dtml-globalBackgroundColor;;
-    color: &dtml-globalFontColor;;
-    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    color: white;
 }
 #portal-siteactions li a:hover {
-    background-color: &dtml-globalBackgroundColor;;
-    color: &dtml-globalFontColor;;
-    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    color: white;
 }
 
 /* Searchbox style and positioning */
@@ -316,41 +313,44 @@ form.searchPage input.searchButton {
 
 /* The global section tabs. */
 #portal-globalnav {
-    background-color: transparent;
-    padding: 0em 0em 0em 2em;
+    background-color: #EEE6CF;
+    /*padding: 0em 0em 0em 2em;*/
     white-space: nowrap;
     list-style: none;
     margin: 0;
     height: auto;
     line-height: normal;
+    border-top: &dtml-globalBorderColor; &dtml-borderWidth; &dtml-borderStyle;;
+    text-align: center;
 }
 #portal-globalnav li {
     display: inline;
+    margin-left: -4px;
 }
 #portal-globalnav li a {
     /* The normal, unselected tabs. They are all links */
     background-color: transparent;
     border-color: &dtml-globalBorderColor;;
     border-width: &dtml-borderWidth;;
-    border-style: &dtml-borderStyle; &dtml-borderStyle; none &dtml-borderStyle;;
+    border-style: none none none &dtml-borderStyle;;
     color: &dtml-globalFontColor;;
     height: auto;
-    margin-right: 0.5em;
     padding: 0em 1.25em;
     text-decoration: none;
+    font-weight: bold;
     text-transform: &dtml-textTransform;;
 }
 #portal-globalnav li.selected a {
     /* The selected tab. There's only one of this */
-    background-color: &dtml-globalBackgroundColor;;
-    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    border-bottom: &dtml-globalBackgroundColor; &dtml-borderWidth; &dtml-borderStyle;;
+    background-color: #D9C894;
+    border-style: none none none &dtml-borderStyle;;
     color: &dtml-globalFontColor;;
+}
+#portal-globalnav li a.lastGlobalTab {
+    border-style: none solid none solid;
 }
 #portal-globalnav li a:hover {
     background-color: &dtml-globalBackgroundColor;;
-    border-color: &dtml-globalBorderColor;;
-    border-bottom-color: &dtml-globalBackgroundColor;;
     color: &dtml-globalFontColor;;
 }
 #portal-personaltools {
@@ -405,12 +405,14 @@ form.searchPage input.searchButton {
 }
 #portal-breadcrumbs {
     /* The path bar, including breadcrumbs and add to favorites */
+    background-color: &dtml-globalBackgroundColor;;
     border-bottom-color: &dtml-globalBorderColor;;
     border-bottom-style: &dtml-borderStyle;;
     border-bottom-width: &dtml-borderWidth;;
     padding-left: 2em;
     padding-right: 2em;
     text-transform: &dtml-textTransform;;
+    font-weight: bold;
     line-height: 1.6em;
 }
 #portal-breadcrumbs a {
@@ -423,7 +425,7 @@ form.searchPage input.searchButton {
     vertical-align: bottom;
 }
 .documentEditable {
-    padding: 0em 1em 1em 1em !important;
+    padding: 0em 0em 1em 0em !important;
     margin: 0 -1em;
 }
 #content-news h1 {

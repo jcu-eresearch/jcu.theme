@@ -16,7 +16,6 @@
 /* Main portlet elements */
 .portlet {
     margin: 1px 0 1em 0;
-    border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
     background-color: &dtml-backgroundColor;;
 }
 .portlet a {
@@ -38,7 +37,6 @@
 }
 .portletHeader {
     background-color: &dtml-globalBackgroundColor;;
-    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
     padding: 0em 1em;
     text-transform: &dtml-textTransform;;
     font-weight: normal;
@@ -50,8 +48,6 @@
 .portletItem {
     margin: 0;
     padding: 1em;
-    border-left: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    border-right: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
 }
 .portletItem ol {
     margin: 0 0 0 1em;
@@ -126,8 +122,6 @@
 }
 .ploneCalendar .weekdays th {
     background-color: &dtml-globalBackgroundColor;;
-    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    border-style: &dtml-borderStyle; none;
     text-align: center;
     padding: 2px;
     font-weight: normal;

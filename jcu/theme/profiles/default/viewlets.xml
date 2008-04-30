@@ -28,16 +28,16 @@
          Note: insert-before and -after accept the value "*" which means
          "all".
          -->
-<!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
-    <viewlet name="jcu.someviewlet"
+    <viewlet name="jcu.global_sections" />
+    <viewlet name="jcu.footer"
              insert-before="*" />
--->
   </order>
 
   <hidden manager="plone.portalheader" skinname="JCU Theme">
-<!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
     <viewlet name="plone.global_sections" />
--->
+  </hidden>
+  <hidden manager="plone.portalfooter" skinname="JCU Theme">
+    <viewlet name="plone.footer" />
   </hidden>
 
 </object>
