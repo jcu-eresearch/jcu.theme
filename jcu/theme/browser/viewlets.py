@@ -1,5 +1,7 @@
+from zope.component import getMultiAdapter
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from plone.app.layout.viewlets.common import ViewletBase, GlobalSectionsViewlet
+from plone.app.layout.viewlets.common import ViewletBase, LogoViewlet, GlobalSectionsViewlet
+from plone.app.layout.viewlets.common import LogoViewlet as BaseLogoViewlet
 
 # Sample code for a basic viewlet (In order to use it, you'll have to):
 # - Un-comment the following useable piece of code (viewlet python class).
@@ -22,3 +24,18 @@ from plone.app.layout.viewlets.common import ViewletBase, GlobalSectionsViewlet
 
 class GlobalSectionsViewlet(GlobalSectionsViewlet):
     render = ViewPageTemplateFile('sections.pt')
+
+class LogoViewlet(BaseLogoViewlet):
+    render = ViewPageTemplateFile('logo.pt')
+
+    def update(self):
+        BaseLogoViewlet.update(self)
+        portal_state = getMultiAdapter((self.context, self.request),
+                                            name=u'plone_portal_state')
+        portal = portal_state.portal()
+
+	self.home_url = portal.restrictedTraverse('base_properties').homelink
+
+        sitelogoName = portal.restrictedTraverse('base_properties').sitelogoName
+        self.sitelogo_tag = portal.restrictedTraverse(sitelogoName).tag()
+
