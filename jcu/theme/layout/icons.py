@@ -12,7 +12,7 @@ class CatalogBrainContentIcon(BaseCatalogBrainContentIcon):
     def url(self):
         portal_url = getToolByName(self.context, 'portal_url')()
         path = self.brain.getIcon
-	return None
+        return None
         return "%s/%s" % (portal_url, path)
 
 
