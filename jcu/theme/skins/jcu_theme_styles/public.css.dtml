@@ -645,17 +645,17 @@ table.listing,
 .stx table {
     /* The default table for document listings. Contains name, document types, modification times etc in a file-browser-like fashion */
     border-collapse: collapse;
-    border-left: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    border-left: &dtml-borderWidth; &dtml-borderStyle; #015883;
+    border-bottom: &dtml-borderWidth; &dtml-borderStyle; #015883;
     font-size: &dtml-fontSmallSize;;
     margin: 1em 0em 1em 0em;
 }
 table.listing th,
 .stx table th {
     background: &dtml-globalBackgroundColor;;
-    border-top: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    border-right: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    border-top: &dtml-borderWidth; &dtml-borderStyle; #015883;
+    border-bottom: &dtml-borderWidth; &dtml-borderStyle; #015883;
+    border-right: &dtml-borderWidth; &dtml-borderStyle; #015883;
     font-weight: normal;
     padding: 0.25em 0.5em;
     text-transform: &dtml-textTransform;;
@@ -672,7 +672,7 @@ table.listing .listingCheckbox {
 }
 table.listing td,
 .stx table td {
-    border-right: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    border-right: &dtml-borderWidth; &dtml-borderStyle; #015883;
     padding: 0.25em 0.5em;
 }
 table.listing a {
