@@ -12,7 +12,7 @@ body {
     font: &dtml-fontBaseSize; <dtml-var fontFamily>;
     background-color: #afafaf;
     color: &dtml-fontColor;;
-    width: 900px;
+    width: 90%;
     margin: 0 auto;
     padding: 0;
 }
@@ -57,13 +57,13 @@ h6 a {
     text-decoration: none;
 }
 h1 {
-    font-size: 160%;
+    /*font-size: 160%;*/
 }
 h2 {
-    font-size: 150%;
+    /*font-size: 150%;*/
 }
 h3 {
-    font-size: 125%;
+    /*font-size: 125%;*/
     border-bottom: none;
     font-weight: bold;
 }

@@ -24,7 +24,6 @@ body.smallText { font-size: 60%; }
 /* Content area */
 h1, h2 {
     border-bottom: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    font-weight: normal;
 }
 /* Compensate for the inline editing hover, since we have a 1px border */
 body.kssActive h2.inlineEditable:hover,
@@ -43,7 +42,6 @@ h3, h4, h5, h6 {
 }
 
 .documentContent {
-    font-size: 110%;
     padding: 1em 1em 2em 1em !important;
     background: transparent url(watermark.gif) no-repeat scroll 100% 99%;
 }
@@ -136,6 +134,7 @@ h3, h4, h5, h6 {
     line-height: normal;
     padding: 3px 2em 3px 0;
     text-align: right;
+	font-size: x-small;
 }
 #portal-siteactions li {
     display: inline;
@@ -313,49 +312,51 @@ form.searchPage input.searchButton {
 
 /* The global section tabs. */
 #portal-globalnav {
-    background-color: #EEE6CF;
+    /* background-color: #EEE6CF; */
     /*padding: 0em 0em 0em 2em;*/
     white-space: nowrap;
     list-style: none;
     margin: 0;
     height: auto;
     line-height: normal;
-    border-top: &dtml-globalBorderColor; &dtml-borderWidth; &dtml-borderStyle;;
     text-align: center;
 }
 #portal-globalnav li {
     display: inline;
-    margin-left: -4px;
 }
 #portal-globalnav li a {
     /* The normal, unselected tabs. They are all links */
-    background-color: transparent;
+    background-color: #F6F2E6;
     border-color: &dtml-globalBorderColor;;
     border-width: &dtml-borderWidth;;
-    border-style: none none none &dtml-borderStyle;;
+    border-style: &dtml-borderStyle; &dtml-borderStyle; none &dtml-borderStyle;;
     color: &dtml-globalFontColor;;
     height: auto;
-    padding: 0em 1.25em;
+	margin-right: 0.5em;
+    padding: 0 1.25em;
     text-decoration: none;
     font-weight: bold;
+	font-size: medium;
     text-transform: &dtml-textTransform;;
 }
 #portal-globalnav li.selected a {
     /* The selected tab. There's only one of this */
-    background-color: #D9C894;
-    border-style: none none none &dtml-borderStyle;;
+    background-color: #EEE6CF;
+    border-color: &dtml-globalBorderColor;;
+    border-style: &dtml-borderStyle; &dtml-borderStyle; none &dtml-borderStyle;;
+	border-bottom: #EEE6CF &dtml-borderWidth; &dtml-borderStyle;;
     color: &dtml-globalFontColor;;
 }
 #portal-globalnav li a.lastGlobalTab {
-    border-style: none solid none solid;
 }
 #portal-globalnav li a:hover {
-    background-color: &dtml-globalBackgroundColor;;
+    border-color: &dtml-globalBorderColor;;
+    border-style: &dtml-borderStyle;;
     color: &dtml-globalFontColor;;
 }
 #portal-personaltools {
     /* Bar with personalized menu (user preferences, favorites etc) */
-    background-color: &dtml-globalBackgroundColor;;
+    background-color: #EEE6CF;
     border-top-color: &dtml-globalBorderColor;;
     border-top-style: &dtml-borderStyle;;
     border-top-width: &dtml-borderWidth;;
@@ -405,10 +406,6 @@ form.searchPage input.searchButton {
 }
 #portal-breadcrumbs {
     /* The path bar, including breadcrumbs and add to favorites */
-    background-color: &dtml-globalBackgroundColor;;
-    border-bottom-color: &dtml-globalBorderColor;;
-    border-bottom-style: &dtml-borderStyle;;
-    border-bottom-width: &dtml-borderWidth;;
     padding-left: 2em;
     padding-right: 2em;
     text-transform: &dtml-textTransform;;

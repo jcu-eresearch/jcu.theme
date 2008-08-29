@@ -7,9 +7,9 @@ homelink:string=http://www.jcu.edu.au
 sitelogoName:string=sitelogo.jpg
 
 fontFamily:string=Arial, Helvetica, sans-serif
-fontBaseSize:string=69%
+fontBaseSize:string=small
 fontColor:string=Black
-fontSmallSize:string=85%
+fontSmallSize:string=90%
 
 backgroundColor:string=white
 
@@ -21,11 +21,11 @@ borderWidth:string=1px
 borderStyle:string=solid
 borderStyleAnnotations:string=dashed
 
-globalBorderColor:string=#94AFC1
-globalBackgroundColor:string=#F6F2E6
+globalBorderColor:string=#DDDDDD
+globalBackgroundColor:string=#DEE7EC
 globalFontColor:string=#436976
 
-headingFontFamily:string="Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
+headingFontFamily:string=Arial, Helvetica, sans-serif
 
 contentViewBorderColor:string=#015883
 contentViewBackgroundColor:string=#D4DFE6
@@ -33,9 +33,9 @@ contentViewFontColor:string=#015883
 
 inputFontColor:string=Black
 
-textTransform:string=lowercase
+textTransform:string=none
 
-evenRowBackgroundColor:string=#F6F2E6
+evenRowBackgroundColor:string=#DEE7EC
 oddRowBackgroundColor:string=transparent
 
 notifyBorderColor:string=#ffa500
@@ -45,5 +45,5 @@ discreetColor:string=#76797c
 helpBackgroundColor:string=#ffffe1
 
 portalMinWidth:string=70em
-columnOneWidth:string=16em
-columnTwoWidth:string=16em
+columnOneWidth:string=14em
+columnTwoWidth:string=14em

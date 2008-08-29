@@ -64,6 +64,8 @@
 */
 .contentActions {
     background-color: &dtml-contentViewBackgroundColor;;
+    border-left: &dtml-borderWidth; &dtml-borderStyle; &dtml-contentViewBorderColor;;
+    border-right: &dtml-borderWidth; &dtml-borderStyle; &dtml-contentViewBorderColor;;
     color: &dtml-contentViewFontColor;;
     text-align: right;
     text-transform: &dtml-textTransform;;
@@ -356,7 +358,7 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
     padding: 0em !important;
 }
 .documentEditable .documentContent {
-    border-top: &dtml-borderWidth; &dtml-borderStyle; &dtml-contentViewBorderColor;;
+    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-contentViewBorderColor;;
     padding: 0;
 }
 .label {

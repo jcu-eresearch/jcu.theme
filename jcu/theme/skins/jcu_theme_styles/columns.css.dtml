@@ -16,8 +16,7 @@
     vertical-align: top;
     width: <dtml-var columnOneWidth missing="16em">;
     border-collapse: collapse;
-    border-right: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    padding: 0;
+    padding: 0.2em;
 }
 #portal-column-content {
     vertical-align: top;
@@ -29,8 +28,7 @@
     vertical-align: top;
     width: <dtml-var columnTwoWidth missing="16em">;
     border-collapse: collapse;
-    border-left: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    padding: 0;    
+    padding: 0.2em;
 }
 
 /* fullscreen */

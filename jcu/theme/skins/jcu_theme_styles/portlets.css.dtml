@@ -41,6 +41,7 @@
     text-transform: &dtml-textTransform;;
     font-weight: normal;
     line-height: 1.6em;
+    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
 }
 .portletHeader a {
     color: &dtml-fontColor;;
@@ -48,6 +49,7 @@
 .portletItem {
     margin: 0;
     padding: 1em;
+    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
 }
 .portletItem ol {
     margin: 0 0 0 1em;
@@ -110,7 +112,6 @@
     text-decoration: none;
 }
 .ploneCalendar {
-    border-collapse: collapse;
     border-spacing:0;
     width: 100%;
 }
