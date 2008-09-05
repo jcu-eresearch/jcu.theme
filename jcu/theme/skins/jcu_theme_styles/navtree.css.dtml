@@ -21,8 +21,9 @@
 
 .portletNavigationTree {
     padding: 0; 
-    list-style: none !important;
-    list-style-image: none !important; 
+    list-style-position: outside;
+    list-style-type: none;
+    list-style-image: url(&dtml-portal_url;/hp_bullet.gif);
     line-height: 1em;
 }
 .navTree {
@@ -36,11 +37,12 @@
 .navTreeItem {
     display: block;
     padding: 0;
-    margin: 0;
+    margin: 0 15px;
+	display: list-item;
 }
 .navTreeItem a,
 dd.portletItem .navTreeItem a {
-    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-backgroundColor;;
+    /*border: &dtml-borderWidth; &dtml-borderStyle; &dtml-backgroundColor;;*/
     display: block;
     text-decoration: none;
     padding-top: 0.2em;
@@ -50,10 +52,12 @@ dd.portletItem .navTreeItem a {
 dd.portletItem .navTreeItem a:hover {
     background-color: &dtml-globalBackgroundColor;;
     color: &dtml-globalFontColor;;
+    /*border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;*/
 }
 .navTreeCurrentItem {
     background-color: &dtml-globalBackgroundColor;;
     color: &dtml-globalFontColor;;
+    /*border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor; !important;*/
 }
 li.navTreeCurrentItem {
     display: block;
@@ -63,6 +67,7 @@ li.navTreeCurrentItem {
 li.navTreeCurrentItem a,
 li.navTreeCurrentItem a:hover {
     display: block;
+    /*border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBackgroundColor;;*/
     min-height: 1.6em;
     line-height: 1.6em;
     height: auto;

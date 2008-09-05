@@ -12,14 +12,6 @@
 body.largeText { font-size: 95%; }
 body.smallText { font-size: 60%; }
 
-/* Padding for the columns */
-
-#portal-column-one .visualPadding {
-    padding: 1em 0em;
-}
-#portal-column-two .visualPadding {
-    padding: 1em 0em;
-}
 
 /* Content area */
 h1, h2 {
@@ -42,7 +34,6 @@ h3, h4, h5, h6 {
 }
 
 .documentContent {
-    padding: 1em 0 2em !important;
     background: transparent url(watermark.gif) no-repeat scroll 100% 99%;
 }
 .documentContent ul {
@@ -336,7 +327,7 @@ form.searchPage input.searchButton {
     padding: 0 1.25em;
     text-decoration: none;
     font-weight: bold;
-	font-size: medium;
+	font-size: &dtml-globalNavFontSize;;
     text-transform: &dtml-textTransform;;
 }
 #portal-globalnav li.selected a {
@@ -356,7 +347,7 @@ form.searchPage input.searchButton {
 }
 #portal-personaltools {
     /* Bar with personalized menu (user preferences, favorites etc) */
-    background-color: #EEE6CF;
+	background: #EEE6CF url(&dtml-portal_url;/personaltools_bg.gif) repeat-x scroll 0 100%;
     border-top-color: &dtml-globalBorderColor;;
     border-top-style: &dtml-borderStyle;;
     border-top-width: &dtml-borderWidth;;
@@ -423,7 +414,6 @@ form.searchPage input.searchButton {
 }
 .documentEditable {
     padding: 0em 0em 1em 0em !important;
-    margin: 0 -1em;
 }
 #content-news h1 {
     margin-bottom: 1em;
@@ -1106,7 +1096,7 @@ dl.captioned {
 }
 
 div.managedPortlet.portlet {
-    border-bottom:none;
+	background-image: none;
 }
 #dashboard select {
     width:100%;

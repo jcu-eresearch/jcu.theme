@@ -5,6 +5,7 @@ plone_skin:string=JCU Theme
 logoName:string=logo.jpg
 homelink:string=http://www.jcu.edu.au
 sitelogoName:string=sitelogo.jpg
+pageWidth:string=90%
 
 fontFamily:string=Arial, Helvetica, sans-serif
 fontBaseSize:string=small
@@ -25,6 +26,7 @@ globalBorderColor:string=#DDDDDD
 globalBackgroundColor:string=#DEE7EC
 globalFontColor:string=#436976
 
+globalNavFontSize:string=medium
 headingFontFamily:string=Arial, Helvetica, sans-serif
 
 contentViewBorderColor:string=#015883
@@ -35,8 +37,8 @@ inputFontColor:string=Black
 
 textTransform:string=none
 
-evenRowBackgroundColor:string=#DEE7EC
-oddRowBackgroundColor:string=transparent
+evenRowBackgroundColor:string=transparent
+oddRowBackgroundColor:string=tansparent
 
 notifyBorderColor:string=#ffa500
 notifyBackgroundColor:string=#ffce7b
