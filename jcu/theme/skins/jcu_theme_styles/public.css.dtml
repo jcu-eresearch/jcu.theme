@@ -690,7 +690,7 @@ table.vertical th {
     padding: 0.5em;
 }
 table.vertical td {
-    border-top: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    border-top: &dtml-borderWidth; &dtml-borderStyle; #015883;
     padding: 0.5em;
 }
 
