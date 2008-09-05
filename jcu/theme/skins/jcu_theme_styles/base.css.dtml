@@ -10,7 +10,6 @@
 
 body {
     font: &dtml-fontBaseSize; <dtml-var fontFamily>;
-    background-color: #afafaf;
     color: &dtml-fontColor;;
     width: &dtml-pageWidth;;
     margin: 0 auto;

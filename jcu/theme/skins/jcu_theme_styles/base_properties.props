@@ -30,7 +30,7 @@ globalNavFontSize:string=medium
 headingFontFamily:string=Arial, Helvetica, sans-serif
 
 contentViewBorderColor:string=#015883
-contentViewBackgroundColor:string=#D4DFE6
+contentViewBackgroundColor:string=#DEE7EC
 contentViewFontColor:string=#015883
 
 inputFontColor:string=Black

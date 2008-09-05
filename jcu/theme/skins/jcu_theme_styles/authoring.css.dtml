@@ -63,7 +63,7 @@
 ** begin ECMAScript Content Action Menus
 */
 .contentActions {
-    background-color: &dtml-contentViewBackgroundColor;;
+	background: &dtml-contentViewBackgroundColor; url(&dtml-portal_url;/portlet_bg.gif) repeat-x scroll 0 100%;
     border-left: &dtml-borderWidth; &dtml-borderStyle; &dtml-contentViewBorderColor;;
     border-right: &dtml-borderWidth; &dtml-borderStyle; &dtml-contentViewBorderColor;;
     color: &dtml-contentViewFontColor;;
@@ -359,7 +359,7 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 }
 .documentEditable .documentContent {
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-contentViewBorderColor;;
-    padding: 0 0.5em;
+    padding: 0 0.5em 0.5em;
 }
 .label {
     font-weight: bold;

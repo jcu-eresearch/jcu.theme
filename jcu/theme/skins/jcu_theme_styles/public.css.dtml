@@ -8,6 +8,8 @@
 /* YOUR CSS RULES START HERE */
 
 
+body { background-color: #afafaf; }
+
 /* Accessibility elements, applied by JS */
 body.largeText { font-size: 95%; }
 body.smallText { font-size: 60%; }
@@ -341,6 +343,7 @@ form.searchPage input.searchButton {
 #portal-globalnav li a.lastGlobalTab {
 }
 #portal-globalnav li a:hover {
+    background-color: #EEE6CF;
     border-color: &dtml-globalBorderColor;;
     border-style: &dtml-borderStyle;;
     color: &dtml-globalFontColor;;
