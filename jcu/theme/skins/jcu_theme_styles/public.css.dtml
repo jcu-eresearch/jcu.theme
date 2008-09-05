@@ -15,10 +15,10 @@ body.smallText { font-size: 60%; }
 /* Padding for the columns */
 
 #portal-column-one .visualPadding {
-    padding: 2em 0em 1em 0em;
+    padding: 1em 0em;
 }
 #portal-column-two .visualPadding {
-    padding: 2em 0em 1em 0em;
+    padding: 1em 0em;
 }
 
 /* Content area */
@@ -42,7 +42,7 @@ h3, h4, h5, h6 {
 }
 
 .documentContent {
-    padding: 1em 1em 2em 1em !important;
+    padding: 1em 0 2em !important;
     background: transparent url(watermark.gif) no-repeat scroll 100% 99%;
 }
 .documentContent ul {
