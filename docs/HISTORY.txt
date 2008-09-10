@@ -1,8 +1,17 @@
-Changelog for jcu.theme
+Change History
+==============
 
-    (name of developer listed in brackets)
+0.2.1 (2008-09-11)
+	- Removed unicode character from footer
 
-jcu.theme - 0.1 Unreleased
+
+0.2 (2008-09-06)
+	- Added more gradients
+	- Reset font size
+	- Made portlets solid blue, forms buttons now have solid backgrounds.
+
+
+0.1 (2008-08-29)
 
     - Initial package structure.
       [zopeskel]
