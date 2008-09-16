@@ -481,4 +481,8 @@ div.formControls input.hidden {
     display: none;
 }
 
+body.kupu {
+    width: inherit;
+}
+
 /* </dtml-with> */
