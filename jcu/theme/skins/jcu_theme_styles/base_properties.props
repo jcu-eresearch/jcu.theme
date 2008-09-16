@@ -23,13 +23,13 @@ borderStyle:string=solid
 borderStyleAnnotations:string=dashed
 
 globalBorderColor:string=#DDDDDD
-globalBackgroundColor:string=#DEE7EC
+globalBackgroundColor:string=#EFF3F5
 globalFontColor:string=#436976
 
-globalNavFontSize:string=medium
+globalNavFontSize:string=small
 headingFontFamily:string=Arial, Helvetica, sans-serif
 
-contentViewBorderColor:string=#015883
+contentViewBorderColor:string=#CCCCCC
 contentViewBackgroundColor:string=#DEE7EC
 contentViewFontColor:string=#015883
 

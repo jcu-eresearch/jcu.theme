@@ -337,7 +337,7 @@ form.searchPage input.searchButton {
     background-color: #EEE6CF;
     border-color: &dtml-globalBorderColor;;
     border-style: &dtml-borderStyle; &dtml-borderStyle; none &dtml-borderStyle;;
-	border-bottom: #EEE6CF &dtml-borderWidth; &dtml-borderStyle;;
+    border-bottom: #EEE6CF &dtml-borderWidth; &dtml-borderStyle;;
     color: &dtml-globalFontColor;;
 }
 #portal-globalnav li a.lastGlobalTab {
@@ -346,6 +346,7 @@ form.searchPage input.searchButton {
     background-color: #EEE6CF;
     border-color: &dtml-globalBorderColor;;
     border-style: &dtml-borderStyle;;
+	border-bottom: #EEE6CF &dtml-borderWidth; &dtml-borderStyle;;
     color: &dtml-globalFontColor;;
 }
 #portal-personaltools {

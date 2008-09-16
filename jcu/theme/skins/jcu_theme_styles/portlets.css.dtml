@@ -16,7 +16,7 @@
 /* Main portlet elements */
 .portlet {
     margin: 1px 0 1em 0;
-	background: &dtml-globalBackgroundColor; url(&dtml-portal_url;/portlet_bg.gif) repeat-x scroll 0 100%;
+    background-color: &dtml-globalBackgroundColor;;
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
 }
 .portlet a {
@@ -37,7 +37,7 @@
     color: &dtml-linkColor;;
 }
 .portletHeader {
-	background: &dtml-globalBackgroundColor; url(&dtml-portal_url;/portlet_top.gif) repeat-x scroll 0 0;
+    background: &dtml-globalBackgroundColor; url(&dtml-portal_url;/portlet_top.gif) repeat-x scroll 0 0;
     padding: 0em 1em;
     text-transform: &dtml-textTransform;;
     font-weight: normal;
@@ -62,8 +62,6 @@
     background-color: &dtml-evenRowBackgroundColor;;
     margin: 0;
     padding: 0.25em 1em;
-    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
-    border-style: dotted &dtml-borderStyle; none &dtml-borderStyle;;
     text-align: right;
 }
 
