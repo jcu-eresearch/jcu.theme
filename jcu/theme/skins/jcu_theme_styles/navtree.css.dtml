@@ -28,7 +28,7 @@
 }
 .navTree {
     list-style: none; 
-    list-style-image: none; 
+    list-style-image: url(&dtml-portal_url;/hp_bullet.gif);
     margin-top: 1px;
 }
 .navTree li {
