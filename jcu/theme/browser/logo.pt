@@ -2,7 +2,7 @@
    id="portal-logo"
    tal:attributes="href view/home_url"
    i18n:domain="jcu">
-    <img src="logo.jpg" alt=""
+    <img src="logo.gif" alt=""
          tal:replace="structure view/logo_tag" /></a>
 <a metal:define-macro="portal_sitelogo"
    id="portal-logo"
