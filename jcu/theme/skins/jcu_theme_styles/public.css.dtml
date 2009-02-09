@@ -99,7 +99,7 @@ h3, h4, h5, h6 {
 #portal-logo img {
     border: 0;
     padding: 0;
-    margin: 1em 0em 1em 2em;
+    margin: 1em 0em 1em 1em;
 }
 
 /* The skin switcher at the top, only shows up if you have multiple skins available */
