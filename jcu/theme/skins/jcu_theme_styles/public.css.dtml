@@ -804,7 +804,7 @@ textarea.proportional {
     float: none;
     line-height: 1.2em;
     margin: 2em 0em 1em 0em;
-    padding: 0.5em 0em 1em 0em;
+    padding: 0.5em 0em 0.5em 0em;
     text-align: center;
 }
 #portal-footer p {
