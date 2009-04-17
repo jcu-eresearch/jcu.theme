@@ -1,2 +1,6 @@
 /* Stylesheet for the 'Explore Theme' Plone theme */
 
+h1#portal-byline {
+    display: inline;
+    margin-left: 2em;
+}

@@ -38,6 +38,14 @@
 <!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
     <viewlet name="plone.global_sections" />
 -->
+      <viewlet name="plone.logo" />
   </hidden>
+
+  <order manager="plone.portalheader" skinname="Explore Theme">
+    <viewlet name="plone.site_actions" insert-before="plone.searchbox" />
+    <viewlet name="plone.searchbox" insert-before="explore.theme.logo"  />
+    <viewlet name="explore.theme.logo" insert-before="plone.global_sections" />
+  </order>
+
 
 </object>
