@@ -25,8 +25,8 @@
          permission="zope2.View"
          />
 -->
-
-     <browser:viewlet
+     
+      <browser:viewlet
         name="explore.theme.logo"
         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
         class=".viewlets.ExploreLogoViewlet"
@@ -34,6 +34,13 @@
         permission="zope2.View"
         />
 
+     <browser:viewlet
+         name="explore.theme.footer"
+         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+         class=".viewlets.ExploreFooterViewlet"
+	 layer=".interfaces.IThemeSpecific"
+         permission="zope2.View"
+         />
 
     <!-- Zope 3 browser resources -->
 

@@ -30,3 +30,11 @@ class ExploreLogoViewlet(ViewletBase):
 
         self.navigation_root_url = portal_state.navigation_root_url()
 
+class ExploreFooterViewlet(ViewletBase):
+    render = ViewPageTemplateFile('templates/footer.pt')
+
+    def update(self):
+        portal_state = getMultiAdapter((self.context, self.request),
+                                            name=u'plone_portal_state')
+
+        self.navigation_root_url = portal_state.navigation_root_url()
