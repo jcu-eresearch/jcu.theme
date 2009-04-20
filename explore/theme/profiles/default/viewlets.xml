@@ -38,7 +38,7 @@
       <viewlet name="plone.logo" />
   </hidden>
 
-  <hidden manager="plone.portalfooter" skinname="JCU Theme">
+  <hidden manager="plone.portalfooter" skinname="Explore Theme">
     <viewlet name="plone.footer" />
   </hidden>
 
