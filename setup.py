@@ -20,11 +20,12 @@ setup(name='flbca.theme',
       url='http://eresearch.jcu.edu.au/',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
-      namespace_packages=['flbcatheme'],
+      namespace_packages=['flbca'],
       include_package_data=True,
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'jcu.theme',
           # -*- Extra requirements: -*-
       ],
       entry_points="""

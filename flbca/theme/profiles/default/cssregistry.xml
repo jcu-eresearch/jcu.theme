@@ -23,7 +23,7 @@
       available keys and default values.
       -->
  <stylesheet title=""
-    id="++resource++flbcatheme.flbca.stylesheets/main.css"
+    id="++resource++flbca.theme.stylesheets/main.css"
     media="screen" rel="stylesheet" rendering="import"
     cacheable="True" compression="safe" cookable="True"
     enabled="1" expression=""/>

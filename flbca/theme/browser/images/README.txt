@@ -7,7 +7,7 @@ Its declaration is located in 'browser/configure.zcml':
 
     <!-- Resource directory for images -->
     <browser:resourceDirectory
-        name="flbcatheme.flbca.images"
+        name="flbca.theme.images"
         directory="images"
         layer=".interfaces.IThemeSpecific"
         />
@@ -15,7 +15,7 @@ Its declaration is located in 'browser/configure.zcml':
 An image placed in this directory (e.g. 'logo.png') can be accessed from
 this relative URL:
 
-    "++resource++flbcatheme.flbca.images/logo.png"
+    "++resource++flbca.theme.images/logo.png"
 
 Note that it might be better to register each of these resources separately if
 you want them to be overridable from zcml directives.

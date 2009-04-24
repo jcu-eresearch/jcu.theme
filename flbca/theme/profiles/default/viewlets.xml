@@ -16,7 +16,7 @@
        existing skin.
        -->
   <order manager="plone.portalfooter" skinname="FLBCA Theme"
-         based-on="Plone Default">
+         based-on="JCU Theme">
     <!-- The definition of a viewlet accepts these parameters:
          - name: quite self explanatory, the name of the viewlet.
          - insert-before: name of the viewlet before which it must be added or
@@ -29,7 +29,7 @@
          "all".
          -->
 <!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
-    <viewlet name="flbcatheme.someviewlet"
+    <viewlet name="flbca.theme.someviewlet"
              insert-before="*" />
 -->
   </order>

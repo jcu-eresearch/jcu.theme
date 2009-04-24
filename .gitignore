@@ -1,0 +1,5 @@
+flbca.theme.egg-info
+*.pyc
+*.pyo
+build
+dist

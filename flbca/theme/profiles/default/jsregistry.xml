@@ -19,7 +19,7 @@
       -->
 <!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
  <javascript title=""
-    id="++resource++flbcatheme.flbca.javascripts/something.js"
+    id="++resource++flbca.theme.javascripts/something.js"
     cacheable="False" compression="safe" cookable="False"
     enabled="True" expression=""  inline="False"/>
 -->

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <import-steps>
-  <import-step id="flbcatheme.flbca.various"
+  <import-step id="flbca.theme.various"
                version="20090424-01"
-               handler="flbcatheme.flbca.setuphandlers.setupVarious"
+               handler="flbca.theme.setuphandlers.setupVarious"
                title="FLBCA Theme: miscellaneous import steps">
     <dependency step="skins" />
     Various import steps that are not handled by GS import/export

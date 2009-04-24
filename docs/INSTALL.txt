@@ -20,7 +20,7 @@ using a traditional Zope 2 instance, you can do this:
    ``/path/to/instance/etc/package-includes`` directory.  The file
    should only contain this::
 
-       <include package="flbcatheme.flbca" />
+       <include package="flbca.theme" />
 
 .. _pythonproducts: http://plone.org/products/pythonproducts
 
