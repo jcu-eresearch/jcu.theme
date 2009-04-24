@@ -28,16 +28,19 @@
          Note: insert-before and -after accept the value "*" which means
          "all".
          -->
-<!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
-    <viewlet name="flbca.theme.someviewlet"
-             insert-before="*" />
--->
+          <viewlet name="flbca.theme.logo"
+             insert-before="jcu.logo"/>
+          <viewlet name="flbca.global_sections" 
+             insert-before="jcu.global_sections"/>
   </order>
 
   <hidden manager="plone.portalheader" skinname="FLBCA Theme">
-<!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
+      <viewlet name="plone.logo" />
+      <viewlet name="jcu.logo" />
+  </hidden>
+  <hidden manager="plone.portalheader" skinname="FLBCA Theme">
     <viewlet name="plone.global_sections" />
--->
+    <viewlet name="jcu.global_sections" />
   </hidden>
 
 </object>

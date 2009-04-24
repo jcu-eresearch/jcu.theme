@@ -16,15 +16,15 @@
       of your product (on the filesystem) as Filesystem Directory Views within
       the portal_skins tool, so that they become usable as skin layers.
       -->
- <object name="flbca.theme_custom_images"
+ <object name="flbca_theme_custom_images"
     meta_type="Filesystem Directory View"
-    directory="flbca.theme:skins/flbca.theme_custom_images"/>
- <object name="flbca.theme_custom_templates"
+    directory="flbca.theme:skins/flbca_theme_custom_images"/>
+ <object name="flbca_theme_custom_templates"
     meta_type="Filesystem Directory View"
-    directory="flbca.theme:skins/flbca.theme_custom_templates"/>
- <object name="flbca.theme_styles"
+    directory="flbca.theme:skins/flbca_theme_custom_templates"/>
+ <object name="flbca_theme_styles"
     meta_type="Filesystem Directory View"
-    directory="flbca.theme:skins/flbca.theme_styles"/>
+    directory="flbca.theme:skins/flbca_theme_styles"/>
 
  <!-- A skin-path in this file corresponds to a Skin Selection in the
      'Properties' tab of the portal_skins tool, in the ZMI.
@@ -39,12 +39,12 @@
        "all".
        -->
  <skin-path name="FLBCA Theme" based-on="JCU Theme">
-  <layer name="flbca.theme_custom_images"
+  <layer name="flbca_theme_custom_images"
      insert-after="custom"/>
-  <layer name="flbca.theme_custom_templates"
-     insert-after="flbca.theme_custom_images"/>
-  <layer name="flbca.theme_styles"
-     insert-after="flbca.theme_custom_templates"/>
+  <layer name="flbca_theme_custom_templates"
+     insert-after="flbca_theme_custom_images"/>
+  <layer name="flbca_theme_styles"
+     insert-after="flbca_theme_custom_templates"/>
  </skin-path>
 
 </object>
