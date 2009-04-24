@@ -1142,11 +1142,6 @@ div.managedPortlet.portlet {
     padding-left:0.7em;
 }
 
-#dashboard-actions ul li.portalUser {
-    background:transparent url(&dtml-portal_url;/user.gif) no-repeat scroll left center;
-    padding-left:18px;
-}
-
 /* manage portlets */
 
 .section div {

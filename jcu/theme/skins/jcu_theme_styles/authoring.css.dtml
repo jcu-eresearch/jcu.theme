@@ -40,14 +40,14 @@
     color: &dtml-contentViewFontColor;;
     height: auto;
     margin-right: 0.5em;
-    padding: 0em 1em;
+    padding: 0em 1em !important;
     line-height: normal;
     text-decoration: none;
     text-transform: &dtml-textTransform;;
     z-index: 1;
 }
 .contentViews .selected a {
-    background: &dtml-contentViewBackgroundColor; url(&dtml-portal_url;/portlet_top.gif) repeat-x scroll 0 0;
+    background: &dtml-contentViewBackgroundColor; url(&dtml-portal_url;/portlet_top.gif) repeat-x scroll 0 0 !important;
     border-bottom: &dtml-contentViewBackgroundColor; &dtml-borderWidth; &dtml-borderStyle;;
     color: &dtml-contentViewFontColor;;
 }
