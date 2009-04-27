@@ -5,7 +5,7 @@
     <img src="logo.gif" alt=""
          tal:replace="structure view/logo_tag" /></a>
 <a metal:define-macro="portal_sitelogo"
-   id="portal-logo"
+   id="site-logo"
    accesskey="1"
    tal:attributes="href view/navigation_root_url"
    i18n:domain="jcu">

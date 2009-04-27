@@ -96,7 +96,7 @@ h3, h4, h5, h6 {
 }
 
 /* Logo properties */
-#portal-logo img {
+#portal-logo img, #site-logo img {
     border: 0;
     padding: 0;
     margin: 1em 0em 1em 1em;
