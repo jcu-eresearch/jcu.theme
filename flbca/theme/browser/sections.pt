@@ -1,4 +1,3 @@
-<tal:lah tal:condition="python:False">
 <tal:tabs tal:condition="view/portal_tabs"
           i18n:domain="plone">
     <h5 class="hiddenStructure" i18n:translate="heading_sections">Sections</h5>
@@ -15,4 +14,3 @@
             </a></li></tal:tabs>
     </ul>
 </tal:tabs>
-</tal:lah>

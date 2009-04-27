@@ -29,18 +29,17 @@
          "all".
          -->
           <viewlet name="flbca.theme.logo"
-             insert-before="jcu.logo"/>
+             insert-before="plone.logo"/>
           <viewlet name="flbca.global_sections" 
-             insert-before="jcu.global_sections"/>
+             insert-before="plone.searchbox" />
   </order>
 
   <hidden manager="plone.portalheader" skinname="FLBCA Theme">
       <viewlet name="plone.logo" />
       <viewlet name="jcu.logo" />
-  </hidden>
-  <hidden manager="plone.portalheader" skinname="FLBCA Theme">
-    <viewlet name="plone.global_sections" />
-    <viewlet name="jcu.global_sections" />
+
+      <viewlet name="plone.global_sections" />
+      <viewlet name="jcu.global_sections" />
   </hidden>
 
 </object>

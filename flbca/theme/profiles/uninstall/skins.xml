@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!-- This file holds the setup configuration for the portal_skins tool -->
+
+<object name="portal_skins" allow_any="False" cookie_persistence="False"
+   default_skin="Plone Default" >
+
+ <object name="flbca_theme_custom_images"
+    meta_type="Filesystem Directory View"
+    directory="flbca.theme:skins/flbca_theme_custom_images" remove="True" />
+ <object name="flbca_theme_custom_templates"
+    meta_type="Filesystem Directory View"
+    directory="flbca.theme:skins/flbca_theme_custom_templates" remove="True" />
+ <object name="flbca_theme_styles"
+    meta_type="Filesystem Directory View"
+    directory="flbca.theme:skins/flbca_theme_styles" remove="True" />
+
+ <skin-path name="FLBCA Theme" based-on="JCU Theme" remove="True" />
+
+</object>

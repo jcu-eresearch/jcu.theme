@@ -25,6 +25,26 @@ from plone.app.layout.viewlets.common import LogoViewlet as BaseLogoViewlet
 class GlobalSectionsViewlet(GlobalSectionsViewlet):
     render = ViewPageTemplateFile('sections.pt')
 
+    def update(self):
+        context_state = getMultiAdapter((self.context, self.request),
+                                        name=u'plone_context_state')
+        actions = context_state.actions()
+        portal_tabs_view = getMultiAdapter((self.context, self.request),
+                                           name='portal_tabs_view')
+        self.portal_tabs = portal_tabs_view.topLevelTabs(actions=actions)
+
+        selectedTabs = self.context.restrictedTraverse('selectedTabs')
+        self.selected_tabs = selectedTabs('index_html',
+                                          self.context,
+                                          self.portal_tabs)
+        self.selected_portal_tab = self.selected_tabs['portal']
+
+        print context_state
+        print actions
+        print portal_tabs_view
+        print selectedTabs
+        print self.__dict__
+
 class LogoViewlet(BaseLogoViewlet):
     render = ViewPageTemplateFile('logo.pt')
 
@@ -38,13 +58,32 @@ class LogoViewlet(BaseLogoViewlet):
 
         sitelogoName = portal.restrictedTraverse('base_properties').sitelogoName
         self.sitelogo_tag = portal.restrictedTraverse(sitelogoName).tag()
+
+        #For the dynamic logo
+        context_state = getMultiAdapter((self.context, self.request),
+                                        name=u'plone_context_state')
+        actions = context_state.actions()
+
+        portal_tabs_view = getMultiAdapter((self.context, self.request),
+                                           name='portal_tabs_view')
+        portal_tabs = portal_tabs_view.topLevelTabs(actions=actions)
   
         selectedTabs = self.context.restrictedTraverse('selectedTabs')
-        self.selected_tabs = selectedTabs('index_html',
+        selected_tabs = selectedTabs('index_html',
                                           self.context,
-                                          self.portal_tabs)
-        self.selected_portal_tab = self.selected_tabs['portal']
+                                          portal_tabs)
+        self.selected_portal_tab = selected_tabs['portal']
 
         self.section_root_url = portal.portal_url()+'/'+self.selected_portal_tab
+
+        self.is_not_home = ('index_html' != self.selected_portal_tab)
+  
+        sectionlogo_image = portal.restrictedTraverse('section-'+self.selected_portal_tab+'.jpg', None)
+
+        if sectionlogo_image:
+            self.sectionlogo_tag = sectionlogo_image.tag()
+        else:
+            self.sectionlogo_tag = ''
+
 
 

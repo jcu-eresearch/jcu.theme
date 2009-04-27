@@ -1,0 +1,22 @@
+/*
+    This file is based on the ploneCustom.css.dtml file shipped with Plone.
+ 
+      <dtml-with base_properties> (do not remove this)
+      <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either)
+*/
+
+/* YOUR CSS RULES START HERE */
+
+#section-logo img {
+    border:0 none;
+    margin:1em 0 1em 1em;
+    padding:0;
+}
+
+/* YOUR CSS RULES STOP HERE */
+
+/* </dtml-with> */
+
+/* Latest version of the documentation on pre-defined properties from Plone
+     can be found in CMFPlone/skins/plone_styles/ploneCustom.css.dtml */ 
+
