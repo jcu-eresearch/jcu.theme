@@ -15,7 +15,7 @@
        The 'based-on' attribute lets you inherit the viewlets ordering from an
        existing skin.
        -->
-  <order manager="plone.portalfooter" skinname="FLBCA Theme"
+  <order manager="plone.portalheader" skinname="FLBCA Theme"
          based-on="JCU Theme">
     <!-- The definition of a viewlet accepts these parameters:
          - name: quite self explanatory, the name of the viewlet.
@@ -30,8 +30,8 @@
          -->
           <viewlet name="flbca.theme.logo"
              insert-before="plone.logo"/>
-          <viewlet name="flbca.global_sections" 
-             insert-before="plone.searchbox" />
+          <viewlet name="flbca.theme.global_sections" 
+             insert-before="plone.global_sections" />
   </order>
 
   <hidden manager="plone.portalheader" skinname="FLBCA Theme">

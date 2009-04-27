@@ -1,3 +1,5 @@
+
+
 from zope.component import getMultiAdapter
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ViewletBase, LogoViewlet, GlobalSectionsViewlet
