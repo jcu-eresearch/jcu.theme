@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- This file holds the setup configuration of the viewlet managers
+     for the "FLBCA Theme" skin.
+     -->
+
+<object>
+
+  <hidden manager="plone.portalheader" skinname="JCU Theme" purge="True" />
+
+</object>

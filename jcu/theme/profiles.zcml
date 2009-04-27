@@ -10,5 +10,14 @@
       description='Extension profile for the "JCU Theme" Plone theme.'
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
+ 
+   <genericsetup:registerProfile
+      name="uninstall"
+      title="JCU Theme Uninstall Profile"
+      directory="profiles/uninstall"
+      description='Removes the "JCU Theme" Plone theme.'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      />
 
 </configure>
