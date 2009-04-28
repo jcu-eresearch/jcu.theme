@@ -30,16 +30,20 @@
          -->
           <viewlet name="flbca.theme.logo"
              insert-before="plone.logo"/>
-          <viewlet name="flbca.theme.global_sections" 
-             insert-before="plone.global_sections" />
   </order>
+
+   <order manager="plone.portalfooter" skinname="FLBCA Theme"
+            based-on="Plone Default">
+      <viewlet name="flbca.theme.footer" insert-before="*" />
+   </order>
 
   <hidden manager="plone.portalheader" skinname="FLBCA Theme">
       <viewlet name="plone.logo" />
       <viewlet name="jcu.logo" />
+  </hidden>
 
-      <viewlet name="plone.global_sections" />
-      <viewlet name="jcu.global_sections" />
+  <hidden manager="plone.portalfooter" skinname="FLBCA Theme">
+      <viewlet name="plone.footer" />
   </hidden>
 
 </object>

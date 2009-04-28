@@ -16,14 +16,14 @@
         />
 
     <!-- Viewlets registration -->
-    <browser:viewlet
-         name="flbca.theme.global_sections"
-         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-         class=".viewlets.GlobalSectionsViewlet"
-         layer=".interfaces.IThemeSpecific"
-         permission="zope2.View"
-         />
 
+    <browser:viewlet
+        name="flbca.theme.footer"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        layer=".interfaces.IThemeSpecific"
+	template="footer.pt"
+        permission="zope2.View"
+        />
 
     <browser:viewlet
         name="flbca.theme.logo"

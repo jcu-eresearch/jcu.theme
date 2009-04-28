@@ -6,5 +6,6 @@
 <object>
 
   <hidden manager="plone.portalheader" skinname="FLBCA Theme" purge="True" />
+  <hidden manager="plone.portalfooter" skinname="FLBCA Theme" purge="True" />
 
 </object>

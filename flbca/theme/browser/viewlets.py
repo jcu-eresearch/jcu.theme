@@ -1,5 +1,3 @@
-
-
 from zope.component import getMultiAdapter
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ViewletBase, LogoViewlet, GlobalSectionsViewlet
@@ -23,29 +21,6 @@ from plone.app.layout.viewlets.common import LogoViewlet as BaseLogoViewlet
 #
 #    def update(self):
 #        self.computed_value = 'any output'
-
-class GlobalSectionsViewlet(GlobalSectionsViewlet):
-    render = ViewPageTemplateFile('sections.pt')
-
-    def update(self):
-        context_state = getMultiAdapter((self.context, self.request),
-                                        name=u'plone_context_state')
-        actions = context_state.actions()
-        portal_tabs_view = getMultiAdapter((self.context, self.request),
-                                           name='portal_tabs_view')
-        self.portal_tabs = portal_tabs_view.topLevelTabs(actions=actions)
-
-        selectedTabs = self.context.restrictedTraverse('selectedTabs')
-        self.selected_tabs = selectedTabs('index_html',
-                                          self.context,
-                                          self.portal_tabs)
-        self.selected_portal_tab = self.selected_tabs['portal']
-
-        print context_state
-        print actions
-        print portal_tabs_view
-        print selectedTabs
-        print self.__dict__
 
 class LogoViewlet(BaseLogoViewlet):
     render = ViewPageTemplateFile('logo.pt')
