@@ -1,6 +1,19 @@
 /* Stylesheet for the 'Explore Theme' Plone theme */
 
+body {
+        background-color: #CCC;
+}
+
+#visual-portal-wrapper {
+        max-width:1024px;
+        min-width:800px;
+        margin:0 auto;
+        background-color #FFF;
+        border: 1px solid #aaa;
+        border-top: none;
+}
+
 h1#portal-byline {
-    display: inline;
-    margin-left: 2em;
+	display: inline;
+	margin-left: 1em;
 }
