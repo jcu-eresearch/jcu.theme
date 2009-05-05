@@ -4,7 +4,7 @@ plone_skin:string=Explore Theme
 
 logoName:string=logo.jpg
 
-fontFamily:string="Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
+fontFamily:string=Arial,Helvetica,sans-serif;
 fontBaseSize:string=69%
 fontColor:string=Black
 fontSmallSize:string=85%
@@ -20,13 +20,13 @@ borderStyle:string=solid
 borderStyleAnnotations:string=dashed
 
 globalBorderColor:string=#8cacbb
-globalBackgroundColor:string=#dee7ec
+globalBackgroundColor:string=#eff3f5
 globalFontColor:string=#436976
 
 headingFontFamily:string="Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
 
 contentViewBorderColor:string=#74ae0b
-contentViewBackgroundColor:string=#cde2a7
+contentViewBackgroundColor:string=#c6e6ae
 contentViewFontColor:string=#578308
 
 inputFontColor:string=Black
