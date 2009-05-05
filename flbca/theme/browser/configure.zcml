@@ -37,6 +37,16 @@
 
     <!-- Zope 3 browser resources -->
 
+    <!-- Bad news here: had to copy Dateable's page template -->
+    <browser:page
+     name="p4a-calendar"
+     for="Products.ATContentTypes.content.folder.ATFolder"
+     permission="zope.Public"
+     template="month.pt"
+     class=".pages.CollageDateableMonthPage"
+     layer="Products.Collage.interfaces.ICollageBrowserLayer"
+      />  
+
     <!-- Resource directory for images
       See flbca.theme/browser/images/README.txt
       for more information about registering images as Zope 3 browser

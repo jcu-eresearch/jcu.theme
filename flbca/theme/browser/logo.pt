@@ -1,3 +1,4 @@
+<div id="portal-logos">
 <a metal:define-macro="portal_logo"
    id="portal-logo"
    tal:attributes="href view/home_url"
@@ -18,4 +19,4 @@
    i18n:domain="flbca">
      <img src="sectionlogo.jpg" alt=""
          tal:replace="structure view/sectionlogo_tag" /></a>
-
+</div>

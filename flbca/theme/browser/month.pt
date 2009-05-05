@@ -1,0 +1,95 @@
+<tal:manager replace="structure provider:collage.ContentManager" />
+
+<tal:folder define="plone_view here/@@plone;
+                    toLocalizedTime nocall: plone_view/toLocalizedTime;
+                    isAnon view/isAnon;
+                    mtool view/mtool;
+                    portal_url view/portal_url;
+                    normalizeString view/normalizeString;
+                    site_properties view/site_properties;
+                    dummy view/calcInfo">
+
+<h2 metal:define-macro="title"
+      tal:define="kssview context/@@collage_kss_helper"
+      tal:attributes="id string:${kssview/getUniqueIdentifier}-title;
+                      class python: kssview.getKssClasses('title')"
+      tal:condition="here/Title">
+    <span metal:define-slot="inside"
+          tal:replace="here/Title">title</span>
+  </h2>
+
+<div id="flbca-calendar">
+    <!-- The calendar, rendered as a table -->
+    <table class="ploneCalendar" summary="Calendar">
+        <thead>
+            <tr>
+                <th id="calendar-header" colspan="8">
+                    <span i18n:translate="" tal:omit-tag="">
+                        <span i18n:translate=""
+                              tal:content="python:view.months[view.month]"
+                              tal:omit-tag=""
+                              id="calendar-month-month">monthname</span> 
+                        <span i18n:name="year"
+                              tal:content="view/year"
+                              tal:attributes="id string:calendar-year-${view/year};"
+                              tal:omit-tag=""
+                              id="calendar-year">year</span>
+
+                        <a href="#" tal:attributes="href here/absolute_url;">
+                         <img src="++resource++chronos_support/calendar_icon.gif" />
+                        </a>
+                    </span>
+                </th>
+            </tr>
+            <tr class="weekdays">
+                <th class="weekHeader" i18n:translate="week_number">Wk#</th>
+                <tal:data tal:repeat="weekday python:range(0,7)">
+		    <th class="weekday-cells" i18n:translate=""
+		      tal:content="python:(view.weekdays[weekday])[0]" />
+                </tal:data>
+            </tr>
+        </thead>
+        <tbody id="chronos-month" >
+            <tr tal:repeat="week python:range(view.weeks)">
+                <td class="weekHeader"
+                      tal:define="weekday python:view.getDateForWeekDay(week);
+                                  thisweek python:weekday.isocalendar()[1]">
+                    <a tal:attributes="href python:view.getDateUrl(weekday, 'week')">
+                      <tal:block i18n:translate="">
+                        <tal:block replace="thisweek" i18n:name="week"/>
+                      </tal:block>
+                    </a>
+                  </td>
+                <tal:block repeat="weekday python:range(1,8)">
+                    <tal:block define="day python:view.getDateForWeekDay(week, weekday);
+                                       dayurl python:view.getDateUrl(day, 'day');">
+                        <td tal:attributes="class python:day.month == view.month and 
+                                                  'monthDay' or 'dayNotInThisMonth';">
+                            <a href="#" tal:attributes="href dayurl"><span tal:content="day/day" /></a>
+                        <tal:block repeat="display python:view.getOccurrenceDisplays(day)">
+                            <div class="event" tal:attributes="title display/title_and_time">
+                              <a tal:attributes="href display/url"
+                                 tal:condition="display/viewable">
+                                  <tal:block replace="display/title" />
+                              </a>
+                              <tal:block condition="not:display/viewable" 
+                                         replace="display/title"/>
+                            </div>
+                        </tal:block>
+                        <tal:block condition="python:view.hasMoreEvents(day)">
+                            <div>
+                              <a tal:attributes="href dayurl" i18n:translate="More..." i18n:domain="chronos">
+                                More...
+                              </a>
+                            </div>
+                        </tal:block>
+                            <div/>
+                        </td>
+                    </tal:block>
+                </tal:block>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</tal:folder>

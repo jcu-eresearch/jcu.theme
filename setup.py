@@ -26,6 +26,9 @@ setup(name='flbca.theme',
       install_requires=[
           'setuptools',
           'jcu.theme',
+          'p4a.z2utils',
+          'Products.Collage',
+          'dateable.chronos',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
