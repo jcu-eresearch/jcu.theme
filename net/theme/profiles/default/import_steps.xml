@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<import-steps>
+  <import-step id="net.theme.various"
+               version="20090417-01"
+               handler="net.theme.setuphandlers.setupVarious"
+               title="Net Theme: miscellaneous import steps">
+    <dependency step="skins" />
+    Various import steps that are not handled by GS import/export
+    handlers.
+  </import-step>
+</import-steps>

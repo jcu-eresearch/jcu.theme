@@ -1,0 +1,64 @@
+/* Stylesheet for the 'Net Theme' Plone theme */
+
+body {
+	background-color:#ccc;
+	font-size:small;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:normal;
+	margin:0 auto;
+	padding:0;
+}
+
+#visual-portal-wrapper {
+        max-width:1024px;
+        min-width:800px;
+        margin:0 auto;
+        background-color: #FFF;
+        border: 1px solid #aaa;
+        border-top: none;
+}
+
+h1#portal-byline {
+	display: inline;
+	margin-left: 1em;
+}
+
+#portal-personaltools, .portletHeader, .managedPortlet .portletHeader, #portal-globalnav li.selected a {
+	background-image:url(++resource++net.theme.images/portlet_top.gif);
+}
+
+#portal-globalnav li a:hover {
+        background-image:url(++resource++net.theme.images/portlet_top_invert.gif);
+}
+
+.contentActions, .contentViews .selected a {
+	background-image:url(++resource++net.theme.images/contentActions_bg.gif);
+}
+
+.contentActions li a:hover, .contentViews li a:hover {
+	background-image:url(++resource++net.theme.images/contentActions_bg_invert.gif);
+}
+
+#portal-personaltools, .portletHeader, .managedPortlet .portletHeader, #portal-globalnav li.selected a, .contentActions, .contentActions li a:hover, .contentViews li a:hover, #portal-globalnav li a:hover {
+	background-position: 0 0;
+        background-attachment: scroll;
+        background-repeat: repeat;
+}
+
+#portal-globalnav li a {
+	font-size:small;
+	font-weight:bold;
+	height:auto;
+	margin-right:0.5em;
+	padding:0 1.25em;
+	text-decoration:none;
+	text-transform:none;
+}
+
+.actionMenu .actionMenuContent li a:hover {
+	color:#70a80a;
+}
