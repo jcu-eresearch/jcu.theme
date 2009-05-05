@@ -27,19 +27,19 @@ h1#portal-byline {
 	margin-left: 1em;
 }
 
-#portal-personaltools, .portletHeader, .managedPortlet .portletHeader {
+#portal-personaltools, .portletHeader, .managedPortlet .portletHeader, #portal-globalnav li.selected a {
 	background-image:url(++resource++explore.theme.images/portlet_top.gif);
 }
 
-#portal-globalnav li a:hover, #portal-globalnav li.selected a {
+#portal-globalnav li a:hover {
         background-image:url(++resource++explore.theme.images/portlet_top_invert.gif);
 }
 
-.contentActions {
+.contentActions, .contentViews .selected a {
 	background-image:url(++resource++explore.theme.images/contentActions_bg.gif);
 }
 
-.contentActions li a:hover, .contentViews li a:hover, .contentViews .selected a {
+.contentActions li a:hover, .contentViews li a:hover {
 	background-image:url(++resource++explore.theme.images/contentActions_bg_invert.gif);
 }
 
