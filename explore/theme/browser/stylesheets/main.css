@@ -27,19 +27,23 @@ h1#portal-byline {
 	margin-left: 1em;
 }
 
-#portal-personaltools, .portletHeader, .managedPortlet .portletHeader, #portal-globalnav li.selected a {
+#portal-personaltools, .portletHeader, .managedPortlet .portletHeader {
 	background-image:url(++resource++explore.theme.images/portlet_top.gif);
 }
 
-.contentActions, .contentViews .selected a {
+#portal-globalnav li a:hover, #portal-globalnav li.selected a {
+        background-image:url(++resource++explore.theme.images/portlet_top_invert.gif);
+}
+
+.contentActions {
 	background-image:url(++resource++explore.theme.images/contentActions_bg.gif);
 }
 
-.contentActions li a:hover, .contentViews li a:hover {
+.contentActions li a:hover, .contentViews li a:hover, .contentViews .selected a {
 	background-image:url(++resource++explore.theme.images/contentActions_bg_invert.gif);
 }
 
-#portal-personaltools, .portletHeader, .managedPortlet .portletHeader, #portal-globalnav li.selected a, .contentActions, .contentActions li a:hover, .contentViews li a:hover {
+#portal-personaltools, .portletHeader, .managedPortlet .portletHeader, #portal-globalnav li.selected a, .contentActions, .contentActions li a:hover, .contentViews li a:hover, #portal-globalnav li a:hover {
 	background-position: 0 0;
         background-attachment: scroll;
         background-repeat: repeat;
