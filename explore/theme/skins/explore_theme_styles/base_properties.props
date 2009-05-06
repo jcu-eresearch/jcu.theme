@@ -2,7 +2,7 @@ title:string=Explore Theme's color, font, logo and border defaults
 
 plone_skin:string=Explore Theme
 
-logoName:string=logo.jpg
+logoName:string=logo.png
 
 fontFamily:string=Arial,Helvetica,sans-serif;
 fontBaseSize:string=69%
