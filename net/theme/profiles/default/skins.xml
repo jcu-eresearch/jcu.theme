@@ -42,8 +42,8 @@
   <layer name="net_theme_custom_images"
      insert-after="custom"/>
   <layer name="net_theme_custom_templates"
-     insert-after="net.theme_custom_images"/>
-  <layer name="net.theme_styles"
+     insert-after="net_theme_custom_images"/>
+  <layer name="net_theme_styles"
      insert-after="net_theme_custom_templates"/>
  </skin-path>
 

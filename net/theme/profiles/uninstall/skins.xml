@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!-- This file holds the setup configuration for the portal_skins tool -->
+
+<!-- Change the value of these parameters to modify portal_skins behavior:
+     - allow_any: change it to True if you want users to be able to select the
+       skin to use from their personal preferences management page. In the
+       ZMI, this value is known as 'Skin flexibility'.
+     - cookie_persistence: change it to True if you want to make the /skin cookie
+       persist indefinitely. In the ZMI, this value is known as 'Skin Cookie
+       persistence'.
+       -->
+<object name="portal_skins" allow_any="False" cookie_persistence="False"
+   default_skin="Net Theme">
+
+ <!-- This list registers the folders that are stored in the skins directory
+      of your product (on the filesystem) as Filesystem Directory Views within
+      the portal_skins tool, so that they become usable as skin layers.
+      -->
+ <object name="net_theme_custom_images"
+    meta_type="Filesystem Directory View"
+    directory="net.theme:skins/net_theme_custom_images" remove="True"/>
+ <object name="net_theme_custom_templates"
+    meta_type="Filesystem Directory View"
+    directory="net.theme:skins/net_theme_custom_templates" remove="True" />
+ <object name="net_theme_styles"
+    meta_type="Filesystem Directory View"
+    directory="net.theme:skins/net_theme_styles" remove="True"/>
+
+ <skin-path name="Net Theme" based-on="Plone Default" remove="True"/>
+
+</object>
