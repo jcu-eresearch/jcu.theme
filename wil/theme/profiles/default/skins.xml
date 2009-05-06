@@ -42,8 +42,8 @@
   <layer name="wil_theme_custom_images"
      insert-after="custom"/>
   <layer name="wil_theme_custom_templates"
-     insert-after="wil.theme_custom_images"/>
-  <layer name="wil.theme_styles"
+     insert-after="wil_theme_custom_images"/>
+  <layer name="wil_theme_styles"
      insert-after="wil_theme_custom_templates"/>
  </skin-path>
 
