@@ -11,4 +11,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+   <genericsetup:registerProfile
+      name="uninstall"
+      title="Wil Theme Uninstall Profile"
+      directory="profiles/uninstall"
+      description='Removes the "Wil Theme" Plone theme.'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      />
+
+
 </configure>
