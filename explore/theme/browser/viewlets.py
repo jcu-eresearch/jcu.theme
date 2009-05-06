@@ -31,7 +31,7 @@ class ExploreLogoViewlet(BaseLogoViewlet):
                                             name=u'plone_portal_state')
         portal = portal_state.portal()
 
-        self.home_url = portal.restrictedTraverse('base_properties').homelink
+        self.home_url = portal_state.navigation_root_url() 
 
         sitelogoName = portal.restrictedTraverse('base_properties').sitelogoName
         self.sitelogo_tag = portal.restrictedTraverse(sitelogoName).tag()
