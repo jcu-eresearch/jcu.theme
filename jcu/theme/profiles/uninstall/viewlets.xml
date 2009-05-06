@@ -6,5 +6,7 @@
 <object>
 
   <hidden manager="plone.portalheader" skinname="JCU Theme" purge="True" />
+  
+  <hidden manager="plone.portalfooter" skinname="JCU Theme" purge="True" />
 
 </object>
