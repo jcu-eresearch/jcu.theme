@@ -1,6 +1,6 @@
 <a metal:define-macro="portal_logo"
    id="portal-logo"
-   tal:attributes="href view/navigation_root_url"
+   tal:attributes="href view/home_url"
    i18n:domain="net">
     <img src="logo.jpg" alt=""
          tal:replace="structure view/logo_tag" /></a>
