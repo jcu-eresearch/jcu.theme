@@ -1,0 +1,5 @@
+wil.theme.egg-info
+*.pyc
+*.pyo
+*.swp
+*.*~
