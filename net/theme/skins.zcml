@@ -5,11 +5,11 @@
 
    <!-- File System Directory Views registration -->
    <cmf:registerDirectory
-       name="net.theme_custom_images"/>
+       name="net_theme_custom_images"/>
    <cmf:registerDirectory
-       name="net.theme_custom_templates"/>
+       name="net_theme_custom_templates"/>
    <cmf:registerDirectory
-       name="net.theme_styles"/>
+       name="net_theme_styles"/>
 
    <!-- Note: This could also be done for all folders at once
         by replacing the previous lines with this one:
