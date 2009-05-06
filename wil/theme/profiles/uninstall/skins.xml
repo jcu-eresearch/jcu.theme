@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <object name="portal_skins" allow_any="False" cookie_persistence="False"
-   default_skin="Wil Theme">
+   default_skin="Plone Default">
 
  <object name="wil_theme_custom_images"
     meta_type="Filesystem Directory View"
