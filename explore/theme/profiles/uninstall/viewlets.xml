@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<object>
+
+  <hidden manager="plone.portalheader" skinname="Explore Theme" purge="True" />
+
+  <hidden manager="plone.portalfooter" skinname="Explore Theme" purge="True" />
+
+</object>

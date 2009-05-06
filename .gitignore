@@ -2,3 +2,4 @@ explore.theme.egg-info
 *.pyc
 *.pyo
 *.swp
+*.*~
