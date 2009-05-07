@@ -33,7 +33,7 @@ class ExploreLogoViewlet(BaseLogoViewlet):
 
         self.home_url = portal_state.navigation_root_url() 
 
-        sitelogoName = portal.restrictedTraverse('base_properties').sitelogoName
+        sitelogoName = portal.restrictedTraverse('base_properties').logoName
         self.sitelogo_tag = portal.restrictedTraverse(sitelogoName).tag()
 
 
