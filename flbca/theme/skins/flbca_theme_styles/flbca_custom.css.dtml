@@ -7,6 +7,10 @@
 
 /* YOUR CSS RULES START HERE */
 
+body {
+    min-width: 900px;
+}
+
 #portal-logos {
     display: inline;
     overflow: hidden;
@@ -99,7 +103,7 @@
 }
 
 #flbca-calendar #chronos-month td div {
-    font-size: 9px;
+    font-size: 8.5px;
 }
 
 #flbca-calendar #chronos-month td.monthDay {
@@ -107,7 +111,7 @@
 }
 
 #flbca-calendar #chronos-month td.monthDay:hover {
-	background-color: #EFF3F5;
+    background-color: #EFF3F5;
 }
 
 #flbca-calendar #chronos-month td.todaynoevent {
@@ -115,7 +119,7 @@
 }
 
 #flbca-calendar #chronos-month td.add-event-block {
-	display: none;
+    display: none;
 }
 
 #flbca-calendar #chronos-month td.add-event-block:hover {
@@ -192,8 +196,6 @@ div.navigationTabs span.selected a {
 
 #dateTabsEnd {
   display: inline; 
-  padding: 2px 0px 0px 1px;
-  background: url(++resource++tab_selected_right.png) top right no-repeat;
 }
 
 /* Month view */
@@ -294,8 +296,6 @@ div.confidentialEvent {
   -moz-box-sizing: border-box;
 }
 
-
-
 div.inOfficeHours {
   background-color: #fff;
 }
@@ -304,9 +304,14 @@ div.outOfficeHours {
   background-color: rgb(204,204,204);
 }
 
-table.ploneCalendar div.event {
+#flbca-calendar table.ploneCalendar div.event {
   clear: both;
-  padding: 2px 8px;
+  padding: 0;
+  border-bottom:1px solid #CCCCCC;
+}
+
+#flbca-calendar table.ploneCalendar div.event a:hover {
+  color: #389DDF;
 }
 
 div.contextlinks {

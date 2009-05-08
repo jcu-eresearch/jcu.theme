@@ -65,25 +65,29 @@
                                        dayurl python:view.getDateUrl(day, 'day');">
                         <td tal:attributes="class python:day.month == view.month and 
                                                   'monthDay' or 'dayNotInThisMonth';">
+
+                <tal:dontwastetime condition="python:day.month == view.month">
+
                             <a href="#" tal:attributes="href dayurl"><span tal:content="day/day" /></a>
+
                         <tal:block repeat="display python:view.getOccurrenceDisplays(day)">
                             <div class="event" tal:attributes="title display/title_and_time">
                               <a tal:attributes="href display/url"
                                  tal:condition="display/viewable">
-                                  <tal:block replace="display/title" />
+                                  <tal:block replace="structure python:view.eventTextDisplay(display.title)" />
                               </a>
                               <tal:block condition="not:display/viewable" 
-                                         replace="display/title"/>
+                                         replace="structure python:view.eventTextDisplay(display.title)"/>
                             </div>
                         </tal:block>
                         <tal:block condition="python:view.hasMoreEvents(day)">
                             <div>
-                              <a tal:attributes="href dayurl" i18n:translate="More..." i18n:domain="chronos">
-                                More...
+                              <a tal:attributes="href dayurl">
+                                + <tal:block replace="python:view.countMoreEvents(day)" /> More
                               </a>
                             </div>
                         </tal:block>
-                            <div/>
+                     </tal:dontwastetime>
                         </td>
                     </tal:block>
                 </tal:block>
