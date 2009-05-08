@@ -9,15 +9,6 @@
                     site_properties view/site_properties;
                     dummy view/calcInfo">
 
-<h2 metal:define-macro="title"
-      tal:define="kssview context/@@collage_kss_helper"
-      tal:attributes="id string:${kssview/getUniqueIdentifier}-title;
-                      class python: kssview.getKssClasses('title')"
-      tal:condition="here/Title">
-    <span metal:define-slot="inside"
-          tal:replace="here/Title">title</span>
-  </h2>
-
 <div id="flbca-calendar">
     <!-- The calendar, rendered as a table -->
     <table class="ploneCalendar" summary="Calendar">
