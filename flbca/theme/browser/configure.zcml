@@ -45,7 +45,26 @@
      template="month.pt"
      class=".pages.CollageDateableMonthPage"
      layer="Products.Collage.interfaces.ICollageBrowserLayer"
-      />  
+      />
+
+    <browser:page
+     name="simple-portlet"
+     for="Products.ATContentTypes.content.folder.ATFolder"
+     permission="zope.Public"
+     template="folder_simple_portlet.pt"
+     class=".pages.CollageSimpleFolderPage"
+     layer="Products.Collage.interfaces.ICollageBrowserLayer"
+     />
+
+    <browser:page
+     name="listing-portlet"
+     for="Products.ATContentTypes.content.topic.ATTopic"
+     permission="zope.Public"
+     template="topic_listing_portlet.pt"
+     class=".pages.CollageTopicListingPortletPage"
+     layer="Products.Collage.interfaces.ICollageBrowserLayer"
+     />
+  
 
     <!-- Resource directory for images
       See flbca.theme/browser/images/README.txt

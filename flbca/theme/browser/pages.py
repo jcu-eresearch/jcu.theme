@@ -2,11 +2,19 @@ from p4a.z2utils.patches import apply_patches
 apply_patches()
 
 from zope.component import getMultiAdapter
-from Products.Collage.browser.views import BaseView
+from Products.Collage.browser.views import BaseView, PortletView
 from dateable.chronos.browser.month import MonthView
 from dateable.chronos.browser.base_view import DAYS, MONTHS
 import datetime
 import textwrap
+
+#what we want to show folder contents without descriptions
+class CollageSimpleFolderPage(PortletView):
+     title = u'Simple Folder Portlet'
+
+#what we want to only show topic results (and their details) in a listing
+class CollageTopicListingPortletPage(PortletView):
+     title = u'Listing Portlet'
 
 class CollageDateableMonthPage(BaseView, MonthView):
      title = u'p4a-calendar'

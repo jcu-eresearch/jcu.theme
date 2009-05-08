@@ -7,6 +7,21 @@
 
 /* YOUR CSS RULES START HERE */
 
+#collage .collage-item .vevent .documentByLine {
+    display: block;
+    color: #76797C;
+    font-size:80%;
+}
+
+#collage .collage-item .portlet .portletItem dd {
+    line-height:1.2em;
+    margin-bottom:0.5em;
+}
+
+#collage .portletItem {
+    padding:0 1em;
+}
+
 body {
     min-width: 900px;
 }
