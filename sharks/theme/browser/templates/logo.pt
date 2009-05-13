@@ -4,5 +4,3 @@
    i18n:domain="sharks">
     <img src="logo.jpg" alt=""
          tal:replace="structure view/logo_tag" /></a>
-
-<h1 id="portal-byline">Collaboration between research and industry</h1>
