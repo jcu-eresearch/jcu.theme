@@ -2,7 +2,7 @@ title:string=Sharks Theme's color, font, logo and border defaults
 
 plone_skin:string=Sharks Theme
 
-logoName:string=logo.png
+logoName:string=logo.jpg
 
 fontFamily:string=Arial,Helvetica,sans-serif;
 fontBaseSize:string=69%
