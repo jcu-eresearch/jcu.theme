@@ -1,7 +1,9 @@
 /* Stylesheet for the 'Sharks Theme' Plone theme */
 
 body {
-	background-color:#ccc;
+	background-color:#0f4aa3;
+	background-image:url(++resource++sharks.theme.images/body_bg_water.jpg);
+	background-repeat:repeat-x;
 	font-size:small;
 	font-size-adjust:none;
 	font-stretch:normal;
@@ -14,11 +16,10 @@ body {
 }
 
 #visual-portal-wrapper {
-        max-width:1024px;
-        min-width:800px;
+        width:970px;
         margin:0 auto;
         background-color: #FFF;
-        border: 1px solid #aaa;
+        border: none;
         border-top: none;
 }
 
@@ -49,6 +50,10 @@ h1#portal-byline {
         background-repeat: repeat;
 }
 
+#portal-personaltools {
+	border-bottom: none;
+}
+
 #portal-globalnav li a {
 	font-size:small;
 	font-weight:bold;
@@ -59,6 +64,28 @@ h1#portal-byline {
 	text-transform:none;
 }
 
+#portal-breadcrumbs, .portletWrapper, #portal-footer {
+	background-image:url(++resource++sharks.theme.images/portal_drop_shadow.gif);
+	background-repeat: repeat-x;
+	border-bottom: none;
+}
+
+#portal-breadcrumbs {
+        background-color: #FFFFFF;
+	background-position: top center;
+	padding-top:5px;
+}
+
+#portal-footer {
+	padding:0.5em 0 2.25em;
+	background-position: bottom center;
+}
+
+.portletWrapper {
+	padding-bottom: 5px;
+	background-position: bottom center;
+}
+
 .actionMenu .actionMenuContent li a:hover {
-	color:#70a80a;
+	color:#436976;
 }

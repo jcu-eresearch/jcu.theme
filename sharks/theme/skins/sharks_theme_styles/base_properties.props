@@ -19,15 +19,15 @@ borderWidth:string=1px
 borderStyle:string=solid
 borderStyleAnnotations:string=dashed
 
-globalBorderColor:string=#8cacbb
+globalBorderColor:string=#A5C4D2
 globalBackgroundColor:string=#eff3f5
 globalFontColor:string=#436976
 
 headingFontFamily:string="Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
 
-contentViewBorderColor:string=#74ae0b
-contentViewBackgroundColor:string=#c6e6ae
-contentViewFontColor:string=#578308
+contentViewBorderColor:string=#9bc4b0
+contentViewBackgroundColor:string=#d3eee7
+contentViewFontColor:string=#5D9EAF
 
 inputFontColor:string=Black
 
