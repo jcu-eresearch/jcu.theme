@@ -89,3 +89,7 @@ h1#portal-byline {
 .actionMenu .actionMenuContent li a:hover {
 	color:#436976;
 }
+
+.state-internally_published {
+	color:#00AECF;
+}
