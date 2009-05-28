@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<object name="portal_actions" meta_type="Plone Actions Tool"
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+ <object name="user" meta_type="CMF Action Category">
+  <object name="my-folder" meta_type="CMF Action" i18n:domain="plone" insert-before="*">
+   <property name="title" i18n:translate="">My Folder</property>
+   <property name="description" i18n:translate=""></property>
+   <property
+      name="url_expr">string:${portal/portal_membership/getHomeUrl}</property>
+   <property name="icon_expr"></property>
+   <property
+      name="available_expr">python:(member is not None) and (portal.portal_membership.getHomeFolder() is not None)</property>
+   <property name="permissions">
+    <element value="View"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+  <object name="business" meta_type="CMF Action" insert-after="my-folder">
+   <property name="title">School of Business</property>
+   <property name="description"></property>
+   <property name="url_expr">string:${portal_url}/business</property>
+   <property name="icon_expr"></property>
+   <property
+      name="available_expr">python:member is not None and '613staff' in here.getGroupMembershipsForUser()</property>
+   <property name="permissions">
+    <element value="View"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+  <object name="law" meta_type="CMF Action" insert-after="business">
+   <property name="title">School of Law</property>
+   <property name="description"></property>
+   <property name="url_expr">string:${portal_url}/law</property>
+   <property name="icon_expr"></property>
+   <property
+      name="available_expr">python:member is not None and '614staff' in here.getGroupMembershipsForUser()</property>
+   <property name="permissions">
+    <element value="View"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+  <object name="soca" meta_type="CMF Action" insert-after="law">
+   <property name="title">School of Creative Arts</property>
+   <property name="description"></property>
+   <property name="url_expr">string:${portal_url}/soca</property>
+   <property name="icon_expr"></property>
+   <property
+      name="available_expr">python:member is not None and '612staff' in here.getGroupMembershipsForUser()</property>
+   <property name="permissions">
+    <element value="View"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+  <object name="faculty" meta_type="CMF Action" insert-after="soca">
+   <property name="title">Faculty</property>
+   <property name="description"></property>
+   <property name="url_expr">string:${portal_url}/faculty</property>
+   <property name="icon_expr"></property>
+   <property
+      name="available_expr">python:member is not None and '610staff' in here.getGroupMembershipsForUser()</property>
+   <property name="permissions">
+    <element value="View"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+ </object>
+</object>
+

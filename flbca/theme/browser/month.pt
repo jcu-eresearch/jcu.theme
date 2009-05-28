@@ -26,8 +26,8 @@
                               tal:omit-tag=""
                               id="calendar-year">year</span>
 
-                        <a href="#" tal:attributes="href here/absolute_url;">
-                         <img src="++resource++chronos_support/calendar_icon.gif" />
+                        <a href="#" tal:attributes="href here/absolute_url;" title="Go to calendar">
+                         <img alt="Calendar icon" src="++resource++chronos_support/calendar_icon.gif" />
                         </a>
                     </span>
                 </th>
@@ -55,7 +55,7 @@
                     <tal:block define="day python:view.getDateForWeekDay(week, weekday);
                                        dayurl python:view.getDateUrl(day, 'day');">
                         <td tal:attributes="class python:day.month == view.month and 
-                                                  'monthDay' or 'dayNotInThisMonth';">
+                                                  'monthDay' or 'dayNotInThisMonth';"><div class="monthDayContent">
 
                 <tal:dontwastetime condition="python:day.month == view.month">
 
@@ -79,7 +79,7 @@
                             </div>
                         </tal:block>
                      </tal:dontwastetime>
-                        </td>
+                        </div></td>
                     </tal:block>
                 </tal:block>
             </tr>
