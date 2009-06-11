@@ -37,13 +37,10 @@ height:100%;
     display:none;
 }
 
-#collage .documentActions
-}
-
 #collage .collage-item .vevent .documentByLine {
     display: block;
     color: #76797C;
-    font-size:80%;
+    font-size:75%;
 }
 
 #collage .collage-item .portlet .portletItem dd {
