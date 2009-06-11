@@ -119,7 +119,7 @@ body {
 }
 
 #flbca-calendar #chronos-month td {
-    height: 20px;
+    height: 6em;
 }
 
 #flbca-calendar #chronos-month .weekHeader {
