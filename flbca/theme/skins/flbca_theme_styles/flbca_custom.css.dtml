@@ -11,13 +11,18 @@
 /* Out, out you demons of Internet Explorer! */
 
 /* Hack for IE7 to play nice with Collage on the homepage */
-*:first-child+html .section-home-page .documentEditable {
+*:first-child+html .section-home-page .documentEditable, *:first-child+html .section-forum #content {
     width:98%;
 }
 
 /* Hack for IE7 to remove unauthenticated icons */
 *:first-child+html .navTree {
     list-style-image: none;
+}
+
+/* Hack for IE7 to fix the width of the calendars */
+*:first-child+html .section-calendar .ploneCalendar #chronos-month td {
+    width:12%;
 }
 
 * html #collage .collage-row {
