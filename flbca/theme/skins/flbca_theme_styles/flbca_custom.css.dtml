@@ -11,7 +11,7 @@
 /* Out, out you demons of Internet Explorer! */
 
 /* Hack for IE7 to play nice with Collage on the homepage */
-*:first-child+html .section-home-page .documentEditable, *:first-child+html .section-forum #content {
+*:first-child+html .section-home-page .documentEditable, *:first-child+html .section-home-page .documentContent, *:first-child+html .section-forum #content {
     width:98%;
 }
 
