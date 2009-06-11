@@ -33,6 +33,13 @@ height:100%;
     width: 100%; 
 }
 
+.section-home-page #collage #plone-document-byline, .section-home-page #collage .documentActions, .section-home-page #collage #review-history {
+    display:none;
+}
+
+#collage .documentActions
+}
+
 #collage .collage-item .vevent .documentByLine {
     display: block;
     color: #76797C;
