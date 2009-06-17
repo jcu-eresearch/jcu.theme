@@ -511,6 +511,17 @@ div.eventlist h1 {
 
 /* end eventlist */
 
+.forumTitleCell {
+    width: 50%;
+}
+
+.forumConversationsCell {
+    width: 10%;
+}
+
+.forumMostRecentCell {
+    width: 40%
+}
 
 
 /* YOUR CSS RULES STOP HERE */
