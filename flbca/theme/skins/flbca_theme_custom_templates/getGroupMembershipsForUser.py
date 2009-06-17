@@ -8,6 +8,4 @@
 ##title=Get the current user's group memberships
 ##
 
-mtool = context.portal_membership
-return mtool.getMemberById(mtool.getAuthenticatedMember().getId()).getGroups()
-
+return context.portal_membership.getAuthenticatedMember().getGroups()
