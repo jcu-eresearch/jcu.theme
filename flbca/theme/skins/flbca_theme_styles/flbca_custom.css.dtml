@@ -524,6 +524,10 @@ div.eventlist h1 {
     width: 40%
 }
 
+.p4acalendar .eventlist {
+    border: 1px solid #8CACBB;
+    padding: 0 1em;
+}
 
 /* YOUR CSS RULES STOP HERE */
 
