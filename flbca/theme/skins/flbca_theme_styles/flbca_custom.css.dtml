@@ -505,8 +505,9 @@ div.eventlist h1 {
 	padding-top: 3px;
 }
 
-.p4acalendar .eventlist A {
+.p4acalendar .eventlist a {
     font-weight: bold;
+    margin-bottom: 0.5em;
 }
 
 /* end eventlist */
