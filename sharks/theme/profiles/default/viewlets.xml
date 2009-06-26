@@ -28,11 +28,9 @@
          Note: insert-before and -after accept the value "*" which means
          "all".
          -->
-    <viewlet name="sharks.theme.footer"
-             insert-before="*" />
+    <viewlet name="sharks.theme.footer" insert-before="*" />
+    <viewlet name="sharks.theme.colophon" insert-after="sharks.theme.footer" />
   </order>
-
-
 
   <hidden manager="plone.portalheader" skinname="Sharks Theme">
       <viewlet name="plone.logo" />
@@ -40,6 +38,7 @@
 
   <hidden manager="plone.portalfooter" skinname="Sharks Theme">
     <viewlet name="plone.footer" />
+    <viewlet name="plone.colophon" />
   </hidden>
 
   <order manager="plone.portalheader" skinname="Sharks Theme">
