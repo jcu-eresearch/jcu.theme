@@ -35,6 +35,7 @@
    <order manager="plone.portalfooter" skinname="FLBCA Theme"
             based-on="Plone Default">
       <viewlet name="flbca.theme.footer" insert-before="*" />
+      <viewlet name="flbca.theme.colophon" insert-after="flbca.theme.footer" />
    </order>
 
   <hidden manager="plone.portalheader" skinname="FLBCA Theme">
@@ -44,6 +45,7 @@
 
   <hidden manager="plone.portalfooter" skinname="FLBCA Theme">
       <viewlet name="plone.footer" />
+      <viewlet name="plone.colophon" />
   </hidden>
 
 </object>

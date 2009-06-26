@@ -33,6 +33,15 @@
         permission="zope2.View"
         />
 
+    <browser:viewlet
+        name="flbca.theme.colophon"
+        for="*"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        layer=".interfaces.IThemeSpecific"
+        template="colophon.pt"
+        permission="zope.Public"
+        />
+
 
 
     <!-- Zope 3 browser resources -->
