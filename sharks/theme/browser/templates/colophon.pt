@@ -18,7 +18,7 @@
       <div class="colophonWrapper">
       <ul>
         <li>  
-           <a href="http://eresearch.jcu.edu.au/gateway"><img width="80" height="24" title="JCU eResearch Centre" alt="JCU eResearch Centre" src="eresearch-logo-sml.gif" tal:attributes="src string:${here/portal_url}/eresearch-logo-sml.gif" /> Designed and developed by JCU eResearch Centre</a>
+           <a href="http://eresearch.jcu.edu.au/gateway"><img width="80" height="24" title="JCU eResearch Centre" alt="JCU eResearch Centre" src="eresearch-logo-sml.gif" tal:attributes="src string:${here/portal_url}/eresearch-logo-sml.gif" /></a> &nbsp;<a href="http://eresearch.jcu.edu.au/gateway">Designed and developed by JCU eResearch Centre</a>
         </li>
         <li>
           <a href="http://plone.org"
