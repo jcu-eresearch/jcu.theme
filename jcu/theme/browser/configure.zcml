@@ -25,6 +25,15 @@
          />
 
      <browser:viewlet
+        name="jcu.colophon"
+        for="*"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        layer=".interfaces.IThemeSpecific"
+        template="colophon.pt"
+        permission="zope.Public"
+        />
+
+     <browser:viewlet
          name="jcu.global_sections"
          manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
          class=".viewlets.GlobalSectionsViewlet"

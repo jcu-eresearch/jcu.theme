@@ -35,8 +35,8 @@
   </order>
   <order manager="plone.portalfooter" skinname="JCU Theme"
          based-on="Plone Default">
-    <viewlet name="jcu.footer"
-             insert-before="*" />
+    <viewlet name="jcu.footer" insert-before="*" />
+    <viewlet name="jcu.colophon" insert-after="jcu.footer" />
   </order>
 
   <hidden manager="plone.portalheader" skinname="JCU Theme">
@@ -47,6 +47,7 @@
   </hidden>
   <hidden manager="plone.portalfooter" skinname="JCU Theme">
     <viewlet name="plone.footer" />
+    <viewlet name="plone.colophon" />
   </hidden>
 
 </object>
