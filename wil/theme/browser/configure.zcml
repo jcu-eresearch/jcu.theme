@@ -41,6 +41,16 @@
 	 layer=".interfaces.IThemeSpecific"
          permission="zope2.View"
          />
+    
+     <browser:viewlet
+        name="wil.theme.colophon"
+        for="*"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        layer=".interfaces.IThemeSpecific"
+        template="templates/colophon.pt"
+        permission="zope.Public"
+        />
+
 
     <!-- Zope 3 browser resources -->
 

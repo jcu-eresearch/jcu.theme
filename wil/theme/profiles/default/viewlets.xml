@@ -28,8 +28,8 @@
          Note: insert-before and -after accept the value "*" which means
          "all".
          -->
-    <viewlet name="wil.theme.footer"
-             insert-before="*" />
+    <viewlet name="wil.theme.footer" insert-before="*" />
+    <viewlet name="wil.theme.colophon" insert-after="wil.theme.footer" />
   </order>
 
 
@@ -40,6 +40,7 @@
 
   <hidden manager="plone.portalfooter" skinname="Wil Theme">
     <viewlet name="plone.footer" />
+    <viewlet name="plone.colophon" />
   </hidden>
 
   <order manager="plone.portalheader" skinname="Wil Theme">
