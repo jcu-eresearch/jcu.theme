@@ -2,7 +2,7 @@ title:string=Wil Theme's color, font, logo and border defaults
 
 plone_skin:string=Wil Theme
 
-logoName:string=logo.gif
+logoName:string=logo.png
 
 fontFamily:string=Arial,Helvetica,sans-serif;
 fontBaseSize:string=69%
