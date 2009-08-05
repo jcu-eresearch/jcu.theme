@@ -8,8 +8,6 @@
 /* YOUR CSS RULES START HERE */
 
 
-body { background-color: #afafaf; }
-
 /* Accessibility elements, applied by JS */
 body.largeText { font-size: 95%; }
 body.smallText { font-size: 60%; }

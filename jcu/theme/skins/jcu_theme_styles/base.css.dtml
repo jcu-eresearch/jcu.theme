@@ -12,7 +12,7 @@ body {
     font: &dtml-fontBaseSize; <dtml-var fontFamily>;
     color: &dtml-fontColor;;
     width: &dtml-pageWidth;;
-    background: transparent url(&dtml-portal_url;/bg_grey_gradient.png) repeat-x top center;
+    background: white url(&dtml-portal_url;/bg_grey_gradient.png) repeat-x top center;
     margin: 0 auto;
     padding: 0;
 }
