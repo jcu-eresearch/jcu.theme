@@ -42,13 +42,13 @@ def createGoogleCalendarEvent(self, email, password, calendar_url, start_time, e
     """
 
 	#Create and send the relevant requests
-	req = urllib2.Request(calendar_url, event, headers)
+	req = urllib2.Request(calendar_url, eventContent, headers)
 	
 	try:
 		calresponse = urllib2.urlopen(req)
 
 		#Google requires a 2nd request to the relevant url
-		req2 = urllib2.Request(calresponse.geturl(), event, headers)
+		req2 = urllib2.Request(calresponse.geturl(), eventContent, headers)
 		try:
 			calresponse2 = urllib2.urlopen(req2)
        		#ignore the 'error' since it actually means it worked
