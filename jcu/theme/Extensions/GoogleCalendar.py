@@ -52,4 +52,8 @@ def createGoogleCalendarEvent(self, email, password, calendar_url, start_time, e
 		try:
 			calresponse2 = urllib2.urlopen(req2)
        		#ignore the 'error' since it actually means it worked
+		except Exception, exception2:
+			self.plone_log(exception2)
+	except Exception, exception1:
+		self.plone_log(exception1)
 
