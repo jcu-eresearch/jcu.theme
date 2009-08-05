@@ -51,10 +51,5 @@ def createGoogleCalendarEvent(self, email, password, calendar_url, start_time, e
 		req2 = urllib2.Request(calresponse.geturl(), event, headers)
 		try:
 			calresponse2 = urllib2.urlopen(req2)
-		except HTTPError, e:
        		#ignore the 'error' since it actually means it worked
-			continue
-	except HTTPError, err:
-		continue
-
 
