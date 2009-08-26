@@ -272,7 +272,7 @@ form.searchPage input.searchButton {
 #livesearchLegend {
     line-height: 1em;
     margin-top: -2em;
-    margin-left: -0.1em;
+    margin-left: -1px;
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
     border-bottom: 0;
 }
