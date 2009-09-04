@@ -1,0 +1,51 @@
+itle:string=JCU Faculty Theme's color, font, logo and border defaults
+
+plone_skin:string=JCU Faculty Theme
+
+logoName:string=logo.gif
+homelink:string=http://www.jcu.edu.au/
+sitelogoName:string=sitelogo.jpg
+pageWidth:string=90%
+
+fontFamily:string=Arial, Helvetica, sans-serif
+fontBaseSize:string=small
+fontColor:string=Black
+fontSmallSize:string=90%
+
+backgroundColor:string=white
+
+linkColor:string=#187dc0
+linkActiveColor:string=Red
+linkVisitedColor:string=#808080
+
+borderWidth:string=1px
+borderStyle:string=solid
+borderStyleAnnotations:string=dashed
+
+globalBorderColor:string=#DDDDDD
+globalBackgroundColor:string=#EFF3F5
+globalFontColor:string=#436976
+
+globalNavFontSize:string=small
+headingFontFamily:string=Arial, Helvetica, sans-serif
+
+contentViewBorderColor:string=#CCCCCC
+contentViewBackgroundColor:string=#DEE7EC
+contentViewFontColor:string=#015883
+
+inputFontColor:string=Black
+
+textTransform:string=none
+
+evenRowBackgroundColor:string=transparent
+oddRowBackgroundColor:string=tansparent
+
+notifyBorderColor:string=#ffa500
+notifyBackgroundColor:string=#ffce7b
+
+discreetColor:string=#76797c
+helpBackgroundColor:string=#ffffe1
+
+portalMinWidth:string=70em
+columnOneWidth:string=14em
+columnTwoWidth:string=14em

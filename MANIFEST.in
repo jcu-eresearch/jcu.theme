@@ -1,2 +1,2 @@
-recursive-include flbca *
+recursive-include jcu *
 global-exclude *pyc

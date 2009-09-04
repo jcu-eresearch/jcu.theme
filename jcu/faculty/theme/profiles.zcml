@@ -1,0 +1,23 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="jcu.faculty.theme">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="JCU Faculty Theme"
+      directory="profiles/default"
+      description='Extension profile for the "JCU Faculty Theme" Plone theme.'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="JCU Faculty Theme Uninstall Profile"
+      directory="profiles/uninstall"
+      description='Removes the "JCU Faculty Theme" Plone theme.'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      />
+
+</configure>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<object name="portal_actions" meta_type="Plone Actions Tool"
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n" i18n:domain="jcu">
+ <object name="user" meta_type="CMF Action Category">
+  <object name="my-folder" meta_type="CMF Action" i18n:domain="plone" remove="True" />
+  <object name="business" meta_type="CMF Action" remove="True" />
+  <object name="law" meta_type="CMF Action" remove="True" />
+  <object name="soca" meta_type="CMF Action" remove="True" />
+  <object name="faculty" meta_type="CMF Action" remove="True" />
+ </object>
+</object>
+
