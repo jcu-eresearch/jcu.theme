@@ -15,66 +15,6 @@
    </property>
    <property name="visible">True</property>
   </object>
-  <object name="business" meta_type="CMF Action" insert-after="my-folder">
-   <property name="title">School of Business</property>
-   <property name="description"></property>
-   <property name="url_expr">string:${portal_url}/business</property>
-   <property name="icon_expr"></property>
-   <property
-      name="available_expr">python:member is not None and '613staff' in here.getGroupMembershipsForUser()</property>
-   <property name="permissions">
-    <element value="View"/>
-   </property>
-   <property name="visible">True</property>
-  </object>
-  <object name="law" meta_type="CMF Action" insert-after="business">
-   <property name="title">School of Law</property>
-   <property name="description"></property>
-   <property name="url_expr">string:${portal_url}/law</property>
-   <property name="icon_expr"></property>
-   <property
-      name="available_expr">python:member is not None and '614staff' in here.getGroupMembershipsForUser()</property>
-   <property name="permissions">
-    <element value="View"/>
-   </property>
-   <property name="visible">True</property>
-  </object>
-  <object name="soca" meta_type="CMF Action" insert-after="law">
-   <property name="title">School of Creative Arts</property>
-   <property name="description"></property>
-   <property name="url_expr">string:${portal_url}/soca</property>
-   <property name="icon_expr"></property>
-   <property
-      name="available_expr">python:member is not None and '612staff' in here.getGroupMembershipsForUser()</property>
-   <property name="permissions">
-    <element value="View"/>
-   </property>
-   <property name="visible">True</property>
-  </object>
-  <object name="faculty" meta_type="CMF Action" insert-after="soca">
-   <property name="title">Faculty</property>
-   <property name="description"></property>
-   <property name="url_expr">string:${portal_url}/faculty</property>
-   <property name="icon_expr"></property>
-   <property
-      name="available_expr">python:member is not None and '610staff' in here.getGroupMembershipsForUser()</property>
-   <property name="permissions">
-    <element value="View"/>
-   </property>
-   <property name="visible">True</property>
-  </object>
-  <object name="help" meta_type="CMF Action" insert-before="logout">
-   <property name="title">Help</property>
-   <property name="description"></property>
-   <property name="url_expr">string:${portal_url}/help</property>
-   <property name="icon_expr"></property>
-   <property
-      name="available_expr">python:member is not None</property>
-   <property name="permissions">
-      <element value="View"/>
-   </property>
-   <property name="visible">True</property>
-  </object>
  </object>
 </object>
 
