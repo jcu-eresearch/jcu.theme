@@ -67,9 +67,9 @@ body {
     white-space: nowrap;
 }
 
-#section-logo img {
+#section-logo img, #site-logo img {
     border:0 none;
-    margin:1em 0 1em 1em;
+    margin:0.5em 0 1em 0.2em;
     padding:0;
 }
 
