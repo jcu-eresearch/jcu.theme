@@ -30,11 +30,12 @@ class LogoViewlet(BaseLogoViewlet):
         portal_state = getMultiAdapter((self.context, self.request),
                                             name=u'plone_portal_state')
         portal = portal_state.portal()
+	portal_id = portal.getId()
 
         self.home_url = portal.restrictedTraverse('base_properties').homelink
 
         sitelogoName = portal.restrictedTraverse('base_properties').sitelogoName
-        self.sitelogo_tag = portal.restrictedTraverse(sitelogoName).tag()
+        self.sitelogo_tag = portal.restrictedTraverse(portal_id+'-'+sitelogoName).tag()
 
         #For the dynamic logo
         context_state = getMultiAdapter((self.context, self.request),
@@ -55,7 +56,7 @@ class LogoViewlet(BaseLogoViewlet):
 
         self.is_not_home = ('index_html' != self.selected_portal_tab)
   
-        sectionlogo_image = portal.restrictedTraverse('section-'+self.selected_portal_tab+'.jpg', None)
+        sectionlogo_image = portal.restrictedTraverse(portal_id+'-section-'+self.selected_portal_tab+'.jpg', None)
 
         if sectionlogo_image:
             self.sectionlogo_tag = sectionlogo_image.tag()
