@@ -3,11 +3,12 @@
       Copyright &copy; 1995 to 
       <span tal:omit-tag=""
             tal:define="now modules/DateTime/DateTime"
-            tal:content="now/year" />, James Cook University. All rights reserved.</a></p>
+            tal:content="now/year" />, James Cook University. All rights reserved. ABN 46253211955</a>
+  </p>
    <p>
-      <a href="http://www.jcu.edu.au/app/feedback/">Provide Feedback</a>&nbsp;
-      <a href="http://www.jcu.edu.au/top/jcuprd_013723.html">Terms of use</a>&nbsp;
-      <a href="http://www.jcu.edu.au/top/jcuprd_013722.html">Privacy statement</a><br />
-      CRICOS Provider Code: 00117J &nbsp; ABN 46253211955
+       <a href="http://www.jcu.edu.au/app/feedback/" tooltip="linkalert-tip">Feedback</a>&nbsp; 
+       <a href="http://www.jcu.edu.au/top/JCUPRD_013723" tooltip="linkalert-tip">Terms of use</a>&nbsp; 
+       <a href="http://www.jcu.edu.au/top/JCUPRD_013722" tooltip="linkalert-tip">Privacy statement</a>&nbsp;  
+       <a href="http://cricos.deewr.gov.au/Institution/InstitutionDetails.aspx?ProviderID=117" tooltip="linkalert-tip">CRICOS Provider Code:00117J</a>
    </p>
 </div>
