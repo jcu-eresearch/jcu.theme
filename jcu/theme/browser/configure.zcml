@@ -49,7 +49,54 @@
         class=".viewlets.LogoViewlet"
         layer=".interfaces.IThemeSpecific"
         permission="zope2.View"
+	/>
+
+    <!-- The breadcrumbs -->
+    <browser:viewlet
+        name="jcu.path_bar"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        class=".viewlets.PathBarViewlet"
+        permission="zope2.View"
         />
+
+    <browser:viewlet
+        name="plone.personal_bar"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class="plone.app.layout.viewlets.common.PersonalBarViewlet"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+	/>
+
+    <browser:viewlet
+        name="plone.contentactions"
+        for="*"
+        manager="plone.app.layout.viewlets.interfaces.IContentViews"
+        template="contentactions_blank.pt"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+	/>
+
+    <browser:viewlet
+        name="plone.contentactions"
+        for="*"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        manager="plone.app.layout.viewlets.interfaces.IContentViews"
+        class="plone.app.layout.viewlets.common.ContentActionsViewlet"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="plone.contentactions"
+        for="*"
+        view="plone.app.content.browser.interfaces.IFolderContentsView"
+        manager="plone.app.layout.viewlets.interfaces.IContentViews"
+        class="plone.app.layout.viewlets.common.ContentActionsViewlet"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+        />
+
+
 
 
     <!-- Zope 3 browser resources -->

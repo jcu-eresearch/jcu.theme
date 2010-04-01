@@ -1,14 +1,11 @@
 <div id="portal-footer" metal:define-macro="portal_footer" i18n:domain="plone">
-   <p><a href="http://www.jcu.edu.au/top/jcuprd_013723.html">
-      Copyright &copy; 1995 to 
-      <span tal:omit-tag=""
+    <p>Copyright &copy; 1995 to <span tal:omit-tag=""
             tal:define="now modules/DateTime/DateTime"
-            tal:content="now/year" />, James Cook University. All rights reserved. ABN 46253211955</a>
-  </p>
-   <p>
-       <a href="http://www.jcu.edu.au/app/feedback/" tooltip="linkalert-tip">Feedback</a>&nbsp; 
-       <a href="http://www.jcu.edu.au/top/JCUPRD_013723" tooltip="linkalert-tip">Terms of use</a>&nbsp; 
-       <a href="http://www.jcu.edu.au/top/JCUPRD_013722" tooltip="linkalert-tip">Privacy statement</a>&nbsp;  
-       <a href="http://cricos.deewr.gov.au/Institution/InstitutionDetails.aspx?ProviderID=117" tooltip="linkalert-tip">CRICOS Provider Code:00117J</a>
-   </p>
+            tal:content="now/year" />, James Cook University. All rights reserved. ABN 46253211955</p>
+    <p>Member of <a href="http://www.irua.edu.au">Innovative Research Universities</a></p>
+    <p><a href="http://www.jcu.edu.au/app/feedback/">Feedback</a>&nbsp;|&nbsp;
+       <a href="http://www.jcu.edu.au/top/JCUPRD_013723">Terms of use</a>&nbsp;|&nbsp;
+       <a href="http://www.jcu.edu.au/top/JCUPRD_013722">Privacy statement</a>&nbsp;|&nbsp;
+       <a href="http://cricos.deewr.gov.au/Institution/InstitutionDetails.aspx?ProviderID=117">CRICOS Provider Code:00117J</a>
+    </p>
 </div>

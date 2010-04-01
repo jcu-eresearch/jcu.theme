@@ -1,7 +1,6 @@
 from zope.component import getMultiAdapter
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from plone.app.layout.viewlets.common import ViewletBase, LogoViewlet, GlobalSectionsViewlet
-from plone.app.layout.viewlets.common import LogoViewlet as BaseLogoViewlet
+from plone.app.layout.viewlets import common
 
 # Sample code for a basic viewlet (In order to use it, you'll have to):
 # - Un-comment the following useable piece of code (viewlet python class).
@@ -22,14 +21,14 @@ from plone.app.layout.viewlets.common import LogoViewlet as BaseLogoViewlet
 #    def update(self):
 #        self.computed_value = 'any output'
 
-class GlobalSectionsViewlet(GlobalSectionsViewlet):
+class GlobalSectionsViewlet(common.GlobalSectionsViewlet):
     render = ViewPageTemplateFile('sections.pt')
 
-class LogoViewlet(BaseLogoViewlet):
+class LogoViewlet(common.LogoViewlet):
     render = ViewPageTemplateFile('logo.pt')
 
     def update(self):
-        BaseLogoViewlet.update(self)
+        common.LogoViewlet.update(self)
         portal_state = getMultiAdapter((self.context, self.request),
                                             name=u'plone_portal_state')
         portal = portal_state.portal()
@@ -38,4 +37,7 @@ class LogoViewlet(BaseLogoViewlet):
 
         sitelogoName = portal.restrictedTraverse('base_properties').sitelogoName
         self.sitelogo_tag = portal.restrictedTraverse(sitelogoName).tag()
+
+class PathBarViewlet(common.PathBarViewlet):
+    index = ViewPageTemplateFile('path_bar.pt')
 

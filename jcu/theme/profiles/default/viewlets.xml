@@ -28,10 +28,14 @@
          Note: insert-before and -after accept the value "*" which means
          "all".
          -->
+    <viewlet name="plone.personal_bar"
+             insert-after="plone.site_actions" />
     <viewlet name="jcu.logo"
              insert-before="plone.logo"/>
-    <viewlet name="jcu.global_sections" 
+    <viewlet name="jcu.global_sections"
              insert-before="plone.global_sections"/>
+    <viewlet name="jcu.path_bar"
+             insert-before="plone.path_bar"/>
   </order>
   <order manager="plone.portalfooter" skinname="JCU Theme"
          based-on="Plone Default">
@@ -46,6 +50,10 @@
   <hidden manager="plone.portalfooter" skinname="JCU Theme">
     <viewlet name="plone.footer" />
     <viewlet name="plone.colophon" />
+  </hidden>
+  <hidden manager="plone.portaltop" skinname="JCU Theme">
+    <viewlet name="plone.personal_bar"/>
+    <viewlet name="plone.path_bar"/>
   </hidden>
 
 </object>

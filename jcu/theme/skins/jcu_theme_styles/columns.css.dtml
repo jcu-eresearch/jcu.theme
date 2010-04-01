@@ -7,39 +7,39 @@
 
 /* <dtml-with base_properties> */
 
-#portal-columns {
-    width: 100% !important;
-    border-collapse: collapse;
-    border-spacing: 0;
-}
 #portal-column-one {
-    vertical-align: top;
-    width: <dtml-var columnOneWidth missing="16em">;
-    border-collapse: collapse;
-    padding: 0.5em 0 1em 1em;
+  float:left;
+  width: <dtml-var columnOneWidth missing="16em">;
+  padding: 0.5em;
 }
 #portal-column-content {
-    vertical-align: top;
-    border-collapse: collapse;
-    padding: 0.5em 1em 0 1em;
-    margin: 0em 0em 2em 0em;
+  padding: 1em 1.25em 0;
+  margin: 0em 0em 2em 0em;
+}
+#portal-column-content.sl {
+  margin-left:<dtml-var columnOneWidth missing="16em">;
+}
+#portal-column-content.sr {
+  margin-right:<dtml-var columnTwoWidth missing="16em">;
+}
+#portal-content-wrapper {
+  float:left;
+  width:100%;
 }
 #portal-column-two {
-    vertical-align: top;
-    width: <dtml-var columnTwoWidth missing="16em">;
-    border-collapse: collapse;
-    padding: 0.5em 1em 1em 0;
+  float:right;
+  width: <dtml-var columnTwoWidth missing="16em">;
+  padding: 0.5em;
 }
 
 /* fullscreen */
 body.fullscreen #portal-column-one,
 body.fullscreen #portal-column-two {
-    display: none;
+  display: none;
 }
-body.fullscreen #portal-column-content { 
-    width: 100%; 
-    margin: 0; 
-    padding: 0; 
+body.fullscreen #portal-column-content {
+  margin: 0;
+  padding: 0;
 }
 
 /* </dtml-with> */

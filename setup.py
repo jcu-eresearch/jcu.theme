@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.3.7'
+version = '1.0'
 
 setup(name='jcu.theme',
       version=version,
@@ -15,9 +15,9 @@ setup(name='jcu.theme',
         "Topic :: Software Development :: Libraries :: Python Modules",
         ],
       keywords='plone theme zope web',
-      author='Russell Sim',
-      author_email='russell.sim@jcu.edu.au',
-      url='http://www.hpc.jcu.edu.au/projects/plone',
+      author='David Breitkreutz',
+      author_email='david.breitkreutz@jcu.edu.au',
+      url='eresearch@jcu.edu.au',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['jcu'],

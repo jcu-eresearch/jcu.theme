@@ -27,8 +27,8 @@ textarea {
 input {
     font-family: <dtml-var fontFamily>;
     visibility: visible;
-    border: 1px solid #ddd;
-    border-color:#666 #ddd #ddd #666;
+    border: &dtml-lightBorderWidth; &dtml-lightBorderStyle; &dtml-lightBorderColor;;
+    border-color:&dtml-darkBorderColor; &dtml-lightBorderColor; &dtml-lightBorderColor; &dtml-darkBorderColor;;
     color: &dtml-inputFontColor;;
     vertical-align: middle;
     background: White url(&dtml-portal_url;/input_background.gif) repeat-x;
@@ -51,8 +51,8 @@ input[type=checkbox] {
 }
 
 
-#searchGadget {
-    border: &dtml-borderWidth; solid &dtml-globalBorderColor;;
+#searchGadget{
+    border: &dtml-lightBorderWidth; &dtml-lightBorderStyle; &dtml-lightBorderColor;;
 }
 
 button {
@@ -75,7 +75,7 @@ form {
     margin: 0;
 }
 fieldset {
-    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    border: &dtml-formBorderWidth; &dtml-formBorderStyle; &dtml-formBorderColor;;
     margin: 1em 0em 1em 0em;
     padding: 0em 1em 1em 1em;
     line-height: 1.5em;
@@ -108,7 +108,7 @@ dl.enableFormTabbing dd {
 }
 
 #login-form {
-    max-width: 30em; 
+    max-width: 20em; 
     margin: 0 auto;
 }
 #login-form .field {
@@ -137,7 +137,7 @@ dl.enableFormTabbing dd {
     font-size: &dtml-fontSmallSize;;
     padding: 1px 1px 1px 15px;
     text-transform: &dtml-textTransform;;
-    border: &dtml-borderWidth; solid &dtml-globalBorderColor;;
+    border: &dtml-formBorderWidth; &dtml-formBorderStyle; &dtml-formBorderColor;;
 }
 .context,
 .formControls .actionButtons .button,
@@ -148,7 +148,7 @@ dl.enableFormTabbing dd {
     font-size: &dtml-fontSmallSize;;
     padding: 1px 1px 1px 15px;
     text-transform: &dtml-textTransform;;
-    border: &dtml-borderWidth; solid &dtml-globalBorderColor;;
+    border: &dtml-formBorderWidth; &dtml-formBorderStyle; &dtml-formBorderColor;;
 }
 .destructive,
 .documentEditable * .destructive {
@@ -159,17 +159,20 @@ dl.enableFormTabbing dd {
     font-size: &dtml-fontSmallSize;;
     padding: 1px 1px 1px 15px;
     text-transform: &dtml-textTransform;;
-    border: &dtml-borderWidth; solid &dtml-globalBorderColor;;
+    border: &dtml-formBorderWidth; &dtml-formBorderStyle; &dtml-formBorderColor;;
 }
 input.searchButton {
     margin-bottom: &dtml-borderWidth; ! important;
-    color: &dtml-fontColor;;
+    color: &dtml-discreetColor;;
     font-size: &dtml-fontSmallSize;;
     background: &dtml-backgroundColor; url(&dtml-portal_url;/search_icon.gif) 2px 1px no-repeat;
     cursor: pointer;
     padding: 1px 1px 1px 19px;
     text-transform: &dtml-textTransform;;
-    border: &dtml-borderWidth; solid &dtml-globalBorderColor;;
+    border: &dtml-lightBorderWidth; &dtml-lightBorderStyle; &dtml-lightBorderColor;;
+}
+input.searchButton:hover {
+    color: &dtml-fontColor;;
 }
 .searchSection {
     color: &dtml-discreetColor;;
@@ -261,3 +264,4 @@ tr.selected {
 }
 
 /* </dtml-with> */
+

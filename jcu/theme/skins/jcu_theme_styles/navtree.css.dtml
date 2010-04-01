@@ -18,17 +18,32 @@
 
 
 /* New navtree styles */
+ul#portal-sitemap {
+margin: 1em 0;
+}
+ul#portal-sitemap li {
+margin: 0.5em 0;
+}
+ul#portal-sitemap li a {
+display: block;
+padding: 0.1em 0;
+}
+.navTreeItem {
+display: block;
+line-height: 1.2em;
+}
 
+/*
 .portletNavigationTree {
     padding: 0; 
     list-style-position: outside;
     list-style-type: none;
-    list-style-image: url(&dtml-portal_url;/hp_bullet.gif);
+    list-style-image: none; 
     line-height: 1em;
 }
 .navTree {
     list-style: none; 
-    list-style-image: url(&dtml-portal_url;/hp_bullet.gif);
+    list-style-image: none;
     margin-top: 1px;
 }
 .navTree li {
@@ -36,27 +51,22 @@
 }
 .navTreeItem {
     padding: 0;
-    margin: 0 15px;
-	display: list-item;
+    margin: 0;
+    display: block;
+    line-height:1.2em;
 }
 .navTreeItem a,
 dd.portletItem .navTreeItem a {
-    /*border: &dtml-borderWidth; &dtml-borderStyle; &dtml-backgroundColor;;*/
     display: block;
     text-decoration: none;
-    padding-top: 0.2em;
-    padding-bottom: 0.25em;
+    padding: 0.3em 0 0.3em 14px;
 }
 .navTreeItem a:hover,
 dd.portletItem .navTreeItem a:hover {
-    background-color: &dtml-globalBackgroundColor;;
     color: &dtml-globalFontColor;;
-    /*border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;*/
 }
 .navTreeCurrentItem {
-    background-color: &dtml-globalBackgroundColor;;
     color: &dtml-globalFontColor;;
-    /*border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor; !important;*/
 }
 li.navTreeCurrentItem {
     display: block;
@@ -66,13 +76,12 @@ li.navTreeCurrentItem {
 li.navTreeCurrentItem a,
 li.navTreeCurrentItem a:hover {
     display: block;
-    /*border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBackgroundColor;;*/
     min-height: 1.6em;
     line-height: 1.6em;
     height: auto;
-}
+} 
 
-/* Another workaround for broken Internet Explorer */
+ Another workaround for broken Internet Explorer 
 * html li.navTreeCurrentItem a,
 * html li.navTreeCurrentItem a:hover {
     height: 1.6em;
@@ -85,4 +94,7 @@ li.navTreeCurrentItem a:hover {
 .navTreeLevel4 { margin-left: 0.75em; }
 .navTreeLevel5 { margin-left: 0.75em; }
 
+*/
+
 /* </dtml-with> */
+

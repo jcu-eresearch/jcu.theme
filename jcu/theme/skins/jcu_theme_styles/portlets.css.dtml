@@ -1,4 +1,4 @@
-/*
+/*  
   This file is based on the ploneCustom.css.dtml file shipped with Plone.
 
   <dtml-with base_properties> (do not remove this)
@@ -13,11 +13,17 @@
     margin: 0 0 0 1em;
 }
 
+.portlets-manager .portletHeader {
+font-size: medium !important;
+}
+
 /* Main portlet elements */
-.portlet {
-    margin: 1px 0 1em 0;
-    background-color: &dtml-globalBackgroundColor;;
+.portlet, .inheritedPortlet {
+    margin: 0 0 1em;
+    background-color: &dtml-backgroundColor;;
     border: &dtml-borderWidth; &dtml-borderStyle; &dtml-globalBorderColor;;
+    padding-bottom: 0.5em;
+    border-bottom: 3px solid &dtml-lightBorderColor;;
 }
 .portlet a {
     text-decoration: none;
@@ -37,21 +43,23 @@
     color: &dtml-linkColor;;
 }
 .portletHeader {
-    background: &dtml-globalBackgroundColor; url(&dtml-portal_url;/portlet_top.gif) repeat-x scroll 0 0;
-    padding: 0em 1em;
+    /*background: &dtml-globalBackgroundColor; url(&dtml-portal_url;/portlet_top.gif) repeat-x scroll 0 0; */
+    padding: 0;
     text-transform: &dtml-textTransform;;
     font-weight: normal;
+    font-size: large;
     line-height: 1.6em;
+    color: &dtml-selectiveHeaderColor;;
 }
 .portletHeader a {
-    color: &dtml-fontColor;;
+    color: &dtml-linkColor;;
 }
 .portletItem {
-    margin: 0;
-    padding: 1em;
+    margin:0.2em 0;
+    padding:0.3em 0;
 }
 .portletItem ol {
-    margin: 0 0 0 1em;
+    margin: 0 0 0 2em;
 }
 .portletItemDetails {
     text-align: right;
@@ -70,6 +78,59 @@
 .portletTopRight {}
 .portletBottomLeft {}
 .portletBottomRight {}
+
+
+/* Navigation portlet specifics */
+
+dl.portletNavigationTree dt.portletHeader {
+padding-bottom: 0;
+margin-bottom: 0;
+}
+dl.portletNavigationTree {
+padding-bottom: 0;
+}
+dl.portletNavigationTree dd.portletItem ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+dl.portletNavigationTree dd.portletItem li ul {
+padding: 0;
+margin: 0;
+padding-left: 14px;
+}
+dl.portletNavigationTree dd.portletItem {
+border: none;
+}
+dl.portletNavigationTree dd.portletItem ul li a {
+display: block;
+margin: 0;
+padding: 0.3em 0 0.3em 14px;
+}
+dl.portletNavigationTree dd.portletItem ul li a img {
+vertical-align: text-top;
+}
+dl.portletNavigationTree dd.portletItem ul li a.navTreeCurrentItem {
+background: transparent url('&dtml-portal_url;/arrow-grey-left.png') 0 0.5em no-repeat;
+}
+dl.portletNavigationTree dd.portletItem ul li a.navTreeItemInPath {
+background: transparent url('&dtml-portal_url;/arrow-darkgrey-down.png') 0 0.5em no-repeat;
+}
+dl.portletNavigationTree dd.portletItem ul li a:hover {
+background: transparent url('&dtml-portal_url;/arrow-grey-left.png') 0 0.5em no-repeat;
+text-decoration: none;
+}
+
+dl.portletSearch form[style] {
+white-space:normal !important;
+}
+dl.portletSearch form .LSBox {
+text-align:left;
+}
+dl.portletSearch .LSResult {
+left:12em;
+top:2em;
+}
 
 /*
 ** Calendar elements - used in the calendar rendering
@@ -97,6 +158,9 @@
     text-align: center;
     line-height: 1.6em;
     border-bottom: none;
+}
+.portletCalendar dt.portletHeader {
+    font-size: medium;
 }
 .portletCalendar dd {
     margin: 0;
@@ -231,4 +295,5 @@ div.managedPortlet {
 
 /* Latest version of the documentation on pre-defined properties from Plone 
    can be found in CMFPlone/skins/plone_styles/ploneCustom.css.dtml */
+
 

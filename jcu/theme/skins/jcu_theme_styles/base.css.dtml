@@ -12,8 +12,9 @@ body {
     font: &dtml-fontBaseSize; <dtml-var fontFamily>;
     color: &dtml-fontColor;;
     width: &dtml-pageWidth;;
-    background: white url(&dtml-portal_url;/bg_grey_gradient.png) repeat-x top center;
-    margin: 0 auto;
+    min-width: &dtml-pageMinWidth;;
+    background: &dtml-backgroundColor; url(&dtml-portal_url;/bg_grey_gradient.png) repeat-x top center;
+    margin: 2em auto 0;
     padding: 0;
 }
 table {
@@ -43,8 +44,8 @@ hr {
     margin: 0.5em 0 1em 0;
 }
 h1, h2, h3, h4, h5, h6 {
-    color: #846A2A;
-    font-family: <dtml-var headingFontFamily>;
+    color: black;
+    font-family: &dtml-headingFontFamily;;
     margin: 0.75em 0 0.25em 0;
 }
 h1 a,
@@ -53,19 +54,27 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-    color: #846A2A ! important;
+    color: black !important;
     text-decoration: none;
 }
 h1 {
     /*font-size: 160%;*/
+    font-weight:normal;
+    line-height:1.5em;
+    margin-bottom:0.5em;
 }
 h2 {
     /*font-size: 150%;*/
+    font-family:Georgia,Times,"Times New Roman",serif;
+    font-weight:normal;
+    font-style:italic;
+    color:&dtml-selectiveHeaderColor;;
 }
 h3 {
     /*font-size: 125%;*/
     border-bottom: none;
     font-weight: bold;
+    font-weight: Arial,Helvetica,Verdana,sans-serif;
 }
 h4 {
     font-size: 110%;
@@ -152,4 +161,5 @@ del {
 
 /* Latest version of the documentation on pre-defined properties from Plone 
    can be found in CMFPlone/skins/plone_styles/ploneCustom.css.dtml */
+
 

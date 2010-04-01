@@ -18,26 +18,26 @@
 
 /* workflow state colors */
 
-.state-private {
-    color: Red !important;
+.state-private, .state-expired, .state-inactive {
+    color: Red;
+}
+.state-internal, .state-internally_published, .state-active {
+    color: #1C9F7C;
 }
 .state-visible {
-    color: #74AE0B !important;
+    color: #74AE0B;
 }
-.state-published {
+.state-published, .state-external {
     color: &dtml-linkColor; !important;
 }
-.state-pending {
-    color: #FFA500 !important;
-}
-.state-expired {
-    color: Red !important;
+.state-pending, .state-pending_externally {
+    color: #FFA500;
 }
 .syndicated {
-    color: #008000 !important;
+    color: #008000;
 }
 
-/* Nav Tree */
+/* Nav Tree */ 
 
 .navTreeItem {
 	display: block !important;
@@ -45,3 +45,4 @@
 }
 
 /* </dtml-with> */
+
