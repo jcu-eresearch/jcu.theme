@@ -19,6 +19,7 @@
 body.kupu {
     width: inherit;
     background: white none;
+    margin: 0 auto;
 }
 
 .kupu a {
