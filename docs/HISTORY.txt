@@ -4,6 +4,7 @@ Change History
 1.0 (2010-04-01)
 
     - Redesigned the site to conform with the new JCU look and feel [David]
+    - Updated discussion styles to add very light borders [David]
 
 0.2.1 (2008-09-11)
 	- Removed unicode character from footer

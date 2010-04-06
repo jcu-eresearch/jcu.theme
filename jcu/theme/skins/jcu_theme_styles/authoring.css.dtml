@@ -268,7 +268,7 @@ ul.configletDetails li label {
 }
 .comment {
     background: &dtml-evenRowBackgroundColor;; 
-    border: &dtml-borderWidth; &dtml-borderStyleAnnotations; &dtml-globalBorderColor;; 
+    border: &dtml-formBorderWidth; &dtml-borderStyleAnnotations; &dtml-formBorderColor;; 
     padding: 0.25em 1em 0.5em 1em;
     margin-bottom: 1em;
 }
@@ -290,6 +290,9 @@ ul.configletDetails li label {
     min-height: 1.6em;
     height: auto;
     line-height: 1.6em;	
+}
+.comment #reply div, .comment #delete div {
+    display:inline-block;
 }
 .commentBody {
     margin: 0 1em 1em 1em;
