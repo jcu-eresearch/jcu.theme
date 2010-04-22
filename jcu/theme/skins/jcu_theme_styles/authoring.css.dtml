@@ -49,11 +49,11 @@
     z-index: 1;
     display: inline-block;
     min-width: 3em;
-    padding: 0.25em 0.5em;
+    padding: 0.25em 0.5em !important;
     text-align: center;
 }
 .contentViews .selected a {
-    background-color: &dtml-contentViewHighlightBackgroundColor;;
+    background-color: &dtml-contentViewHighlightBackgroundColor; !important;
     border-bottom: &dtml-contentViewBackgroundColor; &dtml-borderWidth; &dtml-borderStyle;;
     color: &dtml-contentViewFontColor;;
     -moz-border-radius: 0.5em;
