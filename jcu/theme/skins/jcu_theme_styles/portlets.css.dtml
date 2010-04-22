@@ -50,6 +50,8 @@ font-size: medium !important;
     font-size: large;
     line-height: 1.6em;
     color: &dtml-selectiveHeaderColor;;
+    -moz-border-radius: 1em 1em 0 0;
+    -webkit-border-radius: 1em 1em 0 0;
 }
 .portletHeader a {
     color: &dtml-linkColor;;

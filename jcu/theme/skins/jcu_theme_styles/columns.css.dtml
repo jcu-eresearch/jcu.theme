@@ -13,7 +13,7 @@
   padding: 0.5em;
 }
 #portal-column-content {
-  padding: 1em 1.25em 0;
+  padding: 0.5em 1.25em 0;
   margin: 0em 0em 2em 0em;
 }
 #portal-column-content.sl {
