@@ -60,7 +60,7 @@
     -webkit-border-radius: 0.5em;
 }
 .contentViews li a:hover {
-    background: &dtml-contentViewHighlightBackgroundColor;;
+    background: &dtml-contentViewHighlightBackgroundColor; !important;
     color: &dtml-contentViewFontColor;;
     -moz-border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
