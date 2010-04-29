@@ -32,8 +32,6 @@
              insert-after="plone.site_actions" />
     <viewlet name="jcu.logo"
              insert-before="plone.logo"/>
-    <viewlet name="jcu.global_sections"
-             insert-before="plone.global_sections"/>
     <viewlet name="jcu.path_bar"
              insert-before="plone.path_bar"/>
   </order>
@@ -45,7 +43,6 @@
 
   <hidden manager="plone.portalheader" skinname="JCU Theme">
     <viewlet name="plone.logo" />
-    <viewlet name="plone.global_sections" />
   </hidden>
   <hidden manager="plone.portalfooter" skinname="JCU Theme">
     <viewlet name="plone.footer" />
