@@ -3,6 +3,8 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="jcu.theme">
 
+
+    <include package="Products.Collage" />
     <!-- 'JCU Theme' Zope 3 browser layer
       Register views, viewlets and resources for this layer to make sure
       they only apply to the 'JCU Theme' theme.
@@ -96,6 +98,15 @@
         permission="zope2.View"
         />
 
+
+    <browser:page
+	name="very-large-left"
+	for="Products.Collage.interfaces.ICollageRow"
+	permission="zope.Public"
+	template="collage_row_verylargeleft.pt"
+	class=".collage.VeryLargeLeftRowView"
+	layer="Products.Collage.interfaces.ICollageBrowserLayer"
+     />
 
 
 

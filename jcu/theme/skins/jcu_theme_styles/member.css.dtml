@@ -19,22 +19,22 @@
 /* workflow state colors */
 
 .state-private, .state-expired, .state-inactive {
-    color: Red;
+    color: Red !important;
 }
 .state-internal, .state-internally_published, .state-active {
-    color: #1C9F7C;
+    color: #1C9F7C !important;
 }
 .state-visible {
-    color: #74AE0B;
+    color: #74AE0B !important;
 }
 .state-published, .state-external {
     color: &dtml-linkColor; !important;
 }
 .state-pending, .state-pending_externally {
-    color: #FFA500;
+    color: #FFA500 !important;
 }
 .syndicated {
-    color: #008000;
+    color: #008000 !important;
 }
 
 /* Nav Tree */ 
