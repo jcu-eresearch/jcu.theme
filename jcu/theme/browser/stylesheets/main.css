@@ -1,2 +1,21 @@
 /* Stylesheet for the 'JCU Theme' Plone theme */
 
+#collage .two-columns-verylargeleft .block_1 {
+    width: 69%;
+}
+#collage .two-columns-verylargeleft .block_2 {
+    width: 30%;
+}
+
+#collage .three-columns-verylargeleft .block_1 {
+    width: 69%;
+}
+
+#collage .three-columns-verylargeleft .block_2 {
+  width: 9%;
+}
+
+#collage .three-columns-verylargeleft .block_3 {
+  width: 10%;
+}
+
