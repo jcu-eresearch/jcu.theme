@@ -1,5 +1,5 @@
-jcu.theme.egg-info
 *.pyc
 *.pyo
 build
 dist
+*.egg-info
