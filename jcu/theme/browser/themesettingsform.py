@@ -109,7 +109,12 @@ class ThemeSettingsView(BrowserView):
         #Loop while we don't have a theme name yet, traversing up to the
         #parents of our context
         while theme_name is None:
-            theme_values = IThemeSettingsManager(current_aq).theme_values()
+            try:
+                theme_values = IThemeSettingsManager(current_aq).theme_values()
+            except:
+                theme_name = ''
+                break;
+
             if 'theme_name' in theme_values and \
                'ignore_selection' in theme_values and \
                theme_values['ignore_selection'] is False:

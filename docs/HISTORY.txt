@@ -3,6 +3,8 @@ Change History
 
 1.0.1 (2010-07-xx)
 
+    - Fixed issue with portlet assignments and theming (TypeError)
+    [David]
     - Fixed issue with missing JCU theme action (tab) 
     [David]
     - Adding CSS for z3c.form action elements
