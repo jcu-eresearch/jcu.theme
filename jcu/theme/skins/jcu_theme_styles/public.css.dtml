@@ -472,7 +472,7 @@ border-right: 0px none;
 }
 .breadcrumbSeparator {
     font-size: 120%;
-background-image:url(http://cms.jcu.edu.au/idc/groups/public/documents/webgraphics/nulook_bullet.gif);
+background-image:url(&dtml-portal_url;/nulook_bullet.gif);
 background-position:0 top;
 background-repeat:no-repeat;
 display:inline-block;
