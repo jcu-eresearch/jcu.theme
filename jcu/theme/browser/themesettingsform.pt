@@ -1,0 +1,49 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="jcu.theme">
+<body>
+   <metal:main fill-slot="main">
+    <tal:main-macro metal:define-macro="main"
+                    tal:define="contents view/contents;
+                                context_state context/@@plone_context_state;">
+
+    <div class="portalMessage"
+         tal:condition="view/status | nothing" tal:content="view/status">
+    </div>
+
+    <h1 tal:content="view/label">Configuration</h1>
+
+     <dl class="portalMessage info" tal:condition="context_state/is_default_page">
+         <dt i18n:translate="">
+             Info
+         </dt>
+         <dd>
+             You are adjusting the theming for a default view in a container.
+             To adjust them for the entire container,
+             <a tal:define="folder context_state/folder"
+                tal:attributes="href string:${folder/absolute_url}/@@edit_theming_settings">go here</a>.
+         </dd>
+     </dl>
+
+
+      <p class="discreet" i18n:translate=""
+         tal:condition="view/description"
+         tal:content="view/description">
+        Description
+      </p>
+
+      <p>Current saved settings are: <span tal:replace="view/current_settings" /></p>
+
+    <div id="skel-contents">
+      <span tal:replace="structure contents" />
+    </div>
+
+ </tal:main-macro>
+</metal:main>
+
+</body>
+</html>

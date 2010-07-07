@@ -6,11 +6,20 @@
 
    <five:registerPackage package="." initialize=".initialize" />
 
+   <include package="zope.annotation" />
+   <include package="plone.app.z3cform" />
+
    <include package=".browser" />
    <!-- include package=".layout" /-->
    <!--includeOverrides package="jcu.theme" file="overrides.zcml" /-->
 
    <include file="skins.zcml" />
    <include file="profiles.zcml" />
+
+   <adapter
+      for="Products.CMFCore.interfaces._content.IDynamicType"
+      provides=".theming.IThemeSettingsManager"
+      factory=".theming.ThemeSettingsManager"
+      />
 
 </configure>

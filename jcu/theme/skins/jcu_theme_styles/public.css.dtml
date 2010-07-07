@@ -333,23 +333,23 @@ padding-top: 0px;
 #portal-globalnav li a {
     /* The normal, unselected tabs. They are all links */
     background-color:transparent;
-    border-color: &dtml-globalBorderColor;;
+    /*border-color: &dtml-globalBorderColor;;
     border-width: &dtml-borderWidth;;
-    border-style: &dtml-borderStyle; &dtml-borderStyle; none &dtml-borderStyle;;
+    border-style: &dtml-borderStyle; &dtml-borderStyle; none &dtml-borderStyle;;*/
     color: &dtml-globalFontColor;;
     height: auto;
     margin: 0;
     display:inline-block;
-    min-width:5em;
-    padding:0.5em 2em 1em 0.5em;
+    min-width:7em;
+    padding:0.75em 0.5em;
     white-space:normal;
     text-decoration: none;
     text-align:center;
     font-weight: normal;
     font-size: &dtml-globalNavFontSize;;
     text-transform: &dtml-textTransform;;
-    border-right:0.1em solid white;
 }
+
 #portal-globalnav li.selected a {
     /* The selected tab. There's only one of this */
     background-color: &dtml-globalNavigationSelectedBackgroundColor;;
@@ -362,6 +362,35 @@ padding-top: 0px;
     border-right-color: &dtml-globalNavigationSelectedHighlightColor;;
     color: &dtml-globalFontColor;;
 }
+
+/*  Variations go here.
+Dark Blue: #2E3192
+Dark Orange:E94F35
+Dark Green: 00A651
+Dark Red:610000
+ */
+.jcu-blue #portal-globalnav { background: #00AEEF url(&dtml-portal_url;/jcu_gradient_blue.png) 0 0 repeat-y; }
+.jcu-orange #portal-globalnav { background: #FDB913 url(&dtml-portal_url;/jcu_gradient_orange.png) 0 0 repeat-y; }
+.jcu-green #portal-globalnav { background: #8CC63F url(&dtml-portal_url;/jcu_gradient_green.png) 0 0 repeat-y; }
+.jcu-red #portal-globalnav { background: #E31F26 url(&dtml-portal_url;/jcu_gradient_red.png) 0 0 repeat-y; }
+
+.jcu-blue #portal-globalnav li a,
+.jcu-orange #portal-globalnav li a,
+.jcu-green #portal-globalnav li a,
+.jcu-red #portal-globalnav li a  {
+    color: white;
+}
+.jcu-blue #portal-globalnav li.selected a { background-color: #00B6FA; }
+.jcu-orange #portal-globalnav li.selected a { background-color: #FDB913; }
+.jcu-green #portal-globalnav li.selected a { background-color: #94D142; }
+.jcu-red  #portal-globalnav li.selected a { background-color: #ED2028; }
+
+.jcu-blue #portal-globalnav li a:hover { background-color: #004173; }
+.jcu-orange #portal-globalnav li a:hover { background-color: #C85A0A; }
+.jcu-green #portal-globalnav li a:hover { background-color: #093; }
+.jcu-red #portal-globalnav li a:hover { background-color: #B43C3C; }
+
+
 #portal-personaltools-wrapper {
     display:inline;
 }
@@ -1202,5 +1231,6 @@ div.managedPortlet.portlet {
 
 /* Latest version of the documentation on pre-defined properties from Plone 
    can be found in CMFPlone/skins/plone_styles/ploneCustom.css.dtml */
+
 
 

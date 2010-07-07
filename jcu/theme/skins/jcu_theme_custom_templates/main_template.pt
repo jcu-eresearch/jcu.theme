@@ -52,7 +52,7 @@
     <tal:comment replace="nothing"> A slot where you can insert javascript in the header from a template </tal:comment>
     <metal:javascriptslot define-slot="javascript_head_slot" />
   </head>
-  <body tal:attributes="class string:${here/getSectionFromURL} template-${template/id};
+  <body tal:attributes="class string:${here/getSectionFromURL} template-${template/id} ${context/@@theming_settings/get_theme};
                         dir python:test(isRTL, 'rtl', 'ltr')">
     <div id="visual-portal-wrapper">
       <div id="portal-top" i18n:domain="plone">

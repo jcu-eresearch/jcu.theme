@@ -58,6 +58,7 @@
         name="jcu.path_bar"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
         class=".viewlets.PathBarViewlet"
+        layer=".interfaces.IThemeSpecific"
         permission="zope2.View"
         />
 
@@ -132,6 +133,22 @@
         name="jcu.theme.stylesheets"
         directory="stylesheets"
         layer=".interfaces.IThemeSpecific"
-        />
+	/>
+
+    <!-- Special theming selector page resources -->
+    <!--	for="Products.CMFCore.interfaces._content.IContentish"-->
+    <browser:page
+	for="Products.CMFCore.interfaces._content.IDynamicType"
+        name="edit_theming_settings"
+	class=".themesettingsform.ThemeSettingsFormView"
+	permission="cmf.ModifyPortalContent"
+	/>
+
+    <browser:page
+	for="*"
+        name="theming_settings"
+	class=".themesettingsform.ThemeSettingsView"
+	permission="zope2.Public"
+	/>
 
 </configure>
