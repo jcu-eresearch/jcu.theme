@@ -1,20 +1,30 @@
 Change History
 ==============
 
-1.0 (2010-04-01)
+1.0.1 (2010-07-xx)
 
-    - Redesigned the site to conform with the new JCU look and feel [David]
-    - Updated discussion styles to add very light borders [David]
+    - Fixed issue with missing JCU theme action (tab) 
+    [David]
+    - Adding CSS for z3c.form action elements
+    [David]
+
+1.0 (2010-06-01)
+
+    - Redesigned the site to conform with the new JCU look and feel 
+    [David]
+    - Updated discussion styles to add very light borders 
+    [David]
+    - Added basic ability to theme different areas of site with different
+      JCU colours and gradients 
+    [David]
 
 0.2.1 (2008-09-11)
-	- Removed unicode character from footer
-
+    - Removed unicode character from footer
 
 0.2 (2008-09-06)
-	- Added more gradients
-	- Reset font size
-	- Made portlets solid blue, forms buttons now have solid backgrounds.
-
+    - Added more gradients
+    - Reset font size
+    - Made portlets solid blue, forms buttons now have solid backgrounds.
 
 0.1 (2008-08-29)
 
