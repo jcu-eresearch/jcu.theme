@@ -147,7 +147,7 @@
     <browser:page
 	for="*"
         name="theming_settings"
-	class=".themesettingsform.ThemeSettingsView"
+	class=".views.ThemeSettingsView"
 	permission="zope2.Public"
 	/>
 

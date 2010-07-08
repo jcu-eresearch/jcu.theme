@@ -3,6 +3,11 @@ Change History
 
 1.0.1 (2010-07-xx)
 
+    - Refactored theme_settings view into specific 'views' file
+    [David]
+    - Slight optimisation to the theme traversal script.  Avoids waking
+      the parent object if we don't have to.
+    [David]
     - Fixed issue with portlet assignments and theming (TypeError)
     [David]
     - Fixed issue with missing JCU theme action (tab) 
