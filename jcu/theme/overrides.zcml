@@ -2,8 +2,9 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:meta="http://namespaces.zope.org/meta"
     i18n_domain="jcu.theme">
 
-   <include package=".layout" />
+   <!-- <include package=".layout" /> -->
 
 </configure>
