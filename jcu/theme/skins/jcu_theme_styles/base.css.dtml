@@ -12,7 +12,7 @@ body {
     font: &dtml-fontBaseSize; <dtml-var fontFamily>;
     color: &dtml-fontColor;;
     background: &dtml-backgroundColor; url(&dtml-portal_url;/bg_grey_gradient.png) repeat-x top center;
-    margin: 2em auto 0;
+    margin: 1em 0;
     padding: 0;
 }
 body.popup, body.atrefbrowser {
