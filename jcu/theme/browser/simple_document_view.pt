@@ -1,0 +1,22 @@
+<tal:simpleview 
+    tal:define="kssClassesView context/@@kss_field_decorator_view;
+                getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
+                templateId template/getId;
+                text here/getText;">
+
+    <h1 class="documentFirstHeading"> 
+        <metal:field use-macro="python:here.widget('title', mode='view')">
+        Title
+        </metal:field>
+    </h1>
+
+    <p class="documentDescription">
+        <metal:field use-macro="python:here.widget('description', mode='view')">
+        Description
+        </metal:field>
+    </p>
+
+    <metal:field use-macro="python:here.widget('text', mode='view')">
+    Body text
+    </metal:field>
+</tal:simpleview>

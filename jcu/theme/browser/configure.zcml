@@ -4,6 +4,7 @@
     i18n_domain="jcu.theme">
 
 
+    <include package="plone.app.contentmenu" />
     <include package="Products.Collage" />
     <!-- 'JCU Theme' Zope 3 browser layer
       Register views, viewlets and resources for this layer to make sure
@@ -99,7 +100,94 @@
         permission="zope2.View"
         />
 
+    <!-- Content view methods -->
+    <browser:page
+        name="simple_view"
+	for="Products.ATContentTypes.interface.document.IATDocument"
+        template="simple_document_view.pt"
+	permission="zope2.View"
+	/>
 
+    <browser:page
+        name="tabbed_listing_view"
+	for="Products.ATContentTypes.interface.folder.IATFolder"
+        template="tabbed_listing_view.pt"
+	permission="zope2.View"
+	/>
+
+    <browser:page
+        name="tabbed_listing_view"
+	for="Products.ATContentTypes.interface.topic.IATTopic"
+        template="tabbed_listing_view.pt"
+	permission="zope2.View"
+	/>
+
+    <browser:menuItem
+        for="Products.ATContentTypes.interface.folder.IATFolder"
+        menu="plone_displayviews"
+        title="Tabbed listing view"
+        action="@@tabbed_listing_view"
+        description="jQuery Tabbed listing of content"
+       />
+
+    <browser:menuItem
+        for="Products.ATContentTypes.interface.topic.IATTopic"
+        menu="plone_displayviews"
+        title="Tabbed listing view"
+        action="@@tabbed_listing_view"
+        description="jQuery Tabbed listing of content"
+       />
+
+
+    <browser:page
+        name="tabbed_listing_dynamic_view"
+	for="Products.ATContentTypes.interface.folder.IATFolder"
+        template="tabbed_listing_dynamic_view.pt"
+	permission="zope2.View"
+	/>
+
+    <browser:page
+        name="tabbed_listing_dynamic_view"
+	for="Products.ATContentTypes.interface.topic.IATTopic"
+        template="tabbed_listing_dynamic_view.pt"
+	permission="zope2.View"
+	/>
+
+    <browser:menuItem
+        for="Products.ATContentTypes.interface.folder.IATFolder"
+        menu="plone_displayviews"
+        title="Tabbed listing view (dynamic)"
+        action="@@tabbed_listing_dynamic_view"
+        description="jQuery Tabbed listing of content (dynamic)"
+       />
+
+    <browser:menuItem
+        for="Products.ATContentTypes.interface.topic.IATTopic"
+        menu="plone_displayviews"
+        title="Tabbed listing view (dynamic)"
+        action="@@tabbed_listing_dynamic_view"
+        description="jQuery Tabbed listing of content (dynamic)"
+       />
+
+
+
+    <!-- Theming selector page resources -->
+    <!--	for="Products.CMFCore.interfaces._content.IContentish"-->
+    <browser:page
+	for="Products.CMFCore.interfaces._content.IDynamicType"
+        name="edit_theming_settings"
+	class=".themesettingsform.ThemeSettingsFormView"
+	permission="cmf.ModifyPortalContent"
+	/>
+
+    <browser:page
+	for="*"
+        name="theming_settings"
+	class=".views.ThemeSettingsView"
+	permission="zope2.Public"
+	/>
+
+    <!-- Collage page view resources -->
     <browser:page
 	name="very-large-left"
 	for="Products.Collage.interfaces.ICollageRow"
@@ -135,20 +223,5 @@
         layer=".interfaces.IThemeSpecific"
 	/>
 
-    <!-- Special theming selector page resources -->
-    <!--	for="Products.CMFCore.interfaces._content.IContentish"-->
-    <browser:page
-	for="Products.CMFCore.interfaces._content.IDynamicType"
-        name="edit_theming_settings"
-	class=".themesettingsform.ThemeSettingsFormView"
-	permission="cmf.ModifyPortalContent"
-	/>
-
-    <browser:page
-	for="*"
-        name="theming_settings"
-	class=".views.ThemeSettingsView"
-	permission="zope2.Public"
-	/>
 
 </configure>
