@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.1.0'
+version = '1.1.2'
 
 setup(name='jcu.theme',
       version=version,
@@ -28,6 +28,8 @@ setup(name='jcu.theme',
           'plone.app.z3cform',
           'zope.annotation',
           'Products.Collage',
+	  'collective.contentleadimage',
+	  'collective.fastview',
           # -*- Extra requirements: -*-
       ],
       entry_points="""

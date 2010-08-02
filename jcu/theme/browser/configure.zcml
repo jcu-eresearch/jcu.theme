@@ -109,6 +109,20 @@
 	/>
 
     <browser:page
+        name="simple_view"
+	for="Products.ATContentTypes.interface.folder.IATFolder"
+        template="simple_folder_view.pt"
+	permission="zope2.View"
+	/>
+
+    <browser:page
+        name="simple_view"
+	for="Products.ATContentTypes.interface.topic.IATTopic"
+        template="simple_folder_view.pt"
+	permission="zope2.View"
+	/>
+
+    <browser:page
         name="tabbed_listing_view"
 	for="Products.ATContentTypes.interface.folder.IATFolder"
         template="tabbed_listing_view.pt"
