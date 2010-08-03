@@ -80,7 +80,7 @@ class ThemeSettingsForm(form.Form):
 from plone.z3cform.layout import FormWrapper
 class ThemeSettingsFormView(FormWrapper):
     form = ThemeSettingsForm
-    index = ViewPageTemplateFile('themesettingsform.pt')
+    index = ViewPageTemplateFile('templates/themesettingsform.pt')
 
     label = _(u"Theming Options")
     description = _(u"Select the theme options you would like to use for this context.")
