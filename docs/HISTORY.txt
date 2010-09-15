@@ -3,8 +3,19 @@ Change History
 
 1.5 (2010-09-xx)
 
+    - Updated various viewlets to bring into line with Plone 4 (eg logo)
+    [David]
+    - Removed various viewlets as Plone 4 provides the same as default (eg global sections)
+    [David]
+    - Added wrapper within the footer structure for margin to apply 
+    [David]
+    - Replaced old CSS with that from Sunburst theme; still needs customisation
+    [David]
+    - Removed main_template customisations and our theme now extends off Sunburst 
+      to get divs OOTB rather than tables
+    [David]
     - Upgrading theming functionality into custom plone_layout view to
-      eliminate the need to hack the main_template again
+      eliminate the need to hack the main_template again.  Using overrides.zcml now.
     [David]
     - Reworking for Plone 4
 
