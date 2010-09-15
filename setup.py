@@ -28,8 +28,8 @@ setup(name='jcu.theme',
           'plone.app.z3cform',
           'zope.annotation',
           'Products.Collage',
-	  'collective.contentleadimage',
-	  'collective.fastview',
+          'collective.contentleadimage',
+          'collective.fastview',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
