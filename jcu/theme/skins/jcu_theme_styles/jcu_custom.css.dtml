@@ -11,6 +11,25 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+.jcu-blue #portal-globalnav { background: #00AEEF url('jcu_gradient_blue.png') 0 0 repeat-y; }
+.jcu-orange #portal-globalnav { background: #FDB913 url('jcu_gradient_orange.png') 0 0 repeat-y; }
+.jcu-green #portal-globalnav { background: #8CC63F url('jcu_gradient_green.png') 0 0 repeat-y; }
+.jcu-red #portal-globalnav { background: #E31F26 url('jcu_gradient_red.png') 0 0 repeat-y; }
+.jcu-blue #portal-globalnav li a,
+.jcu-orange #portal-globalnav li a,
+.jcu-green #portal-globalnav li a,
+.jcu-red #portal-globalnav li a  {
+color: white;
+}
+.jcu-blue #portal-globalnav .selected a { background: #00B6FA; }
+.jcu-orange #portal-globalnav .selected a { background: #FDB913; }
+.jcu-green #portal-globalnav .selected a { background: #94D142; }
+.jcu-red  #portal-globalnav .selected a { background: #ED2028; }
+.jcu-blue #portal-globalnav a:hover { background: #004173; }
+.jcu-orange #portal-globalnav a:hover { background: #C85A0A; }
+.jcu-green #portal-globalnav a:hover { background: #093; }
+.jcu-red #portal-globalnav a:hover { background: #B43C3C; }
+
 /* Darn you, IE */
 #slider-container  {
 overflow:hidden;

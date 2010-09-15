@@ -1,6 +1,13 @@
 Change History
 ==============
 
+1.5 (2010-09-xx)
+
+    - Upgrading theming functionality into custom plone_layout view to
+      eliminate the need to hack the main_template again
+    [David]
+    - Reworking for Plone 4
+
 1.0.1 (2010-07-xx)
 
     - Refactored theme_settings view into specific 'views' file

@@ -1,7 +1,8 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.0.1'
+_home_dir = os.path.join(os.path.dirname(__file__), 'jcu', 'theme')
+version = file(os.path.join(_home_dir, 'version.txt'), 'r').read().strip()
 
 setup(name='jcu.theme',
       version=version,
