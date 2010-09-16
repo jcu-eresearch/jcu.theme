@@ -15,8 +15,7 @@
        The 'based-on' attribute lets you inherit the viewlets ordering from an
        existing skin.
        -->
-  <order manager="plone.portalheader" skinname="JCU Theme"
-         based-on="Sunburst Theme">
+  <order manager="plone.portalheader" skinname="JCU Theme" based-on="Sunburst Theme">
     <!-- The definition of a viewlet accepts these parameters:
          - name: quite self explanatory, the name of the viewlet.
          - insert-before: name of the viewlet before which it must be added or
@@ -28,12 +27,15 @@
          Note: insert-before and -after accept the value "*" which means
          "all".
          -->
+    <viewlet name="jcu.site_actions" insert-after="plone.personal_bar"/>
     <viewlet name="jcu.logo" insert-before="plone.logo"/>
   </order>
-  <order manager="plone.portalfooter" skinname="JCU Theme"
-         based-on="Sunburst Theme">
+  <order manager="plone.portalfooter" skinname="JCU Theme" based-on="Sunburst Theme">
     <viewlet name="jcu.footer" insert-before="*" />
-    <viewlet name="jcu.colophon" insert-after="jcu.footer" />
+    <viewlet name="jcu.colophon" insert-before="jcu.footer" />
+  </order>
+  <order manager="plone.abovecontent" skinname="JCU Theme" based-on="Sunburst Theme">
+    <viewlet name="jcu.path_bar" insert-before="plone.path_bar" />
   </order>
 
   <hidden manager="plone.portalheader" skinname="JCU Theme">
@@ -42,6 +44,10 @@
   <hidden manager="plone.portalfooter" skinname="JCU Theme">
     <viewlet name="plone.footer" />
     <viewlet name="plone.colophon" />
+    <viewlet name="plone.site_actions" />
+  </hidden>
+  <hidden manager="plone.abovecontent" skinname="JCU Theme">
+    <viewlet name="plone.path_bar" />
   </hidden>
 
 </object>

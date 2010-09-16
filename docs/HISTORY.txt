@@ -3,6 +3,13 @@ Change History
 
 1.5 (2010-09-xx)
 
+    - Updating various style elements (eg JCU colours, styling, livesearch,
+      positioning, margins, site actions menu, logos, alignment, sizes, etc)
+    [David] 
+    - Changing site actions into a menu like the personal tools
+    [David]
+    - Updated path_bar to not show if we only have Home in the breadcrumbs
+    [David]
     - Updated various viewlets to bring into line with Plone 4 (eg logo)
     [David]
     - Removed various viewlets as Plone 4 provides the same as default (eg global sections)

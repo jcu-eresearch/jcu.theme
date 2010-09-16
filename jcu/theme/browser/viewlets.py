@@ -15,3 +15,6 @@ class LogoViewlet(common.LogoViewlet):
 class PathBarViewlet(common.PathBarViewlet):
     index = ViewPageTemplateFile('path_bar.pt')
 
+class SiteActionsViewlet(common.SiteActionsViewlet):
+    index = ViewPageTemplateFile('site_actions.pt')
+

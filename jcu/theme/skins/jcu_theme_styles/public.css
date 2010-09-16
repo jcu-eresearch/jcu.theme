@@ -42,25 +42,29 @@ body {
 }
 #portal-columns {
     border-bottom:1px dotted #eee;
+    margin-bottom: 1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Helvetica Neue", Arial, FreeSans, sans-serif;
-    font-weight: bold;
+    font-family: Arial,Tahoma,FreeSans,sans-serif;
     color: Black;
     line-height: 1.5em;
 }
 h1, h2 {
-    letter-spacing: -0.05em;
+    letter-spacing: -0.01em;
 }
 h1 {
-    font-size: 2em;
+    font-size: 2.1em;
 }
 h2 {
-    font-size: 1.75em;
+    font-size: 1.65em;
+    color:#333;
+    font-family:Georgia,Times,"Times New Roman",serif;
+    font-style:italic;
 }
 h3 {
     font-size: 1.25em;
+    font-weight: bold;
 }
 h4 {
     font-size: 1.25em;
@@ -71,11 +75,17 @@ h5 {
 h6 {
     font-size: 0.8em;
 }
-h2, h3, h4, h5, h6 {
-    color: #444;
+h5, h6 {
+    color: #76797C;
 }
 h2 a, h3 a, h4 a {
     border-bottom: none !important;
+}
+h1, h2 {
+    font-weight:normal;
+}
+h3, h4, h5, h6 {
+    font-weight:bold;
 }
 
 p {
@@ -108,9 +118,13 @@ q {
     margin-bottom: 0.5em;
 }
 
-#portal-logo {
+#portal-logo, #site-logo {
     display: inline-block;
-    margin: 0.75em 0.5em 1.25em 0;
+    margin:0.75em 1em 1.5em 0;
+    vertical-align:middle;
+}
+#site-logo {
+    margin-top: 1.25em; 
 }
 
 #portal-globalnav {
@@ -118,8 +132,8 @@ q {
     font-size: 85%;
     background:#F6F2E6;
     /* ensure top navigation dont touches portlets, content etc.. #10491 */
-    margin: 0 0 0 -1.125%;
-    width: 102.23%;
+    margin: 0 0 0 -1.2%;
+    width: 102.4%;
 }
 #portal-globalnav li {
     text-align:center;
@@ -140,6 +154,7 @@ q {
     color: #436976;
 }
 
+#portal-siteactions,
 #portal-personaltools {
     float: right;
     background: #e3e3e3;
@@ -233,24 +248,27 @@ input.searchField {
 }
 
 #LSResult fieldset {
-    padding: 1em 0 0;
-    border: 0.1em solid #ccc;
+    padding: 0;
+    border: 0.1em solid #eee;
+    margin:1em 0 0;
 }
 
 #livesearchLegend {
-    background-color:#ccc;
-    padding:0.3em;
+    background-color:White;
+    padding:0 0.5em 0.5em;
 }
 
 #LSResult .LSDescr {
     font-size: 85%;
     color: #666;
+    display:inline-block;
+    margin-left:1em;
 }
 
 .LSRow,
 #LSNothingFound {
     display: block;
-    padding: 0.5em 1em;
+    padding: 0 0 0.25em 1.25em;
     white-space: normal;
     width:28em;
 }
@@ -266,7 +284,6 @@ input.searchField {
 
 #portal-breadcrumbs {
     font-size: 80%;
-    margin-bottom: 1em;
     margin-left: 0.25em;
 }
 #portal-breadcrumbs a {
@@ -274,27 +291,44 @@ input.searchField {
     padding: 0.25em 0;
     display: inline-block;
 }
+#breadcrumbs-you-are-here {
+    display:none;
+}
+.breadcrumbSeparator {
+    background-image:url('nulook_bullet.gif');
+    background-position:0 top;
+    background-repeat:no-repeat;
+    display:inline-block;
+    font-size:120%;
+    height:7px;
+    line-height:0.4em;
+    margin:0 0.2em;
+    overflow:hidden;
+    padding:0 0 0 5px;
+    width:0;
+}
 /* @end */
 
 
 
 
 
-/* @group Site actions */
+/* @group Site actions 
 
 #portal-siteactions {
     font-size: 85%;
-    padding-bottom: 2em;
-    text-align: center;
+    padding: 0.25em 0;
+    float:right;
+    display:inline-block;
 }
 #portal-siteactions li {
     margin-right: 0.5em;
 }
 #portal-siteactions li a:hover {
-    color: #75ad0a
+    color: #9E9270;
 }
 
-/* @end */
+ @end */
 
 /* @group Listings */
 
@@ -543,7 +577,7 @@ dl.portlet li {
     margin-right: 0;
 }
 #content dd {
-    margin: 0 0 1em 2em;
+    margin: 0 0 0.5em 2em;
 }
 
 #content pre {
@@ -553,7 +587,7 @@ dl.portlet li {
     padding: 1em;
     overflow-x: auto;
     font-size: 90%;
-    margin-bottom: 1em;
+    margin: 1em 0;
     line-height: 1.25em;
 }
 #content pre.python {
@@ -608,9 +642,9 @@ dl.portlet li {
 
 #content .documentDescription,
 #content #description {
-    color: #666;
-    margin-left: 0;
-    font: bold 1.25em "Helvetica Neue", Arial, FreeSans, sans-serif;
+    color: #333;
+    margin: 0.25em 0;
+    font:bold 1.1em Arial,Tahoma,FreeSans,sans-serif; 
 }
 
 #content img.tileImage,
@@ -838,10 +872,10 @@ dl.error dd {
 }
 #edit-bar {
     background-color: #75ad0a;
-    border: 0.25em solid #75ad0a;
+    border: 0.3em solid #75ad0a;
     font-size: 80%;
     min-height: 2em;
-    margin-bottom: 1em;
+    margin: 1em 0;
     padding-top: 0.05em;
 }
 #content-views {
@@ -929,28 +963,35 @@ dl.error dd {
 /* @group Pulldown menus */
 
 /* @group Personal tools pulldown */
+#portal-siteactions dl,
 #portal-personaltools dl {
 }
+#portal-siteactions dt,
 #portal-personaltools dt {
     font-weight: normal;
 }
+#portal-siteactions dt.actionMenuHeader a:after, 
 #portal-personaltools dt.actionMenuHeader a:after {
     content: " ▼";
 }
+#portal-siteactions dd, 
 #portal-personaltools dd {
     right: 0;
     padding-top: 0.5em;
 }
+#portal-siteactions dd,
 #portal-personaltools dd {
     background: #e3e3e3;
     padding-bottom: 0.5em;
 }
+#portal-siteactions dd a,
 #portal-personaltools dd a {
     line-height: 2em;
     padding: 0 0.75em;
 }
+#portal-siteactions dd a:hover,
 #portal-personaltools dd a:hover {
-    background: #205c90;
+    background: #333;
     color: White;
 }
 
@@ -1432,9 +1473,9 @@ fieldset,
     font-weight: bold;
 }
 
-
+div.action { display: inline-block; }
 div.formControls {
-    margin: 1em;
+    margin: 1em 0;
 }
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -1617,9 +1658,8 @@ dl.toc dd ol {
 #portal-footer {
     font-size: 75%;
     line-height: 2em;
-    margin:1em 0;
     width:50%;
-    float:left;
+    margin-bottom: 2em;
 }
 #portal-footer-internal-wrapper {
     margin:0 0 0 1em;
@@ -1627,7 +1667,6 @@ dl.toc dd ol {
 #portal-colophon {
     font-size: 70%;
     text-align: center;
-    margin: 1em 0;
     width:50%;
     float:right;
 }

@@ -44,6 +44,21 @@
         permission="zope2.View"
 	/>
 
+    <browser:viewlet
+	name="jcu.path_bar"
+	manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+	class=".viewlets.PathBarViewlet"
+        layer=".interfaces.IThemeSpecific"
+	permission="zope2.View"
+	/>
+
+    <browser:viewlet
+	name="jcu.site_actions"
+	manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+	class=".viewlets.SiteActionsViewlet"
+	layer=".interfaces.IThemeSpecific"
+	permission="zope2.View"
+       />
 
     <browser:page
 	name="very-large-left"

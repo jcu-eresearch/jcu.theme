@@ -12,23 +12,47 @@
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
 .jcu-blue #portal-globalnav { background: #00AEEF url('jcu_gradient_blue.png') 0 0 repeat-y; }
-.jcu-orange #portal-globalnav { background: #FDB913 url('jcu_gradient_orange.png') 0 0 repeat-y; }
-.jcu-green #portal-globalnav { background: #8CC63F url('jcu_gradient_green.png') 0 0 repeat-y; }
-.jcu-red #portal-globalnav { background: #E31F26 url('jcu_gradient_red.png') 0 0 repeat-y; }
-.jcu-blue #portal-globalnav li a,
-.jcu-orange #portal-globalnav li a,
-.jcu-green #portal-globalnav li a,
-.jcu-red #portal-globalnav li a  {
-color: white;
-}
+.jcu-blue #portal-globalnav li a{ color: White; }
 .jcu-blue #portal-globalnav .selected a { background: #00B6FA; }
-.jcu-orange #portal-globalnav .selected a { background: #FDB913; }
-.jcu-green #portal-globalnav .selected a { background: #94D142; }
-.jcu-red  #portal-globalnav .selected a { background: #ED2028; }
 .jcu-blue #portal-globalnav a:hover { background: #004173; }
+.jcu-blue #content fieldset { border-color: #00AEEF; }
+.jcu-blue #portal-siteactions li a:hover { color: #004173 !important; }
+
+.jcu-orange #portal-globalnav { background: #FDB913 url('jcu_gradient_orange.png') 0 0 repeat-y; }
+.jcu-orange #portal-globalnav li a { color: White; }
+.jcu-orange #portal-globalnav .selected a { background: #E09900; }
 .jcu-orange #portal-globalnav a:hover { background: #C85A0A; }
+.jcu-orange #content fieldset { border-color: #FDB913; }
+.jcu-orange #portal-siteactions li a:hover { color: #C85A0A !important; }
+
+.jcu-green #portal-globalnav { background: #8CC63F url('jcu_gradient_green.png') 0 0 repeat-y; }
+.jcu-green #portal-globalnav li a { color: White; }
+.jcu-green #portal-globalnav .selected a { background: #94D142; }
 .jcu-green #portal-globalnav a:hover { background: #093; }
+.jcu-green #content fieldset { border-color: #8CC63F; }
+.jcu-green #portal-siteactions li a:hover { color: #8CC63F !important; }
+
+.jcu-red #portal-globalnav { background: #E31F26 url('jcu_gradient_red.png') 0 0 repeat-y; }
+.jcu-red #portal-globalnav li a { color: White; }
+.jcu-red #portal-globalnav .selected a { background: #ED2028; }
 .jcu-red #portal-globalnav a:hover { background: #B43C3C; }
+.jcu-red #content fieldset { border-color: #E31F26; }
+.jcu-red #portal-siteactions li a:hover { color: #B43C3C !important; }
+
+/*
+.jcu-blue #portal-personaltools a { color: White; }
+.jcu-blue #portal-personaltools, 
+.jcu-blue #portal-personaltools dd { background: #00B6FA; }
+.jcu-orange #portal-personaltools a { color: White; }
+.jcu-orange #portal-personaltools,
+.jcu-orange #portal-personaltools dd { background: #FF9100; }
+.jcu-green #portal-personaltools a { color: white; }
+.jcu-green #portal-personaltools,
+.jcu-green #portal-personaltools dd { background: #94D142; }
+.jcu-red #portal-personaltools a { color: white; }
+.jcu-red #portal-personaltools,
+.jcu-red #portal-personaltools dd { background: #ED2028; }
+*/
 
 /* Darn you, IE */
 #slider-container  {
