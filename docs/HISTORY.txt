@@ -3,6 +3,9 @@ Change History
 
 1.5 (2010-09-xx)
 
+    - Providing custom version of PloneFormGen main view due to theirs
+      being borked in 1.6.0b4
+    [David]
     - Updating various style elements (eg JCU colours, styling, livesearch,
       positioning, margins, site actions menu, logos, alignment, sizes, etc)
     [David] 

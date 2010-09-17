@@ -3,7 +3,7 @@
 }
 
 .blockedPortlet .portletHeader {
-    border: 1px dashed #ddd;
+    border: 1px dashed #ddd !important;
     margin: -1px;
     background: none !important;
 }

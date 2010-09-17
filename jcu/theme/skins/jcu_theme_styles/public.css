@@ -42,10 +42,10 @@ body {
 }
 #portal-columns {
     border-bottom:1px dotted #eee;
-    margin-bottom: 1em;
+    margin:0.5em 0 1em 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .mce_h2, .mce_h3 {
     font-family: Arial,Tahoma,FreeSans,sans-serif;
     color: Black;
     line-height: 1.5em;
@@ -58,12 +58,18 @@ h1 {
 }
 h2 {
     font-size: 1.65em;
+}
+.mce_h2,
+h2 {
     color:#333;
     font-family:Georgia,Times,"Times New Roman",serif;
     font-style:italic;
 }
 h3 {
     font-size: 1.25em;
+}
+.mce_h3,
+h3 {
     font-weight: bold;
 }
 h4 {
@@ -132,8 +138,8 @@ q {
     font-size: 85%;
     background:#F6F2E6;
     /* ensure top navigation dont touches portlets, content etc.. #10491 */
-    margin: 0 0 0 -1.2%;
-    width: 102.4%;
+    margin: 0 0 0 -1.15%;
+    width: 102.35%;
 }
 #portal-globalnav li {
     text-align:center;
@@ -284,7 +290,7 @@ input.searchField {
 
 #portal-breadcrumbs {
     font-size: 80%;
-    margin-left: 0.25em;
+    margin: 0 0 0.5em 0.25em;
 }
 #portal-breadcrumbs a {
     border-bottom: none;
@@ -366,8 +372,8 @@ dl.portletError {
 
 dl.portlet dt,
 div.portletAssignments div.portletHeader {
-    padding: 0.42em 1em;
-    background: #ddd;
+    padding: 0.42em 1em 0.42em 0;
+    border-bottom: 1px dotted #999;
     line-height: normal;
 }
 div.portletAssignments {
@@ -458,15 +464,17 @@ dl.portlet ul.navTreeLevel0 > .navTreeItem {
 }
 
 dl.portlet ul.navTreeLevel1 .navTreeItem {
-    padding-left: 0.5em;
+    padding-left: 1em;
     line-height: 2em;
 }
 
 dl.portlet ul.navTree .navTreeCurrentItem {
-    background-color: #ddd;
-    border-left: 1em solid #ddd;
-    margin-left: -1em;
+    margin-left: 0;
     margin-right: -1em;
+}
+
+dl.portlet ul.navTree li.navTreeCurrentNode {
+    background: url('arrow-grey-left.png') no-repeat scroll 0 0.75em transparent;
 }
 
 /* @end */
@@ -515,11 +523,10 @@ dl.portlet a:link {
 #content a:visited,
 dl.portlet a:visited {
     color: #427597;
-    border-bottom: 0.1em solid #ccc;
 }
 #content a:hover,
 dl.portlet a:hover {
-    color: #75ad0a !important; /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
+    color: #C2A759 !important; /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
 }
 #content a:target {
     background-color: #ffb;
@@ -602,6 +609,7 @@ dl.portlet li {
     font-size: 85%;
     display: block;
     color: #666;
+    margin-bottom:0.5em;
 }
 
 #content .discreet,
@@ -875,7 +883,7 @@ dl.error dd {
     border: 0.3em solid #75ad0a;
     font-size: 80%;
     min-height: 2em;
-    margin: 1em 0;
+    margin: 0 0 1em;
     padding-top: 0.05em;
 }
 #content-views {
@@ -1456,20 +1464,19 @@ fieldset,
 
 /* Emulates the styling from the h1 tag */
 #archetypes-fieldname-title input {
-    font-family: "Helvetica Neue", Arial, FreeSans, sans-serif;
+    font-family: Arial,Tahoma,FreeSans,sans-serif;
     line-height: 125%;
     color: Black;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.01em;
     margin: inherit -0.05em;
     font-size: 2em; /* 26px equiv */
-    font-weight: bold;
 }
 
 /* Emulates styling from the description's view */
 #archetypes-fieldname-description textarea#description {
     font-family: Arial,FreeSans,sans-serif;
     color:#666666;
-    font-size:1.25em;
+    font-size:1em;
     font-weight: bold;
 }
 
