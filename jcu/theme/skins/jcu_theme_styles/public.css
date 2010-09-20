@@ -996,6 +996,8 @@ dl.error dd {
 #portal-personaltools dd a {
     line-height: 2em;
     padding: 0 0.75em;
+    border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
 }
 #portal-siteactions dd a:hover,
 #portal-personaltools dd a:hover {

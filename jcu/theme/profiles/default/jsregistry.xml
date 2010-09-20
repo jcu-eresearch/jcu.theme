@@ -24,4 +24,6 @@
     enabled="True" expression=""  inline="False"/>
 -->
 
+ <javascript authenticated="False" id="dropdown.js"/>
+
 </object>

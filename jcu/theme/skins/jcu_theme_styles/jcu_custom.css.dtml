@@ -110,6 +110,20 @@ background:none repeat scroll 0 0 white !important;
 font-weight:normal !important;
 }
 
+#siteaction-get_support a, 
+#personaltools-logout a {
+background: #888;
+color: White;
+}
+
+#content .documentActions li {
+display:inline-block;
+margin-right: 1.5em;
+}
+#content .documentActions ul {
+margin: 0;
+}
+
 /* Darn you, IE */
 #slider-container  {
 overflow:hidden;
@@ -125,13 +139,8 @@ display:none;
 }
 
 .sliderPullQuote, .sliderPullQuoteLeft {
--moz-background-clip:border;
--moz-background-inline-policy:continuous;
--moz-background-origin:padding;
--moz-border-radius-bottomleft:1em;
--moz-border-radius-bottomright:1em;
--moz-border-radius-topleft:1em;
--moz-border-radius-topright:1em;
+-moz-border-radius:1em;
+border-radius:1em;
 background:transparent url(&dtml-portal_url;/1x1-75pc-opacity.png) repeat scroll 0 0;
 clear:right;
 color:#000000;

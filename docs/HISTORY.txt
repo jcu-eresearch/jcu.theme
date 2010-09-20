@@ -3,6 +3,16 @@ Change History
 
 1.5 (2010-09-xx)
 
+    - Updating more CSS to look even better with drop down menus
+    [David]
+    - Forcing the dropdown.css file in the JS registry to be available for
+    logged out users too because of our Site Actions drop down.
+    [David]
+    - Making the Author page "Edit" link edit one's profile
+    [David]
+    - Adding special aspects to drop-down menus at top right (About Me and
+      Get Support links)
+    [David]
     - Providing custom version of PloneFormGen main view due to theirs
       being borked in 1.6.0b4
     [David]

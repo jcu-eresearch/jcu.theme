@@ -7,7 +7,8 @@
 
 <dl class="actionMenu deactivated" id="portal-siteactions">
   <dt class="actionMenuHeader">
-    <a id="site-menu-title" href="#">Help</a>
+  <a id="site-menu-title" href="#"
+    tal:attributes="href string:${context/@@plone_portal_state/navigation_root_url}/sitemap">Help</a>
   </dt>
   <dd class="actionMenuContent">
     <ul><li tal:repeat="saction view/site_actions"

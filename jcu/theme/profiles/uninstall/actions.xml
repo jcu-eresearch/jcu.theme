@@ -5,7 +5,19 @@
  <object name="folder_buttons" meta_type="CMF Action Category">
   <object name="sort_contents" meta_type="CMF Action" i18n:domain="plone" remove="True" />
  </object>
+
  <object name="object" meta_type="CMF Action Category">
   <object name="theme" meta_type="CMF Action" i18n:domain="plone" remove="True" />
  </object>
+
+ <object name="site_actions" meta_type="CMF Action Category">
+   <object name="get_support" meta_type="CMF Action" i18n:domain="plone"
+    remove="True" />
+ </object>
+
+ <object name="user" meta_type="CMF Action Category">
+  <object name="about_me" meta_type="CMF Action" i18n:domain="plone"
+   remove="True" />
+ </object>
+
 </object>
