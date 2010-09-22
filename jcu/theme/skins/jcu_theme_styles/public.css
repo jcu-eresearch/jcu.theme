@@ -125,9 +125,12 @@ q {
 }
 
 #portal-logo, #site-logo {
+    display: -moz-inline-stack;
     display: inline-block;
     margin:0.75em 1em 1.5em 0;
     vertical-align:middle;
+    zoom: 1;
+    *display: inline;
 }
 #site-logo {
     margin-top: 1.25em; 
@@ -138,19 +141,22 @@ q {
     font-size: 85%;
     background:#F6F2E6;
     /* ensure top navigation dont touches portlets, content etc.. #10491 */
-    margin: 0 0 0 -1.15%;
-    width: 102.35%;
+    margin: 0 0 0 -1.2%;
+    width: 102.3%;
 }
 #portal-globalnav li {
     text-align:center;
 }
 #portal-globalnav li a {
+    display: -moz-inline-stack;
     display: inline-block;
     padding:0.75em 0.5em;
     background: transparent;
     color: #436976;
     min-width: 7em;
+    _width: 7em;
     white-space: normal;
+    _white-space: nowrap;
     text-align:center;
 }
 
@@ -267,6 +273,7 @@ input.searchField {
 #LSResult .LSDescr {
     font-size: 85%;
     color: #666;
+    display: -moz-inline-stack;
     display:inline-block;
     margin-left:1em;
 }
@@ -295,6 +302,7 @@ input.searchField {
 #portal-breadcrumbs a {
     border-bottom: none;
     padding: 0.25em 0;
+    display: -moz-inline-stack;
     display: inline-block;
 }
 #breadcrumbs-you-are-here {
@@ -304,6 +312,7 @@ input.searchField {
     background-image:url('nulook_bullet.gif');
     background-position:0 top;
     background-repeat:no-repeat;
+    display: -moz-inline-stack;
     display:inline-block;
     font-size:120%;
     height:7px;
@@ -417,6 +426,7 @@ a.managePortletsFallback {
     -moz-border-radius: 0.5em;
 }
 a.managePortletsFallback {
+    display: -moz-inline-stack;
     display:inline-block; /* in order for our vertical margins to work on inline element */
 }
 #content a.managePortletsFallback {
@@ -437,6 +447,7 @@ a.managePortletsFallback {
 #dashboard-portlets2,
 #dashboard-portlets3,
 #dashboard-portlets4 {
+    display: -moz-inline-stack;
     display: inline-block;
 }
 
@@ -739,6 +750,7 @@ table.listing tbody tr.odd td {
 table.listing a {
     line-height: 2em;
     border: none;
+    display: -moz-inline-stack;
     display: inline-block;
     border-bottom: none !important;
 }
@@ -780,15 +792,18 @@ div.listingBar {
 }
 
 div.listingBar .next {
+    display: -moz-inline-stack;
     display: inline-block;
     float: right;
 }
 
 div.listingBar .previous {
+    display: -moz-inline-stack;
     display: inline-block;
 }
 
 div.listingBar a {
+    display: -moz-inline-stack;
     display: inline-block;
     padding: 0.25em 0.5em;
     border: 0.1em solid #ccc;
@@ -1482,7 +1497,7 @@ fieldset,
     font-weight: bold;
 }
 
-div.action { display: inline-block; }
+div.action { display: -moz-inline-stack; display: inline-block; }
 div.formControls {
     margin: 1em 0;
 }
@@ -1626,6 +1641,7 @@ body.template-new-user #content input {
     padding-top:0.2em;
     text-align:right;
     width: 10em;
+    display: -moz-inline-stack;
     display: inline-block;
 }
 
@@ -2045,6 +2061,7 @@ div.overlay .formControls a {
 .icons-on #plone-contentmenu-factories .contenttype-file,
 .icons-on #plone-contentmenu-factories .contenttype-image {
     line-height: 2em;
+    display: -moz-inline-stack;
     display: inline-block;
     padding-left: 20px !important;
 }
