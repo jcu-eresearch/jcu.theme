@@ -141,8 +141,8 @@ q {
     font-size: 85%;
     background:#F6F2E6;
     /* ensure top navigation dont touches portlets, content etc.. #10491 */
-    margin: 0 0 0 -1.2%;
-    width: 102.3%;
+    margin: 0 0 0 -1.1378003%;
+    width: 102.3017903%;
 }
 #portal-globalnav li {
     text-align:center;
