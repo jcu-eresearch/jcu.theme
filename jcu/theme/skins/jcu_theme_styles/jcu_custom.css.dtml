@@ -11,6 +11,7 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+.jcu-blue #globalnav-wrapper,
 .jcu-blue #portal-globalnav { background: #00AEEF url('jcu_gradient_blue.png') 0 0 repeat-y; }
 .jcu-blue #portal-globalnav li a { color: White; }
 .jcu-blue #portal-globalnav .selected a { background: #00B6FA; }
@@ -30,6 +31,7 @@
 .jcu-blue #contentActionMenus dl.actionMenu.activated dd 
     { background-color: #00AEEF; }
 
+.jcu-orange #globalnav-wrapper,
 .jcu-orange #portal-globalnav { background: #FDB913 url('jcu_gradient_orange.png') 0 0 repeat-y; }
 .jcu-orange #portal-globalnav li a { color: White; }
 .jcu-orange #portal-globalnav .selected a { background: #E09900; }
@@ -49,6 +51,7 @@
 .jcu-orange #contentActionMenus dl.actionMenu.activated dd 
     { background-color: #E09900; }
 
+.jcu-green #globalnav-wrapper,
 .jcu-green #portal-globalnav { background: #8CC63F url('jcu_gradient_green.png') 0 0 repeat-y; }
 .jcu-green #portal-globalnav li a { color: White; }
 .jcu-green #portal-globalnav .selected a { background: #94D142; }
@@ -68,6 +71,7 @@
 .jcu-green #contentActionMenus dl.actionMenu.activated dd 
     { background-color: #94D142; }
 
+.jcu-red #globalnav-wrapper,
 .jcu-red #portal-globalnav { background: #E31F26 url('jcu_gradient_red.png') 0 0 repeat-y; }
 .jcu-red #portal-globalnav li a { color: White; }
 .jcu-red #portal-globalnav .selected a { background: #ED2028; }
