@@ -13,9 +13,10 @@
 
 .jcu-blue #globalnav-wrapper,
 .jcu-blue #portal-globalnav { background: #00AEEF url('jcu_gradient_blue.png') 0 0 repeat-y; }
-.jcu-blue #portal-globalnav li a { color: White; }
-.jcu-blue #portal-globalnav .selected a { background: #00B6FA; }
-.jcu-blue #portal-globalnav a:hover { background: #004173; }
+.jcu-blue #portal-globalnav li a { color: White !important; }
+.jcu-blue #portal-globalnav li ul li a, 
+.jcu-blue #portal-globalnav .selected a { background-color: #00B6FA; }
+.jcu-blue #portal-globalnav a:hover { background-color: #004173 !important; }
 .jcu-blue #content fieldset { border-color: #99E3FF; }
 .jcu-blue #content a:hover,
 .jcu-blue dl.portlet a:hover  { color: #00b6fa !important; }
@@ -33,9 +34,11 @@
 
 .jcu-orange #globalnav-wrapper,
 .jcu-orange #portal-globalnav { background: #FDB913 url('jcu_gradient_orange.png') 0 0 repeat-y; }
-.jcu-orange #portal-globalnav li a { color: White; }
-.jcu-orange #portal-globalnav .selected a { background: #E09900; }
-.jcu-orange #portal-globalnav a:hover { background: #C85A0A; }
+.jcu-orange #portal-globalnav li a { color: White !important; }
+.jcu-orange #portal-globalnav li ul li a, 
+.jcu-orange #portal-globalnav .selected a { background-color: #E09900; }
+.jcu-orange #portal-globalnav a:hover { background-color: #C85A0A !important; }
+.jcu-orange #portal-globalnav li ul li a { border-bottom: 1px solid #EEEEEE; border-top: 0px none; }
 .jcu-orange #content fieldset { border-color: #FDB913; }
 .jcu-orange #content a:hover, .jcu-orange dl.portlet a:hover 
     { color: #c85a0a !important; }
@@ -53,9 +56,11 @@
 
 .jcu-green #globalnav-wrapper,
 .jcu-green #portal-globalnav { background: #8CC63F url('jcu_gradient_green.png') 0 0 repeat-y; }
-.jcu-green #portal-globalnav li a { color: White; }
-.jcu-green #portal-globalnav .selected a { background: #94D142; }
-.jcu-green #portal-globalnav a:hover { background: #093; }
+.jcu-green #portal-globalnav li a { color: White !important; }
+.jcu-green #portal-globalnav li ul li a, 
+.jcu-green #portal-globalnav .selected a { background-color: #94D142; }
+.jcu-green #portal-globalnav a:hover { background-color: #093 !important; }
+.jcu-green #portal-globalnav li ul li a { border-bottom: 1px solid #EEEEEE; border-top: 0px none; }
 .jcu-green #content fieldset { border-color: #B2D485; }
 .jcu-green #content a:hover, .jcu-green dl.portlet a:hover 
     { color: #093 !important; }
@@ -73,9 +78,11 @@
 
 .jcu-red #globalnav-wrapper,
 .jcu-red #portal-globalnav { background: #E31F26 url('jcu_gradient_red.png') 0 0 repeat-y; }
-.jcu-red #portal-globalnav li a { color: White; }
-.jcu-red #portal-globalnav .selected a { background: #ED2028; }
-.jcu-red #portal-globalnav a:hover { background: #B43C3C; }
+.jcu-red #portal-globalnav li a { color: White !important; }
+.jcu-red #portal-globalnav li ul li a, 
+.jcu-red #portal-globalnav .selected a { background-color: #ED2028; }
+.jcu-red #portal-globalnav a:hover { background-color: #B43C3C !important; }
+.jcu-red #portal-globalnav li ul li a { border-bottom: 1px solid #EEEEEE; border-top: 0px none; }
 .jcu-red #content fieldset { border-color: #F99; }
 .jcu-red #content a:hover, .jcu-red dl.portlet a:hover 
     { color: #ed2028 !important; }
