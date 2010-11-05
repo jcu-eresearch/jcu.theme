@@ -1,6 +1,27 @@
 Change History
 ==============
 
+1.1.2 (2010-08-02)
+    - Updated CSS for accordion with TinyMCE
+    [David]
+    - Added @@simple_view for Plone Topic and Folder.  This view uses
+      a metal macro call to simply extend off the existing standard view
+      for folder listings.
+    [David]
+    - Simple views now utilise collective.fastview to load the 
+      collective.leadimage images for content.
+    [David]
+
+1.1 (2010-07-28)
+    - Added jQuery Tools tab views for folders and topics
+      with AJAX and plain supported views.
+    [David]
+    - Included extra support for the above with JCU's main theme colours
+    [David]
+    - Created @@simple_view for Page content in the theme; for use with
+      the AJAX tabbed view
+    [David]
+
 1.0.1 (2010-07-xx)
 
     - Refactored theme_settings view into specific 'views' file

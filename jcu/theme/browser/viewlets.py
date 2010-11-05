@@ -22,10 +22,10 @@ from plone.app.layout.viewlets import common
 #        self.computed_value = 'any output'
 
 class GlobalSectionsViewlet(common.GlobalSectionsViewlet):
-    render = ViewPageTemplateFile('sections.pt')
+    render = ViewPageTemplateFile('templates/sections.pt')
 
 class LogoViewlet(common.LogoViewlet):
-    render = ViewPageTemplateFile('logo.pt')
+    render = ViewPageTemplateFile('templates/logo.pt')
 
     def update(self):
         common.LogoViewlet.update(self)
@@ -39,5 +39,5 @@ class LogoViewlet(common.LogoViewlet):
         self.sitelogo_tag = portal.restrictedTraverse(sitelogoName).tag()
 
 class PathBarViewlet(common.PathBarViewlet):
-    index = ViewPageTemplateFile('path_bar.pt')
+    index = ViewPageTemplateFile('templates/path_bar.pt')
 

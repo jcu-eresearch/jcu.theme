@@ -1,0 +1,30 @@
+<tal:simpleview 
+    tal:define="kssClassesView context/@@kss_field_decorator_view;
+                getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
+                templateId template/getId;
+                text here/getText;">
+
+    <h1 class="documentFirstHeading"> 
+       <a href=""
+          tal:attributes="href string:${here/absolute_url}/view">
+        <metal:field use-macro="python:here.widget('title', mode='view')">
+        Title
+        </metal:field>
+       </a>
+    </h1>
+
+    <div class="leadimage">
+	<div tal:replace="structure context/@@viewlets/collective.contentleadimage.thumbnail">Lead image</div>
+    </div>
+
+    <p class="documentDescription">
+        <metal:field use-macro="python:here.widget('description', mode='view')">
+        Description
+        </metal:field>
+    </p>
+
+    <metal:field use-macro="python:here.widget('text', mode='view')">
+    Body text
+    </metal:field>
+
+</tal:simpleview>

@@ -1,0 +1,26 @@
+<metal:block use-macro="here/global_defines/macros/defines" />
+
+<tal:simpleview 
+    tal:define="kssClassesView context/@@kss_field_decorator_view;
+                getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
+                templateId template/getId;">
+
+    <h1 class="documentFirstHeading"> 
+        <metal:field use-macro="python:here.widget('title', mode='view')">
+        Title
+        </metal:field>
+    </h1>
+
+    <div class="leadimage">
+	<div tal:replace="structure context/@@viewlets/collective.contentleadimage.thumbnail">Lead image</div>
+    </div>
+
+    <p class="documentDescription">
+        <metal:field use-macro="python:here.widget('description', mode='view')">
+        Description
+        </metal:field>
+    </p>
+
+    <metal:macro metal:use-macro="here/folder_listing/macros/listing" />
+
+</tal:simpleview>

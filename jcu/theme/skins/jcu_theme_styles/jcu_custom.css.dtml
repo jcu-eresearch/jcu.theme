@@ -121,7 +121,7 @@ background-color:#FFF6D9;
         padding:0 0.75em;
         line-height:1.5em;
 }
-body.kupu .accordion .accordion-pane {
+body.kupu .accordion .accordion-pane, body.mceContentBody .accordion .accordion-pane {
 display:block;
 }
 
