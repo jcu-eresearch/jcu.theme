@@ -99,6 +99,16 @@ h3, h4, h5, h6 {
     margin: 0 0 1em 1em;
 }
 
+#site-title {
+clear:right;
+color:#0066CC;
+float:right;
+font-family:georgia,times,san-serif;
+font-size:1.5em;
+margin:0.5em 1em 0;
+text-decoration:none;
+}
+
 /* The skin switcher at the top, only shows up if you have multiple skins available */
 #portal-skinswitcher {
 }
@@ -429,6 +439,7 @@ Dark Red:610000
 #portal-personaltools li {
     color: &dtml-globalFontColor;;
     display: inline;
+    font-size: 0.8em;
 }
 #portal-personaltools li a {
     background-color: transparent;
@@ -437,7 +448,6 @@ Dark Red:610000
     text-decoration: none;
     color: &dtml-linkColor;;
     text-transform: &dtml-textTransform;;
-    font-size: 0.8em;
     border-right: &dtml-lightBorderWidth; &dtml-lightBorderStyle; &dtml-lightBorderColor;;
 }
 #portal-personaltools li a:hover {

@@ -464,13 +464,17 @@ li.formTab a {
 }
 li.firstFormTab a {
     border-left: &dtml-formBorderWidth; &dtml-formBorderStyle; &dtml-formBorderColor;;
-    -moz-border-radius: 0.75em 0 0 0.75em;
-    -webkit-border-radius: 0.7em 0 0 0.75em;
+    -moz-border-radius-bottomleft: 0.75em 0.75em;
+    -moz-border-radius-topleft: 0.75em 0.75em;
+    border-bottom-left-radius: 0.75em 0.75em;
+    border-top-left-radius: 0.75em 0.75em;
 }
 li.lastFormTab a {
     border-right: &dtml-formBorderWidth; &dtml-formBorderStyle; &dtml-formBorderColor;;
-    -moz-border-radius: 0 0.75em 0.75em 0;
-    -webkit-border-radius: 0 0.75em 0.75em 0;
+    -moz-border-radius-bottomright: 0.75em 0.75em;
+    -moz-border-radius-topright: 0.75em 0.75em;
+    border-bottom-right-radius: 0.75em 0.75em;
+    border-top-right-radius: 0.75em 0.75em;
 }
 li.formTab a.selected {
     background: &dtml-globalBackgroundColor;;
