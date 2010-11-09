@@ -685,7 +685,7 @@ dl.searchResults span.documentByLine {
 
 .notify,
 .documentEditable * .notify {
-    border: &dtml-borderWidth; &dtml-borderStyle; &dtml-notifyBorderColor;;
+    border: 1px solid &dtml-notifyBorderColor;;
 }
 .card {
     background-color: &dtml-globalBackgroundColor;;
