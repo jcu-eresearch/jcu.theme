@@ -1,6 +1,50 @@
 Change History
 ==============
 
+1.5 (2010-11-xx)
+
+    - Adding a viewlet manager specifically for our site actions so we 
+    don't need to be using CSS hacks any more.  CSS at 100% width now
+    works entirely.  Yay!
+    [David]
+    - Updating site actions drop down menu to support "target" for links
+    [David]
+    - Updating more CSS to look even better with drop down menus
+    [David]
+    - Forcing the dropdown.css file in the JS registry to be available for
+    logged out users too because of our Site Actions drop down.
+    [David]
+    - Making the Author page "Edit" link edit one's profile
+    [David]
+    - Adding special aspects to drop-down menus at top right (About Me and
+      Get Support links)
+    [David]
+    - Providing custom version of PloneFormGen main view due to theirs
+      being borked in 1.6.0b4
+    [David]
+    - Updating various style elements (eg JCU colours, styling, livesearch,
+      positioning, margins, site actions menu, logos, alignment, sizes, etc)
+    [David] 
+    - Changing site actions into a menu like the personal tools
+    [David]
+    - Updated path_bar to not show if we only have Home in the breadcrumbs
+    [David]
+    - Updated various viewlets to bring into line with Plone 4 (eg logo)
+    [David]
+    - Removed various viewlets as Plone 4 provides the same as default (eg global sections)
+    [David]
+    - Added wrapper within the footer structure for margin to apply 
+    [David]
+    - Replaced old CSS with that from Sunburst theme; still needs customisation
+    [David]
+    - Removed main_template customisations and our theme now extends off Sunburst 
+      to get divs OOTB rather than tables
+    [David]
+    - Upgrading theming functionality into custom plone_layout view to
+      eliminate the need to hack the main_template again.  Using overrides.zcml now.
+    [David]
+    - Reworking for Plone 4
+
 1.1.2 (2010-08-02)
     - Updated CSS for accordion with TinyMCE
     [David]

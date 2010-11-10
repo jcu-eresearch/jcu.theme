@@ -2,7 +2,7 @@
 <!-- This file holds the setup configuration for the portal_skins tool -->
 
 <object name="portal_skins" allow_any="False" cookie_persistence="False"
-   default_skin="Plone Default">
+   default_skin="Sunburst Theme">
 
  <object name="jcu_theme_custom_images"
     meta_type="Filesystem Directory View"
@@ -14,6 +14,6 @@
     meta_type="Filesystem Directory View"
     directory="jcu.theme:skins/jcu_theme_styles" remove="True" />
 
- <skin-path name="JCU Theme" based-on="Plone Default" remove="True" />
+ <skin-path name="JCU Theme" based-on="Sunburst Theme" remove="True" />
 
 </object>

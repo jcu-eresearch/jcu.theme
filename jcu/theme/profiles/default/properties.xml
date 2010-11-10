@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<site>
+ <property name="email_from_address"
+    type="string">eresearch@jcu.edu.au</property>
+ <property name="email_from_name"
+    type="string">eResearch Site Administrator</property>
+</site>

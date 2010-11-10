@@ -36,7 +36,14 @@
         Description
       </p>
 
-      <p>Current saved settings are: <span tal:replace="view/current_settings" /></p>
+      <div>Current saved settings are:
+          <dl>
+           <tal:settings repeat="setting python:view.current_settings.keys()">
+             <dt tal:content="setting">Setting</dt>
+             <dd tal:content="python:view.current_settings[setting]">Value</dd>
+           </tal:settings>
+         </dl>
+      </div> 
 
     <div id="skel-contents">
       <span tal:replace="structure contents" />

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<object>
+ <resourcetypes>
+  <link_using_uids value="True"/>
+ </resourcetypes>
+ <toolbar>
+  <toolbar_anchor value="True"/>
+  <toolbar_hr value="False"/>
+  <toolbar_insertdate value="True"/>
+  <toolbar_cut value="False"/>
+  <toolbar_definitionlist value="True"/>
+  <customtoolbarbuttons value=""/>
+  <toolbar_paste value="False"/>
+  <toolbar_justifycenter value="True"/>
+  <toolbar_inserttime value="True"/>
+  <toolbar_tablecontrols value="True"/>
+  <toolbar_justifyleft value="True"/>
+  <toolbar_redo value="False"/>
+  <toolbar_unlink value="True"/>
+  <toolbar_visualchars value="False"/>
+  <toolbar_media value="False"/>
+  <toolbar_nonbreaking value="False"/>
+  <toolbar_image value="True"/>
+  <toolbar_advhr value="False"/>
+  <toolbar_removeformat value="True"/>
+  <toolbar_undo value="False"/>
+  <toolbar_save value="True"/>
+  <toolbar_sub value="True"/>
+  <toolbar_numlist value="True"/>
+  <toolbar_underline value="False"/>
+  <toolbar_sup value="True"/>
+  <toolbar_preview value="False"/>
+  <toolbar_forecolor value="False"/>
+  <toolbar_style value="True"/>
+  <toolbar_link value="True"/>
+  <toolbar_emotions value="True"/>
+  <toolbar_justifyright value="True"/>
+  <toolbar_replace value="True"/>
+  <toolbar_outdent value="True"/>
+  <toolbar_strikethrough value="True"/>
+  <toolbar_pasteword value="True"/>
+  <toolbar_width value="440"/>
+  <toolbar_print value="False"/>
+  <toolbar_code value="True"/>
+  <toolbar_justifyfull value="True"/>
+  <toolbar_charmap value="False"/>
+  <toolbar_bullist value="True"/>
+  <toolbar_copy value="False"/>
+  <toolbar_pastetext value="True"/>
+  <toolbar_visualaid value="False"/>
+  <toolbar_indent value="True"/>
+  <toolbar_iespell value="False"/>
+  <toolbar_search value="False"/>
+  <toolbar_fullscreen value="True"/>
+  <toolbar_italic value="True"/>
+  <toolbar_attribs value="True"/>
+  <toolbar_pagebreak value="False"/>
+  <toolbar_bold value="True"/>
+  <toolbar_backcolor value="False"/>
+  <toolbar_external value="False"/>
+  <toolbar_cleanup value="True"/>
+ </toolbar>
+</object>

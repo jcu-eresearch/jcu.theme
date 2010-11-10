@@ -16,9 +16,25 @@
         interface=".interfaces.IThemeSpecific"
         type="zope.publisher.interfaces.browser.IBrowserSkinType"
         name="JCU Theme"
-        />
+	/>
+
+    <browser:viewletManager
+	name="jcu.portaltop"
+	provides=".interfaces.IPortalTop"
+	layer=".interfaces.IThemeSpecific"
+	class="plone.app.viewletmanager.manager.OrderedViewletManager"
+	permission="zope.Public"
+	/>
 
     <!-- Viewlets registration -->
+    <browser:viewlet
+	name="plone.global_sections"
+	manager=".interfaces.IPortalTop"
+	class="plone.app.layout.viewlets.common.GlobalSectionsViewlet"
+    	permission="zope2.View"
+    />
+
+
      <browser:viewlet
          name="jcu.footer"
          manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
@@ -36,15 +52,6 @@
         permission="zope.Public"
         />
 
-     <browser:viewlet
-         name="jcu.global_sections"
-         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-         class=".viewlets.GlobalSectionsViewlet"
-         layer=".interfaces.IThemeSpecific"
-         permission="zope2.View"
-         />
-
-
     <!-- The logo -->
     <browser:viewlet
         name="jcu.logo"
@@ -54,51 +61,22 @@
         permission="zope2.View"
 	/>
 
-    <!-- The breadcrumbs -->
     <browser:viewlet
-        name="jcu.path_bar"
-        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-        class=".viewlets.PathBarViewlet"
+	name="jcu.path_bar"
+	manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+	class=".viewlets.PathBarViewlet"
         layer=".interfaces.IThemeSpecific"
-        permission="zope2.View"
-        />
-
-    <browser:viewlet
-        name="plone.personal_bar"
-        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-        class="plone.app.layout.viewlets.common.PersonalBarViewlet"
-        layer=".interfaces.IThemeSpecific"
-        permission="zope2.View"
+	permission="zope2.View"
 	/>
 
     <browser:viewlet
-        name="plone.contentactions"
-        for="*"
-        manager="plone.app.layout.viewlets.interfaces.IContentViews"
-        template="templates/contentactions_blank.pt"
-        layer=".interfaces.IThemeSpecific"
-        permission="zope2.View"
-	/>
+	name="jcu.site_actions"
+	manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+	class=".viewlets.SiteActionsViewlet"
+	layer=".interfaces.IThemeSpecific"
+	permission="zope2.View"
+       />
 
-    <browser:viewlet
-        name="plone.contentactions"
-        for="*"
-        view="plone.app.layout.globals.interfaces.IViewView"
-        manager="plone.app.layout.viewlets.interfaces.IContentViews"
-        class="plone.app.layout.viewlets.common.ContentActionsViewlet"
-        layer=".interfaces.IThemeSpecific"
-        permission="zope2.View"
-        />
-
-    <browser:viewlet
-        name="plone.contentactions"
-        for="*"
-        view="plone.app.content.browser.interfaces.IFolderContentsView"
-        manager="plone.app.layout.viewlets.interfaces.IContentViews"
-        class="plone.app.layout.viewlets.common.ContentActionsViewlet"
-        layer=".interfaces.IThemeSpecific"
-        permission="zope2.View"
-        />
 
     <!-- Content view methods -->
     <browser:page

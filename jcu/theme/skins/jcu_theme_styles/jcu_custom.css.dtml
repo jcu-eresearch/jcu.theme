@@ -11,6 +11,130 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
+.jcu-blue #globalnav-wrapper,
+.jcu-blue #portal-globalnav { background: #00AEEF url('jcu_gradient_blue.png') 0 0 repeat-y; }
+.jcu-blue #portal-globalnav li a { color: White !important; }
+.jcu-blue #portal-globalnav li ul li a, 
+.jcu-blue #portal-globalnav .selected a { background-color: #00B6FA; }
+.jcu-blue #portal-globalnav a:hover { background-color: #004173 !important; }
+.jcu-blue #content fieldset { border-color: #99E3FF; }
+.jcu-blue #content a:hover,
+.jcu-blue dl.portlet a:hover  { color: #00b6fa !important; }
+.jcu-blue #edit-bar,
+.jcu-blue #contentActionMenus dl.actionMenu.activated dd,
+.jcu-blue dl.portlet dt,
+.jcu-blue div.portletAssignments div.portletHeader
+    { border-color: #00AEEF; }
+.jcu-blue #edit-bar, 
+.jcu-blue #content-views, 
+.jcu-blue #contentActionMenus,
+.jcu-blue #contentActionMenus dl.actionMenu a, 
+.jcu-blue #contentActionMenus dl.actionMenu.activated dd 
+    { background-color: #00AEEF; }
+
+.jcu-orange #globalnav-wrapper,
+.jcu-orange #portal-globalnav { background: #FDB913 url('jcu_gradient_orange.png') 0 0 repeat-y; }
+.jcu-orange #portal-globalnav li a { color: White !important; }
+.jcu-orange #portal-globalnav li ul li a, 
+.jcu-orange #portal-globalnav .selected a { background-color: #E09900; }
+.jcu-orange #portal-globalnav a:hover { background-color: #C85A0A !important; }
+.jcu-orange #portal-globalnav li ul li a { border-bottom: 1px solid #EEEEEE; border-top: 0px none; }
+.jcu-orange #content fieldset { border-color: #FDB913; }
+.jcu-orange #content a:hover, .jcu-orange dl.portlet a:hover 
+    { color: #c85a0a !important; }
+.jcu-orange #edit-bar,
+.jcu-orange #contentActionMenus dl.actionMenu.activated dd,
+.jcu-orange dl.portlet dt,
+.jcu-orange div.portletAssignments div.portletHeader
+    { border-color: #E09900; }
+.jcu-orange #edit-bar, 
+.jcu-orange #content-views, 
+.jcu-orange #contentActionMenus,
+.jcu-orange #contentActionMenus dl.actionMenu a, 
+.jcu-orange #contentActionMenus dl.actionMenu.activated dd 
+    { background-color: #E09900; }
+
+.jcu-green #globalnav-wrapper,
+.jcu-green #portal-globalnav { background: #8CC63F url('jcu_gradient_green.png') 0 0 repeat-y; }
+.jcu-green #portal-globalnav li a { color: White !important; }
+.jcu-green #portal-globalnav li ul li a, 
+.jcu-green #portal-globalnav .selected a { background-color: #94D142; }
+.jcu-green #portal-globalnav a:hover { background-color: #093 !important; }
+.jcu-green #portal-globalnav li ul li a { border-bottom: 1px solid #EEEEEE; border-top: 0px none; }
+.jcu-green #content fieldset { border-color: #B2D485; }
+.jcu-green #content a:hover, .jcu-green dl.portlet a:hover 
+    { color: #093 !important; }
+.jcu-green #edit-bar,
+.jcu-green #contentActionMenus dl.actionMenu.activated dd,
+.jcu-green dl.portlet dt,
+.jcu-green div.portletAssignments div.portletHeader
+    { border-color: #94D142; }
+.jcu-green #edit-bar, 
+.jcu-green #content-views, 
+.jcu-green #contentActionMenus,
+.jcu-green #contentActionMenus dl.actionMenu a, 
+.jcu-green #contentActionMenus dl.actionMenu.activated dd 
+    { background-color: #94D142; }
+
+.jcu-red #globalnav-wrapper,
+.jcu-red #portal-globalnav { background: #E31F26 url('jcu_gradient_red.png') 0 0 repeat-y; }
+.jcu-red #portal-globalnav li a { color: White !important; }
+.jcu-red #portal-globalnav li ul li a, 
+.jcu-red #portal-globalnav .selected a { background-color: #ED2028; }
+.jcu-red #portal-globalnav a:hover { background-color: #B43C3C !important; }
+.jcu-red #portal-globalnav li ul li a { border-bottom: 1px solid #EEEEEE; border-top: 0px none; }
+.jcu-red #content fieldset { border-color: #F99; }
+.jcu-red #content a:hover, .jcu-red dl.portlet a:hover 
+    { color: #ed2028 !important; }
+.jcu-red #edit-bar,
+.jcu-red #contentActionMenus dl.actionMenu.activated dd,
+.jcu-red dl.portlet dt,
+.jcu-red div.portletAssignments div.portletHeader
+    { border-color: #B43C3C; }
+.jcu-red #edit-bar, 
+.jcu-red #content-views, 
+.jcu-red #contentActionMenus,
+.jcu-red #contentActionMenus dl.actionMenu a, 
+.jcu-red #contentActionMenus dl.actionMenu.activated dd 
+    { background-color: #B43C3C; }
+
+/*
+.jcu-blue #portal-personaltools a { color: White; }
+.jcu-blue #portal-personaltools, 
+.jcu-blue #portal-personaltools dd { background: #00B6FA; }
+.jcu-orange #portal-personaltools a { color: White; }
+.jcu-orange #portal-personaltools,
+.jcu-orange #portal-personaltools dd { background: #FF9100; }
+.jcu-green #portal-personaltools a { color: white; }
+.jcu-green #portal-personaltools,
+.jcu-green #portal-personaltools dd { background: #94D142; }
+.jcu-red #portal-personaltools a { color: white; }
+.jcu-red #portal-personaltools,
+.jcu-red #portal-personaltools dd { background: #ED2028; }
+*/
+
+.plonepopup {
+background:none repeat scroll 0 0 white !important;
+}
+
+.ploneSkin .mce_h2 span.mceText {
+font-weight:normal !important;
+}
+
+#siteaction-get_support a, 
+#personaltools-logout a {
+background: #888;
+color: White;
+}
+
+#content .documentActions li {
+display:inline-block;
+margin-right: 1.5em;
+}
+#content .documentActions ul {
+margin: 0;
+}
+
 /* Darn you, IE */
 #slider-container  {
 overflow:hidden;
@@ -26,13 +150,8 @@ display:none;
 }
 
 .sliderPullQuote, .sliderPullQuoteLeft {
--moz-background-clip:border;
--moz-background-inline-policy:continuous;
--moz-background-origin:padding;
--moz-border-radius-bottomleft:1em;
--moz-border-radius-bottomright:1em;
--moz-border-radius-topleft:1em;
--moz-border-radius-topright:1em;
+-moz-border-radius:1em;
+border-radius:1em;
 background:transparent url(&dtml-portal_url;/1x1-75pc-opacity.png) repeat scroll 0 0;
 clear:right;
 color:#000000;

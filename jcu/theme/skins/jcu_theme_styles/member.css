@@ -1,0 +1,87 @@
+/* - member.css - */
+
+/* workflow state colors */
+
+.state-closed,
+.state-private {
+	color: Red !important;
+}
+.state-restricted,
+.state-internally_published,
+.state-visible {
+	color: #0065C2 !important;
+}
+.state-open,
+.state-external,
+.state-published {
+	color: #436976 !important;
+}
+.state-protected,
+.state-pending_external,
+.state-pending {
+	color: #FFA500 !important;
+}
+.state-expired {
+	color: Red !important;
+}
+.syndicated {
+	color: #008000 !important;
+}
+.state-internal {
+	color: #1C9F7C;
+}
+
+/* Pulldown menu state indicators */
+
+#plone-contentmenu-workflow .state-closed,
+#plone-contentmenu-workflow .state-private {
+	padding: 0 0.5em;
+	background-color: Red;
+	border: 0.1em solid Red;
+	color: White !important;
+	border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+}
+#plone-contentmenu-workflow .state-internal {
+	padding: 0 0.5em;
+	background-color: #1C9F7C;
+	border: 0.1em solid #1C9F7C;
+	color: White !important;
+	border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+}
+#plone-contentmenu-workflow .state-restricted,
+#plone-contentmenu-workflow .state-internally_published,
+#plone-contentmenu-workflow .state-visible {
+	padding: 0 0.5em;
+	background-color: #0065C2;
+	border: 0.1em solid #0065C2;
+	color: White !important;
+	border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+}
+#plone-contentmenu-workflow .state-open,
+#plone-contentmenu-workflow .state-external,
+#plone-contentmenu-workflow .state-published {
+	padding: 0 0.5em;
+	background-color: #436976;
+	border: 0.1em solid #436976;
+	color: White !important;
+	border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+}
+#plone-contentmenu-workflow .state-protected,
+#plone-contentmenu-workflow .state-pending_external,
+#plone-contentmenu-workflow .state-pending {
+	padding: 0 0.5em;
+	background-color: #FFA500;
+	border: 0.1em solid #FFA500;
+	color: White !important;
+	border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+}

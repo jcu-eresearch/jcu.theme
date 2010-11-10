@@ -1,10 +1,17 @@
-<configure
-    xmlns="http://namespaces.zope.org/zope"
-    xmlns:five="http://namespaces.zope.org/five"
-    xmlns:cmf="http://namespaces.zope.org/cmf"
-    xmlns:meta="http://namespaces.zope.org/meta"
-    i18n_domain="jcu.theme">
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:zcml="http://namespaces.zope.org/zcml"
+           xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+           xmlns:browser="http://namespaces.zope.org/browser"
+           i18n_domain="jcu.theme">
 
-   <!-- <include package=".layout" /> -->
+  <browser:page
+        name="plone_layout"
+        for="*"
+        permission="zope.Public"
+        class=".browser.layout.JCULayoutPolicy"
+        allowed_interface="plone.app.layout.globals.interfaces.ILayoutPolicy"
+        />
+
 
 </configure>
+

@@ -34,4 +34,37 @@
   </object>
  </object>
 
+ <object name="site_actions" meta_type="CMF Action Category">
+  <object name="get_support" meta_type="CMF Action" i18n:domain="plone"
+        insert-after="*">
+   <property name="title" i18n:translate="">Get Support</property>
+   <property name="description" i18n:translate=""></property>
+   <property
+      name="url_expr">string:http://eresearch.jcu.edu.au/support</property>
+   <property name="link_target">_blank</property>
+   <property name="icon_expr"></property>
+   <property name="available_expr">python:member is not None</property>
+   <property name="permissions">
+    <element value="View"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+ </object>
+
+ <object name="user" meta_type="CMF Action Category">
+  <object name="about_me" meta_type="CMF Action" i18n:domain="plone"
+        insert-after="dashboard">
+   <property name="title" i18n:translate="">About me</property>
+    <property name="description"
+     i18n:translate="">Details and authoring information about you</property>
+    <property
+     name="url_expr">string:${portal_url}/author/${member/id}</property>
+    <property name="link_target"></property>
+    <property name="icon_expr"></property>
+    <property name="available_expr">python:member is not None</property>
+    <property name="permissions"/>
+    <property name="visible">True</property>
+  </object>
+ </object>
+
 </object>

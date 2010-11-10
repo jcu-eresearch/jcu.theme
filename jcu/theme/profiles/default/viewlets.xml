@@ -5,7 +5,7 @@
 
 <object>
 
-  <!-- Viewlets keep the same ordering than the default skin ('Plone Default'
+  <!-- Viewlets keep the same ordering than the default skin ('Plone Classic Theme'
        out of the box).
        You can specify skinname="*" if you want changes apply for all skins.
        Using "True"" for the 'make-default' parameter will make the 'skinname'
@@ -15,8 +15,7 @@
        The 'based-on' attribute lets you inherit the viewlets ordering from an
        existing skin.
        -->
-  <order manager="plone.portalheader" skinname="JCU Theme"
-         based-on="Plone Default">
+  <order manager="plone.portalheader" skinname="JCU Theme" based-on="Plone Default">
     <!-- The definition of a viewlet accepts these parameters:
          - name: quite self explanatory, the name of the viewlet.
          - insert-before: name of the viewlet before which it must be added or
@@ -28,19 +27,19 @@
          Note: insert-before and -after accept the value "*" which means
          "all".
          -->
-    <viewlet name="plone.personal_bar"
-             insert-after="plone.site_actions" />
-    <viewlet name="jcu.logo"
-             insert-before="plone.logo"/>
-    <viewlet name="jcu.global_sections"
-             insert-before="plone.global_sections"/>
-    <viewlet name="jcu.path_bar"
-             insert-before="plone.path_bar"/>
+    <viewlet name="jcu.site_actions" insert-after="plone.personal_bar"/>
+    <viewlet name="jcu.logo" insert-before="plone.logo"/>
   </order>
-  <order manager="plone.portalfooter" skinname="JCU Theme"
-         based-on="Plone Default">
+  <order manager="plone.portalfooter" skinname="JCU Theme" based-on="Plone Default">
     <viewlet name="jcu.footer" insert-before="*" />
-    <viewlet name="jcu.colophon" insert-after="jcu.footer" />
+    <viewlet name="jcu.colophon" insert-before="jcu.footer" />
+  </order>
+  <order manager="plone.abovecontent" skinname="JCU Theme" based-on="Plone Default">
+    <viewlet name="jcu.path_bar" insert-before="plone.path_bar" />
+  </order>
+
+  <order manager="jcu.portaltop" skinname="JCU Theme">
+    <viewlet name="plone.global_sections" />
   </order>
 
   <hidden manager="plone.portalheader" skinname="JCU Theme">
@@ -50,10 +49,10 @@
   <hidden manager="plone.portalfooter" skinname="JCU Theme">
     <viewlet name="plone.footer" />
     <viewlet name="plone.colophon" />
+    <viewlet name="plone.site_actions" />
   </hidden>
-  <hidden manager="plone.portaltop" skinname="JCU Theme">
-    <viewlet name="plone.personal_bar"/>
-    <viewlet name="plone.path_bar"/>
+  <hidden manager="plone.abovecontent" skinname="JCU Theme">
+    <viewlet name="plone.path_bar" />
   </hidden>
 
 </object>
