@@ -22,6 +22,7 @@
                tal:content="title"
                tal:attributes="href saction/url;
                                title title;
+                               target saction/link_target;
                                accesskey accesskey;">Site action</a></li></ul>
   </dd>
 </dl>

@@ -38,8 +38,13 @@
     <viewlet name="jcu.path_bar" insert-before="plone.path_bar" />
   </order>
 
+  <order manager="jcu.portaltop" skinname="JCU Theme">
+    <viewlet name="plone.global_sections" />
+  </order>
+
   <hidden manager="plone.portalheader" skinname="JCU Theme">
     <viewlet name="plone.logo" />
+    <viewlet name="plone.global_sections" />
   </hidden>
   <hidden manager="plone.portalfooter" skinname="JCU Theme">
     <viewlet name="plone.footer" />

@@ -1,8 +1,14 @@
 Change History
 ==============
 
-1.5 (2010-09-xx)
+1.5 (2010-11-xx)
 
+    - Adding a viewlet manager specifically for our site actions so we 
+    don't need to be using CSS hacks any more.  CSS at 100% width now
+    works entirely.  Yay!
+    [David]
+    - Updating site actions drop down menu to support "target" for links
+    [David]
     - Updating more CSS to look even better with drop down menus
     [David]
     - Forcing the dropdown.css file in the JS registry to be available for

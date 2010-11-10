@@ -38,7 +38,7 @@ body {
     background: White;
     margin:1em auto 0;
     min-width:960px;
-    width:80%;
+    width:90%;
 }
 #portal-columns {
     border-bottom:1px dotted #eee;
@@ -121,13 +121,12 @@ q {
 #portal-header {
     position: relative;
     z-index: 2;
-    margin-bottom: 0.5em;
 }
 
 #portal-logo, #site-logo {
     display: -moz-inline-stack;
     display: inline-block;
-    margin:0.75em 1em 1.5em 0;
+    margin:0.75em 1em 1em 0;
     vertical-align:middle;
     zoom: 1;
     *display: inline;
@@ -141,8 +140,8 @@ q {
     font-size: 85%;
     background:#F6F2E6;
     /* ensure top navigation dont touches portlets, content etc.. #10491 */
-    margin: 0 0 0 -1.1378003%;
-    width: 102.3017903%;
+    width: 100%;
+    margin:0.5em 0;
 }
 #portal-globalnav li {
     text-align:center;
