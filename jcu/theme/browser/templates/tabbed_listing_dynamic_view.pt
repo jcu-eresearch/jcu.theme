@@ -69,7 +69,8 @@
                             folderContents python: (over_limit and folderContents[:limit_display]) or folderContents;
                             normalizeString nocall:context/@@plone/normalizeString;
                             isAnon context/@@plone_portal_state/anonymous;
-                            batch folderContents;">
+                            batch folderContents;
+                            portal context/@@plone_portal_state/portal">
 
         <tal:listing condition="folderContents">
         <div id="sidetabwrapper">

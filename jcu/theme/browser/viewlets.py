@@ -16,5 +16,5 @@ class PathBarViewlet(common.PathBarViewlet):
     index = ViewPageTemplateFile('templates/path_bar.pt')
 
 class SiteActionsViewlet(common.SiteActionsViewlet):
-    index = ViewPageTemplateFile('site_actions.pt')
+    index = ViewPageTemplateFile('templates/site_actions.pt')
 

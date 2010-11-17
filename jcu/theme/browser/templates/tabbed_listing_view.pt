@@ -79,7 +79,7 @@
                              item_type           item/portal_type;
                              item_title_or_id    item/pretty_title_or_id;
                              item_description    item/Description;
-                             item_has_leadimage  item/hasContentLeadImage;
+                             item_has_leadimage  python:hasattr(item, 'hasContentLeadImage') and item/hasContentLeadImage or False;
                              item_object         item/getObject;">
                 <!-- <img src="" alt=""
                      tal:condition="exists:item_has_leadimage"
