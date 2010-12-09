@@ -1,8 +1,13 @@
 Change History
 ==============
 
-1.5 (2010-11-xx)
+1.5 (2010-12-xx)
 
+    - Removed some extra, unnecessary TinyMCE buttons
+    [David]
+    - Changing to populate reCaptcha settings public/private key if we are 
+    using this service.  The buildout now using reCaptcha by default.
+    [David]
     - Adding a viewlet manager specifically for our site actions so we 
     don't need to be using CSS hacks any more.  CSS at 100% width now
     works entirely.  Yay!

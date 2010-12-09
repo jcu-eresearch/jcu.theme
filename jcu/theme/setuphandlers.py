@@ -9,3 +9,13 @@ def setupVarious(context):
         return
 
     # Add additional setup code here
+    try:
+        from collective.recaptcha.settings import getRecaptchaSettings
+        settings = getRecaptchaSettings()
+        settings.public_key = u'6Ld5c78SAAAAAJH6NdN69ZYiXGrYcs9MLrvjY08U'
+        settings.private_key = u'6Ld5c78SAAAAAGJpMrcbF_vAzeVRNWCjIWFZPZfs'
+    except:
+        pass
+
+
+

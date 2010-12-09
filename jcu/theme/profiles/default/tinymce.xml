@@ -6,13 +6,13 @@
  <toolbar>
   <toolbar_anchor value="True"/>
   <toolbar_hr value="False"/>
-  <toolbar_insertdate value="True"/>
+  <toolbar_insertdate value="False"/>
   <toolbar_cut value="False"/>
   <toolbar_definitionlist value="True"/>
   <customtoolbarbuttons value=""/>
   <toolbar_paste value="False"/>
   <toolbar_justifycenter value="True"/>
-  <toolbar_inserttime value="True"/>
+  <toolbar_inserttime value="False"/>
   <toolbar_tablecontrols value="True"/>
   <toolbar_justifyleft value="True"/>
   <toolbar_redo value="False"/>
@@ -33,7 +33,7 @@
   <toolbar_forecolor value="False"/>
   <toolbar_style value="True"/>
   <toolbar_link value="True"/>
-  <toolbar_emotions value="True"/>
+  <toolbar_emotions value="False"/>
   <toolbar_justifyright value="True"/>
   <toolbar_replace value="True"/>
   <toolbar_outdent value="True"/>
