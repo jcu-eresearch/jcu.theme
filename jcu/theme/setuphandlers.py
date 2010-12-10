@@ -37,7 +37,6 @@ def setupVarious(context):
         ldap_acl_users.read_only = True
         ldap_acl_users._pwd_encryption = 'SSHA'
         ldap_acl_users._roles = ['Anonymous']
-        import ipdb; ipdb.set_trace()
     except:
         site.plone_log('Could not configure LDAP plugin settings.')
         pass
