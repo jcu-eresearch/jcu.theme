@@ -468,7 +468,7 @@ dl.portletNavigationTree dd.portletItem {
 }
 
 dl.portlet ul.navTreeLevel0 > .navTreeItem {
-    padding: 0.25em 1em;
+    padding: 0 1em;
     border-bottom: 0.1em dotted #ddd;
     line-height: 2em;
 }
@@ -484,7 +484,7 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 }
 
 dl.portlet ul.navTree li.navTreeCurrentNode {
-    background: url('arrow-grey-left.png') no-repeat scroll 0 0.75em transparent;
+    background: url('arrow-grey-left.png') no-repeat scroll 0 0.5em transparent;
 }
 
 /* @end */

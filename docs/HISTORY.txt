@@ -3,6 +3,11 @@ Change History
 
 1.5 (2010-12-xx)
 
+    - Added LDAP GenericSetup profile.  It doesn't all work yet due to a 
+    bug, but I've added manually intervention for the moment.
+    [David]
+    - Removed old-style group preference page since the new one works
+    [David]
     - Removed some extra, unnecessary TinyMCE buttons
     [David]
     - Changing to populate reCaptcha settings public/private key if we are 
@@ -36,14 +41,15 @@ Change History
     [David]
     - Updated various viewlets to bring into line with Plone 4 (eg logo)
     [David]
-    - Removed various viewlets as Plone 4 provides the same as default (eg global sections)
+    - Removed various viewlets as Plone 4 provides the same as default 
+      (eg global sections)
     [David]
     - Added wrapper within the footer structure for margin to apply 
     [David]
     - Replaced old CSS with that from Sunburst theme; still needs customisation
     [David]
-    - Removed main_template customisations and our theme now extends off Sunburst 
-      to get divs OOTB rather than tables
+    - Removed main_template customisations and our theme now extends off 
+      Sunburst to get divs OOTB rather than tables
     [David]
     - Upgrading theming functionality into custom plone_layout view to
       eliminate the need to hack the main_template again.  Using overrides.zcml now.
