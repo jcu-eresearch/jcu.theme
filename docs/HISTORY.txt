@@ -3,6 +3,12 @@ Change History
 
 1.5 (2010-12-xx)
 
+    - Fixed issue with TinyMCE toolbars being too long.  This should
+    be enough unless we add more buttons to the toolbar :/ .
+    [David]
+    - Depended on plone.app.caching.  We really need this to fix Google
+    Chrome's dodginess and for speed.
+    [David]
     - Added LDAP GenericSetup profile.  It doesn't all work yet due to a 
     bug, but I've added manually intervention for the moment.
     [David]
