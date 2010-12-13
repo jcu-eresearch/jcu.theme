@@ -5,5 +5,7 @@
   <dependencies>
    <dependency>profile-plone.app.z3cform:default</dependency>
    <dependency>profile-plone.app.ldap:ldap</dependency>
+   <dependency>profile-plone.app.caching:default</dependency>
+   <dependency>profile-plone.app.caching:without-caching-proxy</dependency>
  </dependencies>
 </metadata>

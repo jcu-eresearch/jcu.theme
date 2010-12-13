@@ -113,6 +113,10 @@
 .jcu-red #portal-personaltools dd { background: #ED2028; }
 */
 
+.ploneSkin table.mceToolbarRow3 {
+float:none !important;
+}
+
 .plonepopup {
 background:none repeat scroll 0 0 white !important;
 }
