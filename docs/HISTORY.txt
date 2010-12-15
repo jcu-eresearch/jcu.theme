@@ -3,6 +3,10 @@ Change History
 
 1.5 (2010-12-xx)
 
+    - Changing LDAP plugin to not be enabled for modification of groups
+    or users.  This should improve performance and stop issues when changing
+    principals.
+    [David]
     - Fixed issue with TinyMCE toolbars being too long.  This should
     be enough unless we add more buttons to the toolbar :/ .
     [David]

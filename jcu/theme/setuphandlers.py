@@ -43,10 +43,16 @@ def setupVarious(context):
     try:
         acl_users = site.acl_users
         plugins = acl_users.plugins
-        plugins.deactivatePlugin(
-            plugins._getInterfaceFromName('IUserManagement'),
-            'ldap-plugin',
-        )
+        deactivation = ['ICredentialsResetPlugin',
+                        'IGroupManagement',
+                        'IUserAdderPlugin',
+                        'IUserManagement',
+                       ]
+        for interface in deactivation:
+            plugins.deactivatePlugin(
+                plugins._getInterfaceFromName(interface),
+                'ldap-plugin',
+            )
         ldap_plugin = acl_users['ldap-plugin']
         ldap_acl_users = ldap_plugin.acl_users
         ldap_acl_users.read_only = True
