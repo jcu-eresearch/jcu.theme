@@ -251,17 +251,22 @@ input.searchField {
 
 /* @group LiveSearch */
 
-#LSResult {
+.LSResult {
     position: absolute;
     right: 0;
-    background: White;
     margin: -1.5em 0 0 -7em;
 }
+.portlet .LSResult {
+    left: 0;
+    right: auto;
+    margin: 0;
+}
 
-#LSResult fieldset {
+.LSResult fieldset {
     padding: 0;
     border: 0.1em solid #eee;
     margin:1em 0 0;
+    background: white;
 }
 
 #livesearchLegend {
@@ -269,7 +274,7 @@ input.searchField {
     padding:0 0.5em 0.5em;
 }
 
-#LSResult .LSDescr {
+.LSResult .LSDescr {
     font-size: 85%;
     color: #666;
     display: -moz-inline-stack;
@@ -408,7 +413,7 @@ dl.portlet dt a:hover {
 dl.portlet dd.portletItem,
 dl.portlet dd.portletFooter,
 dl.portletError dd {
-    padding: 1em;
+    padding: 0.5em;
 }
 
 
@@ -1617,8 +1622,8 @@ tr.selected {
 
 /* @group Login form */
 
-body.template-logged_out #content,
-body.template-login_form #content,
+body.template-logged_out #login-form,
+body.template-login_form #login-form,
 .pb-ajax #login-form {
     text-align: center;
 }

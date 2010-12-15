@@ -147,6 +147,23 @@ position:relative;
 
 *:first-child+html div.collage-item { min-width: 1px; } 
 * html .accordion div.collage-item { min-width: 1px; }
+
+:first-child+html #portal-breadcrumbs a {vertical-align:middle;}
+* html #portal-breadcrumbs a {vertical-align:middle;}
+
+:first-child+html #portal-top {z-index: 9999;}
+* html #portal-top {z-index:9999;}
+
+:first-child+html #portal-logo {margin-top:-1em;}
+* html #portal-logo {margin-top:-1em;}
+
+:first-child+html #site-logo {margin-top:0;}
+* html #site-logo {margin-top:0;}
+
+
+* html dl.portlet ul.navTree li.navTreeCurrentNode {padding-left: 1em;}
+* html #LSResult { width: 50%;}
+
 /* End IE workarounds */
 
 .collage_view_easyslider h1.documentFirstHeading {

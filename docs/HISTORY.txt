@@ -3,6 +3,10 @@ Change History
 
 1.5 (2010-12-xx)
 
+    - Fixing styles in various areas of Plone, especially hacks for IE6 and 7.
+    In particular, portal top drop-down menus and z-index (IE6/7 use parental
+    z-index values for comparison), and lack of arrows on menus (fixed via JS).
+    [David]
     - Adding JCU specific information the login form
     [David]
     - Removing usernames from advanced search form.  This is a security issue.
