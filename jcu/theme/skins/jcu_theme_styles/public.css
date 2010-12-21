@@ -1106,10 +1106,13 @@ dl.actionMenu.activated dd {
     min-width: 100%;
     border-bottom-right-radius: 0.5em;
     border-bottom-left-radius: 0.5em;
+    border-top-left-radius: 0.5em;
     -webkit-border-bottom-right-radius: 0.5em;
     -webkit-border-bottom-left-radius: 0.5em;
-    -moz-border-radius-bottomleft: 0.5em;
+    -webkit-border-top-left-radius: 0.5em;
     -moz-border-radius-bottomright: 0.5em;
+    -moz-border-radius-bottomleft: 0.5em;
+    -moz-border-radius-topleft: 0.5em;
 }
 dl.actionMenu.activated dt a,
 dl.actionMenu.activated dd a,
