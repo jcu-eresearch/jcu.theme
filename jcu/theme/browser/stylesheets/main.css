@@ -27,7 +27,6 @@
 }
 #nav {
     width: 25%;
-    min-width: 200px;
     max-width: 250px;
     padding: 0;
     float:left;
@@ -122,7 +121,7 @@
 .jcu-green #nav a.current {
     background-color: #94D142;
     text-shadow: 0 -1px 0 #372;
-    color: #FFF;
+    color: #FFF !important;
 }
 .jcu-green #panes { 
     border-color: #94D142;
@@ -131,7 +130,7 @@
 .jcu-blue #nav a.current {
     background-color: #00B6FA;
     text-shadow: 0 -1px 0 #37F;
-    color: #FFF;
+    color: #FFF !important;
 }
 .jcu-blue #nav a {
     background-color: #D4E8EE;
@@ -148,7 +147,7 @@
 .jcu-orange #nav a.current {
     background-color: #FDB913;
     text-shadow: 0 -1px 0 #950;
-    color: #FFF;
+    color: #FFF !important;
 }
 .jcu-orange #panes { 
     border-color: #FDB913;
@@ -157,7 +156,7 @@
 .jcu-red #nav a.current {
     background-color: #ED2028;
     text-shadow: 0 -1px 0 #833;
-    color: #FFF;
+    color: #FFF !important;
 }
 .jcu-red #nav a {
     background-color: #F0D7D5;

@@ -27,6 +27,7 @@
          Note: insert-before and -after accept the value "*" which means
          "all".
          -->
+    <viewlet name="plone.personal_bar" insert-before="plone.searchbox"/>
     <viewlet name="jcu.site_actions" insert-after="plone.personal_bar"/>
     <viewlet name="jcu.logo" insert-before="plone.logo"/>
   </order>

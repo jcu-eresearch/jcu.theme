@@ -1,7 +1,14 @@
 Change History
 ==============
 
-1.5 (2010-12-xx)
+1.5.1 (2011-01-06)
+
+    - Making theme work with upgraded jcu.theme's viewlets
+    [David]
+    - Minor CSS fixes to portlets-within-content (eg Collage portlets)
+    [David]
+
+1.5 (2010-12-31)
 
     - Depended on OpenXml and Redirection tool in the GS profile
     [David]
