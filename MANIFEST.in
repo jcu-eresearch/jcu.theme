@@ -1,2 +1,3 @@
+recursive-include docs *
 recursive-include jcu *
-global-exclude *pyc
+global-exclude *py[co], *mo
