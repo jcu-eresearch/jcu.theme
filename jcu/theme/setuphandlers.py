@@ -77,7 +77,7 @@ def setupVarious(context):
         settings.enabled = True
         ploneSettings = registry.forInterface(IPloneCacheSettings)
         ploneSettings.enableCompression = True
-        purgingSettings = self.registry.forInterface(ICachePurgingSettings)
+        purgingSettings = registry.forInterface(ICachePurgingSettings)
         purgingSettings.enabled = False
 
         site.plone_log('plone.app.caching settings configured.  Caching and \
