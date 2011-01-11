@@ -10,7 +10,7 @@
     <script type="text/javascript">
       /* <![CDATA[ */
         jq(function() {
-            jq("#nav ul").tabs("#panes > div", {effect: 'default'});
+            jq("#tabbed-spinner-nav ul").tabs("#tabbed-spinner-content-panes > div", {effect: 'default'});
         });
       /* ]]> */
     </script>
@@ -60,8 +60,8 @@
                             batch folderContents;">
 
     <tal:listing condition="folderContents">
-    <div id="sidetabwrapper">
-        <div id="nav">
+    <div id="tabbed-spinner-wrapper">
+        <div id="tabbed-spinner-nav">
             <ul> 
                 <li tal:repeat="navItem folderContents"> 
                     <tal:li_nav tal:define="item_title_or_id navItem/pretty_title_or_id;">
@@ -71,27 +71,12 @@
                 </li>
             </ul>
         </div>
-        <div id="panes">
+        <div id="tabbed-spinner-content-panes">
             <tal:panes tal:repeat="item folderContents" >
-               <div class="tab-content"
-                 tal:define="item_url            item/getURL|item/absolute_url;
-                             item_id             item/getId|item/id;
-                             item_type           item/portal_type;
-                             item_title_or_id    item/pretty_title_or_id;
-                             item_description    item/Description;
-                             item_has_leadimage  python:hasattr(item, 'hasContentLeadImage') and item/hasContentLeadImage or False;
-                             item_object         item/getObject;">
-                <!-- <img src="" alt=""
-                     tal:condition="exists:item_has_leadimage"
-                     tal:attributes="src item_url/leadImage_thumb" /> -->
-
-                <h3 tal:content="item_title_or_id">Item Title</h3>
-                <p class="more" tal:content="item_description">Item description</p>
-                <p> <a href=""
-                       tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url"
-                       i18n:translate="read_more">
-                       Read More&hellip;
-                    </a></p>
+               <div class="tabbed-spinner-content"
+                   tal:define="object item/getObject;"
+                   tal:content="structure object/@@simple_view">
+                   Content
                </div>
             </tal:panes>
         </div>      

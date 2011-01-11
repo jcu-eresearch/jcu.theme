@@ -11,13 +11,13 @@
       /* <![CDATA[ */
         jq(function() {
            jq.tools.tabs.addEffect("ajaxspinner", function(tabIndex, done) {
-             var spinner = jq("#tabbed-spinner-wrapper .tabbed-spinner").clone().appendTo(this.getTabs().eq(tabIndex));
+             var spinner = jq("#tabbed-spinner-loading-wrapper .tabbed-spinner-loading").clone().appendTo(this.getTabs().eq(tabIndex));
              this.getPanes().eq(0).load(this.getTabs().eq(tabIndex).attr("href"), function() {
                    spinner.fadeOut(500, function() { jq(this).remove() });
                    return;
                    });
            });
-           jq("#nav ul").tabs("#panes > div", {effect: 'ajaxspinner', history: true});
+           jq("#tabbed-spinner-nav ul").tabs("#tabbed-spinner-content-panes > div", {effect: 'ajaxspinner', history: true});
         });
       /* ]]> */
     </script>
@@ -73,8 +73,8 @@
                             portal context/@@plone_portal_state/portal">
 
         <tal:listing condition="folderContents">
-        <div id="sidetabwrapper">
-            <div id="nav">
+        <div id="tabbed-spinner-wrapper">
+            <div id="tabbed-spinner-nav">
                 <ul> 
                     <li tal:repeat="navItem folderContents"> 
                         <tal:li_nav tal:define="item_title_or_id navItem/pretty_title_or_id; item_url navItem/getURL;">
@@ -84,11 +84,11 @@
                     </li>
                 </ul>
             </div>
-            <div id="panes">
-                <div class="tab-content dynamic-tab-content"><!-- --></div>
+            <div id="tabbed-spinner-content-panes">
+                <div class="tabbed-spinner-content dynamic-tabbed-spinner-content"><!-- --></div>
             </div>            
-            <div id="tabbed-spinner-wrapper">
-                <div class="tabbed-spinner">
+            <div id="tabbed-spinner-loading-wrapper">
+                <div class="tabbed-spinner-loading">
                     <img src="ajax-loader.gif" 
                         tal:attributes="src portal/++resource++jcu.theme.images/ajax-loader.gif;" />
                 </div>

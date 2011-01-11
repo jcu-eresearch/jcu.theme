@@ -70,12 +70,16 @@ def setupVarious(context):
         from plone.registry.interfaces import IRegistry
         from plone.caching.interfaces import ICacheSettings
         from plone.app.caching.interfaces import IPloneCacheSettings
+        from plone.cachepurging.interfaces import ICachePurgingSettings
 
         registry = getUtility(IRegistry)
         settings = registry.forInterface(ICacheSettings)
         settings.enabled = True
         ploneSettings = registry.forInterface(IPloneCacheSettings)
         ploneSettings.enableCompression = True
+        purgingSettings = self.registry.forInterface(ICachePurgingSettings)
+        purgingSettings.enabled = False
+
         site.plone_log('plone.app.caching settings configured.  Caching and \
                        compression are now active.')
     except:

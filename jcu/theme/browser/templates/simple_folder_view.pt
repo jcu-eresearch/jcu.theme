@@ -3,7 +3,8 @@
 <tal:simpleview 
     tal:define="kssClassesView context/@@kss_field_decorator_view;
                 getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
-                templateId template/getId;">
+		templateId template/getId;
+		plone_view context/@@plone;">
 
     <h1 class="documentFirstHeading"> 
         <metal:field use-macro="python:here.widget('title', mode='view')">
