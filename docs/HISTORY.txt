@@ -1,7 +1,14 @@
 Change History
 ==============
 
-1.5.2 (2011-01-11)
+1.5.4 (2011-01-11)
+
+    - Fixing more CSS to fit more things on the tabbed spinner
+    [David]
+    - Fixing issues with image caption on IE 6 and 7
+    [David]
+
+1.5.3 (2011-01-11)
 
     - Fixing some CSS issues with content
     [Marianne]

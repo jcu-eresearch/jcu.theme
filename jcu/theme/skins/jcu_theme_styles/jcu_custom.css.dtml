@@ -207,7 +207,7 @@ margin:0 1em 1em;
 max-width:50%;
 padding:0 0.5em;
 position:relative;
-top:-240px;
+top:-320px;
 width:auto;
 }
 
@@ -218,6 +218,10 @@ background-image: url(&dtml-portal_url;/slider_arrow_left.gif) !important;
 background-image: url(&dtml-portal_url;/slider_arrow_right.gif) !important;
 }
 
+#collage #slider .slide p img {
+position:relative;
+top:-100px;
+}
 
 /* Styles for our accordion. */
 .accordion {
