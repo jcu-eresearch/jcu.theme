@@ -59,5 +59,7 @@ def createGoogleCalendarEvent(self, email, password, calendar_url, \
             #ignore the 'error' since it actually means it worked
         except Exception, exception2:
             self.plone_log(exception2)
-        except Exception, exception1:
-            self.plone_log(exception1)
+
+    except Exception, exception1:
+        self.plone_log(exception1)
+

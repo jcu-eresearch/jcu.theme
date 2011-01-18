@@ -2,6 +2,11 @@ from zope.app.component.hooks import getSite
 
 
 def setupVarious(context):
+    """
+    Set up various aspects of Plone that we can't set up using
+    GenericSetup profiles (yet).  These aspects should be removed
+        whenever possible and replaced with a GS import profile.
+    """
 
     # Ordinarily, GenericSetup handlers check for the existence of XML files.
     # Here, we are not parsing an XML file, but we use this text file as a
@@ -26,7 +31,6 @@ def setupVarious(context):
         site.plone_log('MailHost configured for queuing.')
     except:
         site.plone_log('Could not reconfigure MailHost for queuing.')
-        pass
 
     #Set up our reCAPTCHA keys for forms, etc
     try:
@@ -37,7 +41,6 @@ def setupVarious(context):
         site.plone_log('reCAPTCHA keys configured.')
     except:
         site.plone_log('Could not configure reCAPTCHA keys.')
-        pass
 
     #Customise the parts of the LDAP plugin our GS doesn't touch yet.
     try:
@@ -61,7 +64,6 @@ def setupVarious(context):
         site.plone_log('LDAP plugin settings configured.')
     except:
         site.plone_log('Could not configure LDAP plugin settings.')
-        pass
 
     #We can import plone.app.caching profiles (we have already via
     #metadata.xml) but we need to manually turn it on.

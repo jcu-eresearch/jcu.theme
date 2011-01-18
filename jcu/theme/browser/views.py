@@ -1,4 +1,3 @@
-import pdb
 #############################################################################
 #
 # Copyright (c) 2010 JCU eResearch Centre and contributors.
@@ -26,38 +25,46 @@ from plone.memoize.view import memoize
 from jcu.theme.theming import IThemeSettingsManager
 
 
-#Todo:
+def getThemeForContext(context):
+    current_aq = context
+    theme_name = None
+
+    #Loop while we don't have a theme name yet, traversing up to the
+    #parents of our context
+    while theme_name is None:
+        try:
+            theme_values = IThemeSettingsManager(current_aq).theme_values()
+
+            if 'theme_name' in theme_values and \
+               'ignore_selection' in theme_values and \
+               theme_values['ignore_selection'] is False:
+                theme_name = theme_values['theme_name']
+        except:
+            pass
+
+        if theme_name is not None:
+            #Quick 'out' to avoid having to wake the parent object
+            #or do a check on interfaces
+            break
+        elif ISiteRoot.providedBy(current_aq):
+            theme_name = theme_name or ''
+            break
+        else:
+            current_aq = current_aq.aq_parent
+
+    return theme_name
+
+#TODO:
 #* Provide global options to disable theming (or set a global theme)
 #* Test it out!
 class ThemeSettingsView(BrowserView):
+    """
+    Browser view for exposing the ability to look up theme setting on a
+    given context.
+    """
 
     @property
     @memoize
     def get_theme(self):
-        current_aq = self.context.aq_inner
-        theme_name = None
+        return getThemeForContext(self.context)
 
-        #Loop while we don't have a theme name yet, traversing up to the
-        #parents of our context
-        while theme_name is None:
-            try:
-                theme_values = IThemeSettingsManager(current_aq).theme_values()
-
-                if 'theme_name' in theme_values and \
-                   'ignore_selection' in theme_values and \
-                   theme_values['ignore_selection'] is False:
-                    theme_name = theme_values['theme_name']
-            except:
-                pass
-
-            if theme_name is not None:
-                #Quick 'out' to avoid having to wake the parent object
-                #or do a check on interfaces
-                break
-            elif ISiteRoot.providedBy(current_aq):
-                theme_name = theme_name or ''
-                break
-            else:
-                current_aq = current_aq.aq_parent
-
-        return theme_name

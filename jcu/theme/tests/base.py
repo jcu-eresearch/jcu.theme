@@ -1,7 +1,7 @@
-import unittest
+#import unittest
 
-from zope.testing import doctestunit
-from zope.component import testing
+#from zope.testing import doctestunit
+#from zope.component import testing
 from Testing import ZopeTestCase as ztc
 
 from Products.Five import zcml
@@ -31,14 +31,14 @@ def setup_product():
     # This can of course use <include /> to include other packages.
 
     fiveconfigure.debug_mode = True
-    import plone.app.z3cform
-    zcml.load_config('configure.zcml', plone.app.z3cform)
-    import Products.Collage
-    zcml.load_config('configure.zcml', Products.Collage)
-    import collective.contentleadimage
-    zcml.load_config('configure.zcml', collective.contentleadimage)
-    import collective.fastview
-    zcml.load_config('configure.zcml', collective.fastview)
+    #import plone.app.z3cform
+    #zcml.load_config('configure.zcml', plone.app.z3cform)
+    #import Products.Collage
+    #zcml.load_config('configure.zcml', Products.Collage)
+    #import collective.contentleadimage
+    #zcml.load_config('configure.zcml', collective.contentleadimage)
+    #import collective.fastview
+    #zcml.load_config('configure.zcml', collective.fastview)
     import jcu.theme
     zcml.load_config('configure.zcml', jcu.theme)
     fiveconfigure.debug_mode = False
