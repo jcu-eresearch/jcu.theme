@@ -25,16 +25,19 @@ from persistent.dict import PersistentDict
 from jcu.theme.config import THEMES, THEME_ANNOTATIONS_KEY as KEY
 from jcu.theme import _
 
+
 class IThemeSettingsManager(interface.Interface):
     theme_name = schema.Choice(title=_(u"Theme Name"),
-                               description=_(u"Select the CSS class to be used in this section."),
-                               values=THEMES,
-                               default='None',
-                            )
+            description=_(u"Select the CSS class to be used in this section."),
+            values=THEMES,
+            default='None',
+                              )
 
     ignore_selection = schema.Bool(title=_(u"Ignore this selection?"),
-                               description=_(u"Select this if you would like to purposefully ignore this theme choice here.  This context will then use a parent's theme choice."),
-                            )
+            description=_(u"Select this if you would like to purposefully \
+                          ignore this theme choice here.  This context will \
+                          then use a parent's theme choice."),
+                                  )
 
 
 class ThemeSettingsManager(object):

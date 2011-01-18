@@ -4,6 +4,7 @@ import doctest
 from Testing import ZopeTestCase as ztc
 from jcu.theme.tests import base
 
+
 def test_suite():
     return unittest.TestSuite([
 
@@ -11,7 +12,8 @@ def test_suite():
         ztc.ZopeDocFileSuite(
             'README.txt', package='jcu.theme',
             test_class=base.FunctionalTestCase,
-            optionflags=doctest.REPORT_ONLY_FIRST_FAILURE | doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS
+            optionflags=doctest.REPORT_ONLY_FIRST_FAILURE | \
+                        doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS
         ),
 
     ])

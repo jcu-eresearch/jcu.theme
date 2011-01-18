@@ -2,7 +2,8 @@ from zope.i18nmessageid import MessageFactory
 _ = MessageFactory('jcu.theme')
 
 from AccessControl import ModuleSecurityInfo
-ModuleSecurityInfo('jcu.theme.Extensions.GoogleCalendar').declarePublic('createGoogleCalendarEvent')
+module = ModuleSecurityInfo('jcu.theme.Extensions.GoogleCalendar') \
+            .declarePublic('createGoogleCalendarEvent')
 
 
 def initialize(context):

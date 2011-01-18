@@ -20,5 +20,6 @@
 
 from Products.Collage.browser.views import RowView
 
+
 class VeryLargeLeftRowView(RowView):
     title = u'Very Large left'

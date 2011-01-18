@@ -84,8 +84,3 @@ def setupVarious(context):
                        compression are now active.')
     except:
         site.plone_log('Could not configure plone.app.caching settings.')
-
-
-
-
-

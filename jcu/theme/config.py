@@ -7,7 +7,8 @@ THEMES = ['None',
           'jcu-blue',
           'jcu-orange',
           'jcu-green',
-          'jcu-red',]
+          'jcu-red',
+         ]
 
 MESSAGE_OKAY = _(u'Theme changes saved. You may wish to refresh your cache.')
 MESSAGE_CANCEL = _(u'Theme changes cancelled.')

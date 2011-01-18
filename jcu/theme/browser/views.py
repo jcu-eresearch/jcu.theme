@@ -25,6 +25,7 @@ from plone.memoize.view import memoize
 
 from jcu.theme.theming import IThemeSettingsManager
 
+
 #Todo:
 #* Provide global options to disable theming (or set a global theme)
 #* Test it out!
@@ -52,10 +53,10 @@ class ThemeSettingsView(BrowserView):
             if theme_name is not None:
                 #Quick 'out' to avoid having to wake the parent object
                 #or do a check on interfaces
-                break;
+                break
             elif ISiteRoot.providedBy(current_aq):
                 theme_name = theme_name or ''
-                break;
+                break
             else:
                 current_aq = current_aq.aq_parent
 

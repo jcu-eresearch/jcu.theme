@@ -4,6 +4,7 @@ from plone.app.layout.globals.layout import LayoutPolicy
 
 from jcu.theme.theming import IThemeSettingsManager
 
+
 class JCULayoutPolicy(LayoutPolicy):
     """A view that gives access to various layout related functions.
     """
@@ -35,11 +36,11 @@ class JCULayoutPolicy(LayoutPolicy):
             if theme_name is not None:
                 #Quick 'out' to avoid having to wake the parent object
                 #or do a check on interfaces
-                break;
+                break
             elif ISiteRoot.providedBy(current_aq):
                 theme_name = theme_name or ''
-                break;
+                break
             else:
                 current_aq = current_aq.aq_parent
 
-        return ' '+theme_name
+        return ' ' + theme_name

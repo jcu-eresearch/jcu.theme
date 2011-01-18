@@ -16,6 +16,7 @@ from Products.PloneTestCase.layer import onsetup
 # not in the Products.*) namespace. For that, see below.
 # All of Plone's products are already set up by PloneTestCase.
 
+
 @onsetup
 def setup_product():
     """Set up the package and its dependencies.
@@ -55,7 +56,13 @@ def setup_product():
 setup_product()
 
 # no installer for the product yet, instead just install parent product
-ptc.setupPloneSite(products=['plone.app.z3cform','Products.Collage','collective.contentleadimage','jcu.theme'])
+ptc.setupPloneSite(products=['plone.app.z3cform',
+                             'Products.Collage',
+                             'collective.contentleadimage',
+                             'jcu.theme'
+                            ]
+                  )
+
 
 class TestCase(ptc.PloneTestCase):
     """We use this base class for all the tests in this package. If
@@ -71,4 +78,3 @@ class FunctionalTestCase(ptc.FunctionalTestCase):
     code in here.
     """
     pass
-

@@ -30,6 +30,7 @@ from jcu.theme.config import MESSAGE_OKAY, MESSAGE_FAILED, MESSAGE_CANCEL, \
         MESSAGE_BALEETED
 from jcu.theme.theming import IThemeSettingsManager
 
+
 class ThemeSettingsForm(form.Form):
     fields = field.Fields(IThemeSettingsManager)
     #ignoreContext = True # don't use context to get widget data
@@ -40,13 +41,6 @@ class ThemeSettingsForm(form.Form):
 
     def getContent(self):
         return self.theme_settings_manager
-
-#    def updateWidgets(self):
-#        super(ThemeSettingsForm, self).updateWidgets()
-#
-#        print "Current values:"
-#        for field in self.fields._data_keys.data:
-#            print str(field)+' - '+str(self.theme_settings_manager.getValue(field))
 
     @button.buttonAndHandler(_(u'Apply'))
     def handleApply(self, action):
@@ -69,7 +63,7 @@ class ThemeSettingsForm(form.Form):
         self.redirectAction()
 
     def setStatusMessage(self, message):
-        ptool = getToolByName(self.context,'plone_utils')
+        ptool = getToolByName(self.context, 'plone_utils')
         ptool.addPortalMessage(message)
 
     def redirectAction(self):
@@ -78,14 +72,16 @@ class ThemeSettingsForm(form.Form):
 #ThemeSettingsFormView = wrap_form(ThemeSettingsForm)
 
 from plone.z3cform.layout import FormWrapper
+
+
 class ThemeSettingsFormView(FormWrapper):
     form = ThemeSettingsForm
     index = ViewPageTemplateFile('templates/themesettingsform.pt')
 
     label = _(u"Theming Options")
-    description = _(u"Select the theme options you would like to use for this context.")
+    description = _(u"Select the theme options you would like to \
+                    use for this context.")
 
     @property
     def current_settings(self):
         return IThemeSettingsManager(self.context).theme_values()
-
