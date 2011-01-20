@@ -37,7 +37,7 @@ body {
 #visual-portal-wrapper {
     background: White;
     margin:1em auto 0;
-    min-width:960px;
+    /*min-width:960px;*/
     width:90%;
 }
 #portal-columns {
@@ -152,8 +152,8 @@ q {
     padding:0.75em 0.5em;
     background: transparent;
     color: #436976;
-    min-width: 7em;
-    _width: 7em;
+    min-width: 6em;
+    _width: 6em;
     white-space: normal;
     _white-space: nowrap;
     text-align:center;
