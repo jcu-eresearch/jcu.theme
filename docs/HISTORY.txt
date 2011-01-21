@@ -1,6 +1,13 @@
 Change History
 ==============
 
+1.5.5-dev (2011-01-xx)
+
+    - Updating iOS touch icon to be JCU
+    - Changing mobile.css around to be much better for iOS and other devices
+    - Updating theming settings to show inherited settings
+    - Updating unit tests - finally!
+
 1.5.4 (2011-01-11)
 
     - Fixing more CSS to fit more things on the tabbed spinner
