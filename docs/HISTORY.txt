@@ -3,10 +3,16 @@ Change History
 
 1.5.5-dev (2011-01-xx)
 
-    - Updating iOS touch icon to be JCU
+    - Updating iOS touch icon to be JCU's shield
+    [David]
     - Changing mobile.css around to be much better for iOS and other devices
+    [David]
     - Updating theming settings to show inherited settings
-    - Updating unit tests - finally!
+    [David]
+    - Updating unit tests.  We now have actual tests which check the theme gets 
+    installs and a variety of aspects to the theme function (theme set, resources
+    available, custom theming working in sections), etc.
+    [David]
 
 1.5.4 (2011-01-11)
 
