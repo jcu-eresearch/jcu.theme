@@ -92,4 +92,5 @@ class ThemeSettingsFormView(FormWrapper):
 
     @property
     def is_inherited_setting(self):
-        return self.inherited_setting != self.current_settings.get('theme_name')
+        return self.inherited_setting['theme_name'] != \
+                self.current_settings.get('theme_name')

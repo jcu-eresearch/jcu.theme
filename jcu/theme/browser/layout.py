@@ -31,7 +31,7 @@ def getThemeForContext(context):
         else:
             current_aq = current_aq.aq_parent
 
-    return theme_name
+    return {'theme_name': theme_name, 'context': current_aq}
 
 class JCULayoutPolicy(LayoutPolicy):
     """A view that gives access to various layout related functions.
@@ -41,6 +41,6 @@ class JCULayoutPolicy(LayoutPolicy):
         """Returns the CSS class to be used on the body tag.
         """
         return super(JCULayoutPolicy, self).bodyClass(template, view) \
-                + ' %s' % getThemeForContext(self.context)
+                + ' %s' % getThemeForContext(self.context)['theme_name']
 
 

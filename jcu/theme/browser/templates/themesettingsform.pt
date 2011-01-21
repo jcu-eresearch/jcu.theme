@@ -36,15 +36,19 @@
         Description
       </p>
 
-      <div>Current saved settings are:
+      <div>Current settings for this context are:
           <dl>
            <tal:settings repeat="setting python:view.current_settings.keys()">
              <dt tal:content="setting">Setting</dt>
              <dd tal:content="python:view.current_settings[setting]">Value</dd>
            </tal:settings>
-           <tal:inherited condition="view/is_inherited_setting">
-             <dt>Inherited setting</dt>
-             <dd tal:content="view/inherited_setting">Value</dd>
+           <tal:inherited condition="view/is_inherited_setting"
+                          define="setting view/inherited_setting;">
+             <dt>Effective inherited setting</dt>
+             <dd><span tal:content="setting/theme_name">Value</span>, inherited from:
+                 <a tal:content="setting/context/Title"
+                  tal:attributes="href string:${setting/context/absolute_url}/@@edit_theming_settings">Context</a>
+                 </dd>
            </tal:inherited>
           </dl>
       </div> 
