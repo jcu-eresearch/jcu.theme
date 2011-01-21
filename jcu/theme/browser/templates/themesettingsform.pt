@@ -42,7 +42,11 @@
              <dt tal:content="setting">Setting</dt>
              <dd tal:content="python:view.current_settings[setting]">Value</dd>
            </tal:settings>
-         </dl>
+           <tal:inherited condition="view/is_inherited_setting">
+             <dt>Inherited setting</dt>
+             <dd tal:content="view/inherited_setting">Value</dd>
+           </tal:inherited>
+          </dl>
       </div> 
 
     <div id="skel-contents">

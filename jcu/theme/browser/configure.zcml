@@ -172,13 +172,6 @@
 	permission="cmf.ModifyPortalContent"
 	/>
 
-    <browser:page
-	for="*"
-        name="theming_settings"
-	class=".views.ThemeSettingsView"
-	permission="zope2.Public"
-	/>
-
     <!-- Collage page view resources -->
     <browser:page
 	name="very-large-left"

@@ -1,4 +1,3 @@
-import pdb
 #############################################################################
 #
 # Copyright (c) 2010 JCU eResearch Centre and contributors.
@@ -29,6 +28,7 @@ from jcu.theme import _
 from jcu.theme.config import MESSAGE_OKAY, MESSAGE_FAILED, MESSAGE_CANCEL, \
         MESSAGE_BALEETED
 from jcu.theme.theming import IThemeSettingsManager
+from jcu.theme.browser.layout import getThemeForContext
 
 
 class ThemeSettingsForm(form.Form):
@@ -85,3 +85,11 @@ class ThemeSettingsFormView(FormWrapper):
     @property
     def current_settings(self):
         return IThemeSettingsManager(self.context).theme_values()
+
+    @property
+    def inherited_setting(self):
+        return getThemeForContext(self.context)
+
+    @property
+    def is_inherited_setting(self):
+        return self.inherited_setting != self.current_settings.get('theme_name')
