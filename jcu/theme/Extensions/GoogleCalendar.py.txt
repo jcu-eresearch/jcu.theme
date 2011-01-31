@@ -1,0 +1,30 @@
+from DateTime import DateTime
+from jcu.theme.Extensions.GoogleCalendar import createGoogleCalendarEvent
+
+cairns_ag_calendar_url = 'http://www.google.com/calendar/feeds/2i41om4738a2uv6lsvkfc281bo%40group.calendar.google.com/private/full'
+townsville_ag_calendar_url = 'http://www.google.com/calendar/feeds/hbdmt3htm9c04mgkso6c50m5s4%40group.calendar.google.com/private/full'
+
+cairns_ag_room = 'E1.018'
+townsville_ag_room = '17-032 (DB017-032)'
+
+accessgrid_special_email = 'jcuaccessgrid@gmail.com'
+accessgrid_secret_password = 'XXXXXX'
+
+startDateTime = (DateTime(str(fields['start-date-time']))).HTML4().replace('Z', '+10:00')
+endDateTime = (DateTime(str(fields['end-date-time']))).HTML4().replace('Z', '+10:00')
+eventTitle = str(fields['purpose'])
+eventLocation = str(fields['rooms-to-book'])
+eventContent = 'Booked for:  '+ str(fields['booking-name']) + '\n' + \
+  'Email address:  '+ str(fields['replyto']) + '\n' + \
+  'Booking type:  '+ str(fields['booking-type']) + '\n' + \
+  'Charge Account:  '+ str(fields['internal-charge-account-code']) + '\n' + \
+  'AG Virtual Venue:  '+  str(fields['virtual-venue']) + '\n' + \
+  'Comments:  ' + str(fields['comments']) + '\n'
+
+
+if eventLocation != 'Cairns':
+    createGoogleCalendarEvent(context, accessgrid_special_email, accessgrid_secret_password, townsville_ag_calendar_url, startDateTime, endDateTime, eventTitle, eventLocation, eventContent)
+
+if eventLocation != 'Townsville':
+    createGoogleCalendarEvent(context, accessgrid_special_email, accessgrid_secret_password, cairns_ag_calendar_url, startDateTime, endDateTime, eventTitle, eventLocation, eventContent)
+
