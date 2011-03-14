@@ -1,6 +1,10 @@
 Change History
 ==============
 
+1.5.6 (2011-XX-XX)
+
+    -
+
 1.5.5 (2011-03-14)
 
     - Updating CSS for portlets within content (eg Collage and collective.
