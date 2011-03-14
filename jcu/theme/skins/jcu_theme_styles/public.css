@@ -476,6 +476,10 @@ dl.portletNavigationTree dd.portletItem {
     padding: 0;
 }
 
+dl.portletNavigationTree dd.portletItem ul.navTree {
+    margin-left: 0em !important;
+}
+
 dl.portlet ul.navTreeLevel0 > .navTreeItem {
     padding: 0 1em;
     border-bottom: 0.1em dotted #ddd;
@@ -582,7 +586,6 @@ dl.portlet a:hover {
 }
 
 dl.portlet ul {
-    list-style-type: disc;
     margin-left: 0.75em !important;
 }
 
@@ -1834,6 +1837,10 @@ dl.toc dd ol {
 
 .visualClear {
     clear: both;
+}
+
+.poweredBy {
+    display:none;
 }
 
 /* @end */

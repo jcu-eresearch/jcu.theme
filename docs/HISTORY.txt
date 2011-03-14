@@ -1,9 +1,11 @@
 Change History
 ==============
 
-1.5.6 (2011-XX-XX)
+1.5.6 (2011-03-14)
 
-    -
+    - Brown-bag 1.5.5 release.  Fixing incorrectly added ul list item type
+    - Added fix for Poi issue tracker link display
+    - Hide all poweredBy-classed objects in CSS
 
 1.5.5 (2011-03-14)
 
