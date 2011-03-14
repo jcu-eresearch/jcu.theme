@@ -1,8 +1,11 @@
 Change History
 ==============
 
-1.5.5-dev (2011-01-xx)
+1.5.5 (2011-03-14)
 
+    - Updating CSS for portlets within content (eg Collage and collective.
+    collage.portlets)
+    [David]
     - Updating iOS touch icon to be JCU's shield
     [David]
     - Changing mobile.css around to be much better for iOS and other devices
@@ -10,8 +13,8 @@ Change History
     - Updating theming settings to show inherited settings
     [David]
     - Updating unit tests.  We now have actual tests which check the theme gets 
-    installs and a variety of aspects to the theme function (theme set, resources
-    available, custom theming working in sections), etc.
+    installs and a variety of aspects to the theme function (theme set, 
+    resources available, custom theming working in sections), etc.
     [David]
 
 1.5.4 (2011-01-11)
