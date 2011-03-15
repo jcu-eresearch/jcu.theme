@@ -285,10 +285,6 @@ border: 0px none;
 display: none;
 }
 
-.return-to-search {
-clear: both;
-}
-
 /* </dtml-with> */
 
 /* DOCUMENTATION ON PRE-DEFINED PROPERTIES FROM PLONE */

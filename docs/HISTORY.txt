@@ -1,10 +1,12 @@
 Change History
 ==============
 
-1.5.7 (2011-XX-XX)
+1.5.7 (2011-03-15)
 
     - Updating TinyMCE GS profile to suit new version
     - Removing some unnecessary buttons and adding others for TinyMCE
+    - Removed fix for Poi issue tracker link display - it's only Plone.org that
+      has a problem.
 
 1.5.6 (2011-03-14)
 
