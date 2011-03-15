@@ -1,6 +1,10 @@
 Change History
 ==============
 
+1.5.8 (2011-XX-XX)
+
+    - Unreleased
+
 1.5.7 (2011-03-15)
 
     - Updating TinyMCE GS profile to suit new version
