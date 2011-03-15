@@ -3,7 +3,8 @@ Change History
 
 1.5.7 (2011-XX-XX)
 
-    - Unreleased
+    - Updating TinyMCE GS profile to suit new version
+    - Removing some unnecessary buttons and adding others for TinyMCE
 
 1.5.6 (2011-03-14)
 
