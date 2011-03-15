@@ -32,6 +32,7 @@ setup(name='jcu.theme',
           'Products.Collage',
           'collective.contentleadimage',
           'collective.fastview',
+          'Products.TinyMCE>=1.2.3',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
