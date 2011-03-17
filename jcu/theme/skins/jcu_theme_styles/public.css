@@ -877,20 +877,14 @@ dl.warning {
 dl.warning dt {
     background-color: #d80;
 }
+dl.warning dd {
+    background-color: #fd7;
+}
 dl.error {
     border-color: #d00;
 }
 dl.error dt {
     background-color: #d00;
-}
-dl.warning {
-    border-color: #d80;
-}
-dl.warning dd {
-    background-color: #fd7;
-}
-dl.error {
-    border-color: red;
 }
 dl.error dd {
     background-color: #fdc;
@@ -1863,7 +1857,7 @@ div.overlay {
     display: none;
     /* some padding to layout nested elements nicely  */
     margin: 1em;
-    font-size: 80%;
+    font-size: 90%;
 }
 
 div.overlay-iframe,
@@ -1927,6 +1921,7 @@ div.overlay #createGroup fieldset { border: none; }
 
 /* lets play nice with paragraphs, links, tabbed pages in overlay e.g. when plone.openid is installed */
 div.overlay p {
+    margin-top: 1em;
     margin-bottom: 1em;
 }
 div.overlay label {

@@ -3,7 +3,8 @@ Change History
 
 1.5.8 (2011-XX-XX)
 
-    - Unreleased
+    - Fixing redundancy in CSS for portal messages
+    - Increasing font size in overlays
 
 1.5.7 (2011-03-15)
 
