@@ -5,6 +5,7 @@ Change History
 
     - Fixing redundancy in CSS for portal messages
     - Increasing font size in overlays
+    - Defaulting to many users for the portal
 
 1.5.7 (2011-03-15)
 

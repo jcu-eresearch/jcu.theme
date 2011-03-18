@@ -2,5 +2,6 @@
 <object name="portal_properties" meta_type="Plone Properties Tool">
  <object name="site_properties" meta_type="Plone Property Sheet">
   <property name="icon_visibility" type="string">authenticated</property>
+  <property name="many_users" type="boolean">True</property>
  </object>
 </object>
