@@ -113,6 +113,17 @@
 .jcu-red #portal-personaltools dd { background: #ED2028; }
 */
 
+#site-title {
+color: #0066CC;
+font-size: 1.4em;
+font-family: georgia,times,san-serif;
+line-height: 140%;
+text-align: right;
+float:right;
+clear: right;
+margin-top:0.75em;
+}
+
 .ploneSkin table.mceToolbarRow3 {
 float:none !important;
 }

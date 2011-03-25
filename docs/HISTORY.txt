@@ -5,7 +5,16 @@ Change History
 
     - Fixing redundancy in CSS for portal messages
     - Increasing font size in overlays
-    - Defaulting to many users for the portal
+    - Defaulting to many users for the portal, since we use LDAP.  We need to
+      do this as Plone now defaults to listing all portal users on the users
+      overview page.  Not bad if only a few LDAP users, but anything more than a
+      handful equals death.  Let's make this our default option and instruct users
+      to add people to groups before assigning roles.
+    - Adding CSS for #site-title.  We can now use this as an <a href="/"> in our
+      portal logo viewlet to look like other JCU sites.
+    - Overriding the group membership page via overrides.zcml
+    - Allowing sorting on group members page (restructuring table)
+    - Reordering search box on group members page
 
 1.5.7 (2011-03-15)
 
