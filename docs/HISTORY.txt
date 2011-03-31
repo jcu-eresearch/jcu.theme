@@ -1,7 +1,7 @@
 Change History
 ==============
 
-1.5.8 (2011-XX-XX)
+1.5.8 (2011-03-25)
 
     - Fixing redundancy in CSS for portal messages
     - Increasing font size in overlays
