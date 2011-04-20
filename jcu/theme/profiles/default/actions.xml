@@ -54,14 +54,27 @@
  <object name="user" meta_type="CMF Action Category">
   <object name="about_me" meta_type="CMF Action" i18n:domain="plone"
         insert-after="dashboard">
-   <property name="title" i18n:translate="">About me</property>
+   <property name="title" i18n:translate="">About Me</property>
     <property name="description"
      i18n:translate="">Details and authoring information about you</property>
     <property
-     name="url_expr">string:${portal_url}/author/${member/id}</property>
+     name="url_expr">string:${globals_view/navigationRootUrl}/author/${member/id}</property>
     <property name="link_target"></property>
     <property name="icon_expr"></property>
     <property name="available_expr">python:member is not None</property>
+    <property name="permissions"/>
+    <property name="visible">True</property>
+  </object>
+  <object name="my_folder" meta_type="CMF Action" i18n:domain="plone"
+        insert-after="about_me">
+   <property name="title" i18n:translate="">My Folder</property>
+    <property name="description"
+     i18n:translate="">Your user home folder on the site</property>
+    <property
+     name="url_expr">string:${portal/portal_membership/getHomeUrl}</property>
+    <property name="link_target"></property>
+    <property name="icon_expr"></property>
+    <property name="available_expr">python:(member is not None) and (portal.portal_membership.getHomeFolder() is not None)</property>
     <property name="permissions"/>
     <property name="visible">True</property>
   </object>

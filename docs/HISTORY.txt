@@ -5,6 +5,7 @@ Change History
 
     - Upgraded GS profile and fixed URL in About Me action
     - Fixed minor issue with CSS not selecting an inactive drop-down menu
+    - Added My Folder action; this is very useful on sites
 
 1.5.8 (2011-03-25)
 
