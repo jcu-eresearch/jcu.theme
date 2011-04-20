@@ -1044,21 +1044,23 @@ dl.error dd {
 
 /* @group Content pulldowns */
 
+#contentActionMenus dl.actionMenu span.noMenuAction,
 #contentActionMenus dl.actionMenu a,
 #contentActionMenus dl.actionMenu.activated dd {
-    background-color: #75ad0a;
     color: White;
     z-index: 5;
 }
 #contentActionMenus dl.actionMenu.activated dd {
     border-bottom: 0.5em solid #75ad0a;
-        right: -3px;
+    right: -3px;
 }
 #contentActionMenus dl.actionMenu.activated dd a:hover,
 #contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
     background-color: White !important;
     color: #666;
 }
+
+#contentActionMenus dl.actionMenu span.noMenuAction,
 #contentActionMenus dl.actionMenu a,
 #contentActionMenus dl.actionMenu div {
     line-height: 2em;

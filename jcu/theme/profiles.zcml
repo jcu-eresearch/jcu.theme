@@ -10,7 +10,7 @@
       description='Extension profile for the "JCU Theme" Plone theme.'
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
- 
+
    <genericsetup:registerProfile
       name="uninstall"
       title="JCU Theme Uninstall Profile"
@@ -18,6 +18,17 @@
       description='Removes the "JCU Theme" Plone theme.'
       provides="Products.GenericSetup.interfaces.EXTENSION"
       for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      />
+
+     <!-- Upgrade steps for the theme -->
+     <genericsetup:upgradeStep
+      title="Fix URL in portal actions for About Me"
+      description="Fix URL in portal actions for About Me"
+      source="22"
+      destination="23"
+      handler="jcu.theme.setuphandlers.upgrade_actions"
+      sortkey="1"
+      profile="jcu.theme:default"
       />
 
 </configure>

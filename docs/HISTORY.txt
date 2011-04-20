@@ -3,6 +3,9 @@ Change History
 
 1.5.9-dev (unreleased)
 
+    - Upgraded GS profile and fixed URL in About Me action
+    - Fixed minor issue with CSS not selecting an inactive drop-down menu
+
 1.5.8 (2011-03-25)
 
     - Fixing redundancy in CSS for portal messages

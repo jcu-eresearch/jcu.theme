@@ -1,5 +1,7 @@
 from zope.app.component.hooks import getSite
+from Products.CMFCore.utils import getToolByName
 
+PROFILE_ID = 'profile-jcu.theme:default'
 
 def setupVarious(context):
     """
@@ -86,3 +88,13 @@ def setupVarious(context):
                        compression are now active.')
     except:
         site.plone_log('Could not configure plone.app.caching settings.')
+
+
+def upgrade_actions(context, logger=None):
+    """Re-import the portal action settings.
+    """
+    #Run the actions setup
+    setup = getToolByName(context, 'portal_setup')
+    setup.runImportStepFromProfile(PROFILE_ID, 'actions')
+    return
+
