@@ -672,6 +672,14 @@ dl.portlet li {
     border-left: 1em solid #ccc;
     clear: both;
 }
+#content .card {
+border: 1px solid #ddd;
+float: left;
+margin: 1em;
+padding: 1em 0;
+text-align: center;
+width: 110px;
+}
 
 
 #content table {
