@@ -150,6 +150,11 @@ margin-right: 1.5em;
 margin: 0;
 }
 
+div.olLayerGoogleCopyright {
+display: none;
+top: -10000px;
+}
+
 /* Darn you, IE */
 #slider-container  {
 overflow:hidden;

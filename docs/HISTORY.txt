@@ -4,234 +4,240 @@ Change History
 1.5.10 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Making theme tab only available to managers
+  [David]
+- Fixing issue with background for menus not showing on default theme
+  [David]
+- Adding workaround for annoying OpenLayers Google popup.  We already have
+  a copyright notice on the map.
+  [David]
 
 
 1.5.9 (2011-05-09)
 ------------------
 
-    - Upgraded GS profile and fixed URL in About Me action
-    - Fixed minor issue with CSS not selecting an inactive drop-down menu
-    - Added My Folder action; this is very useful on sites
-    - Added .card CSS declaration for use on the member search results page
+- Upgraded GS profile and fixed URL in About Me action
+- Fixed minor issue with CSS not selecting an inactive drop-down menu
+- Added My Folder action; this is very useful on sites
+- Added .card CSS declaration for use on the member search results page
 
 1.5.8 (2011-03-25)
 ------------------
 
-    - Fixing redundancy in CSS for portal messages
-    - Increasing font size in overlays
-    - Defaulting to many users for the portal, since we use LDAP.  We need to
-      do this as Plone now defaults to listing all portal users on the users
-      overview page.  Not bad if only a few LDAP users, but anything more than a
-      handful equals death.  Let's make this our default option and instruct users
-      to add people to groups before assigning roles.
-    - Adding CSS for #site-title.  We can now use this as an <a href="/"> in our
-      portal logo viewlet to look like other JCU sites.
-    - Overriding the group membership page via overrides.zcml
-    - Allowing sorting on group members page (restructuring table)
-    - Reordering search box on group members page
+- Fixing redundancy in CSS for portal messages
+- Increasing font size in overlays
+- Defaulting to many users for the portal, since we use LDAP.  We need to
+ do this as Plone now defaults to listing all portal users on the users
+ overview page.  Not bad if only a few LDAP users, but anything more than a
+ handful equals death.  Let's make this our default option and instruct users
+ to add people to groups before assigning roles.
+- Adding CSS for #site-title.  We can now use this as an <a href="/"> in our
+ portal logo viewlet to look like other JCU sites.
+- Overriding the group membership page via overrides.zcml
+- Allowing sorting on group members page (restructuring table)
+- Reordering search box on group members page
 
 1.5.7 (2011-03-15)
 ------------------
 
-    - Updating TinyMCE GS profile to suit new version
-    - Removing some unnecessary buttons and adding others for TinyMCE
-    - Removed fix for Poi issue tracker link display - it's only Plone.org that
-      has a problem.
+- Updating TinyMCE GS profile to suit new version
+- Removing some unnecessary buttons and adding others for TinyMCE
+- Removed fix for Poi issue tracker link display - it's only Plone.org that
+ has a problem.
 
 1.5.6 (2011-03-14)
 ------------------
 
-    - Brown-bag 1.5.5 release.  Fixing incorrectly added ul list item type
-    - Added fix for Poi issue tracker link display
-    - Hide all poweredBy-classed objects in CSS
+- Brown-bag 1.5.5 release.  Fixing incorrectly added ul list item type
+- Added fix for Poi issue tracker link display
+- Hide all poweredBy-classed objects in CSS
 
 1.5.5 (2011-03-14)
 ------------------
 
-    - Updating CSS for portlets within content (eg Collage and collective.
-    collage.portlets)
-    [David]
-    - Updating iOS touch icon to be JCU's shield
-    [David]
-    - Changing mobile.css around to be much better for iOS and other devices
-    [David]
-    - Updating theming settings to show inherited settings
-    [David]
-    - Updating unit tests.  We now have actual tests which check the theme gets 
-    installs and a variety of aspects to the theme function (theme set, 
-    resources available, custom theming working in sections), etc.
-    [David]
+- Updating CSS for portlets within content (eg Collage and collective.
+ collage.portlets)
+ [David]
+- Updating iOS touch icon to be JCU's shield
+ [David]
+- Changing mobile.css around to be much better for iOS and other devices
+ [David]
+- Updating theming settings to show inherited settings
+ [David]
+- Updating unit tests.  We now have actual tests which check the theme gets 
+ installs and a variety of aspects to the theme function (theme set, 
+ resources available, custom theming working in sections), etc.
+ [David]
 
 1.5.4 (2011-01-11)
 ------------------
 
-    - Fixing more CSS to fit more things on the tabbed spinner
-    [David]
-    - Fixing issues with image caption on IE 6 and 7
-    [David]
+- Fixing more CSS to fit more things on the tabbed spinner
+ [David]
+- Fixing issues with image caption on IE 6 and 7
+ [David]
 
 1.5.3 (2011-01-11)
 ------------------
 
-    - Fixing some CSS issues with content
-    [Marianne]
-    - Improving tabbed listing templates to simply call simple views directly
-    [David]
-    - Disabling plone.app.caching's proxy purging by default
-    [David]
+- Fixing some CSS issues with content
+ [Marianne]
+- Improving tabbed listing templates to simply call simple views directly
+ [David]
+- Disabling plone.app.caching's proxy purging by default
+ [David]
 
 1.5.1 (2011-01-06)
 ------------------
 
-    - Making theme work with upgraded jcu.theme's viewlets
-    [David]
-    - Minor CSS fixes to portlets-within-content (eg Collage portlets)
-    [David]
+- Making theme work with upgraded jcu.theme's viewlets
+ [David]
+- Minor CSS fixes to portlets-within-content (eg Collage portlets)
+ [David]
 
 1.5 (2010-12-31)
 ------------------
 
-    - Depended on OpenXml and Redirection tool in the GS profile
-    [David]
-    - Fixing styles in various areas of Plone, especially hacks for IE6 and 7.
-    In particular, portal top drop-down menus and z-index (IE6/7 use parental
-    z-index values for comparison), and lack of arrows on menus (fixed via JS).
-    [David]
-    - Adding JCU specific information the login form
-    [David]
-    - Removing usernames from advanced search form.  This is a security issue.
-    See my bug at http://dev.plone.org/plone/ticket/11346
-    [David]
-    - Changing LDAP plugin to not be enabled for modification of groups
-    or users.  This should improve performance and stop issues when changing
-    principals.
-    [David]
-    - Fixed issue with TinyMCE toolbars being too long.  This should
-    be enough unless we add more buttons to the toolbar :/ .
-    [David]
-    - Depended on plone.app.caching.  We really need this to fix Google
-    Chrome's dodginess and for speed.
-    [David]
-    - Added LDAP GenericSetup profile.  It doesn't all work yet due to a 
-    bug, but I've added manually intervention for the moment.
-    [David]
-    - Removed old-style group preference page since the new one works
-    [David]
-    - Removed some extra, unnecessary TinyMCE buttons
-    [David]
-    - Changing to populate reCaptcha settings public/private key if we are 
-    using this service.  The buildout now using reCaptcha by default.
-    [David]
-    - Adding a viewlet manager specifically for our site actions so we 
-    don't need to be using CSS hacks any more.  CSS at 100% width now
-    works entirely.  Yay!
-    [David]
-    - Updating site actions drop down menu to support "target" for links
-    [David]
-    - Updating more CSS to look even better with drop down menus
-    [David]
-    - Forcing the dropdown.css file in the JS registry to be available for
-    logged out users too because of our Site Actions drop down.
-    [David]
-    - Making the Author page "Edit" link edit one's profile
-    [David]
-    - Adding special aspects to drop-down menus at top right (About Me and
-      Get Support links)
-    [David]
-    - Providing custom version of PloneFormGen main view due to theirs
-      being borked in 1.6.0b4
-    [David]
-    - Updating various style elements (eg JCU colours, styling, livesearch,
-      positioning, margins, site actions menu, logos, alignment, sizes, etc)
-    [David] 
-    - Changing site actions into a menu like the personal tools
-    [David]
-    - Updated path_bar to not show if we only have Home in the breadcrumbs
-    [David]
-    - Updated various viewlets to bring into line with Plone 4 (eg logo)
-    [David]
-    - Removed various viewlets as Plone 4 provides the same as default 
-      (eg global sections)
-    [David]
-    - Added wrapper within the footer structure for margin to apply 
-    [David]
-    - Replaced old CSS with that from Sunburst theme; still needs customisation
-    [David]
-    - Removed main_template customisations and our theme now extends off 
-      Sunburst to get divs OOTB rather than tables
-    [David]
-    - Upgrading theming functionality into custom plone_layout view to
-      eliminate the need to hack the main_template again.  Using overrides.zcml now.
-    [David]
-    - Reworking for Plone 4
+- Depended on OpenXml and Redirection tool in the GS profile
+ [David]
+- Fixing styles in various areas of Plone, especially hacks for IE6 and 7.
+ In particular, portal top drop-down menus and z-index (IE6/7 use parental
+ z-index values for comparison), and lack of arrows on menus (fixed via JS).
+ [David]
+- Adding JCU specific information the login form
+ [David]
+- Removing usernames from advanced search form.  This is a security issue.
+ See my bug at http://dev.plone.org/plone/ticket/11346
+ [David]
+- Changing LDAP plugin to not be enabled for modification of groups
+ or users.  This should improve performance and stop issues when changing
+ principals.
+ [David]
+- Fixed issue with TinyMCE toolbars being too long.  This should
+ be enough unless we add more buttons to the toolbar :/ .
+ [David]
+- Depended on plone.app.caching.  We really need this to fix Google
+ Chrome's dodginess and for speed.
+ [David]
+- Added LDAP GenericSetup profile.  It doesn't all work yet due to a 
+ bug, but I've added manually intervention for the moment.
+ [David]
+- Removed old-style group preference page since the new one works
+ [David]
+- Removed some extra, unnecessary TinyMCE buttons
+ [David]
+- Changing to populate reCaptcha settings public/private key if we are 
+ using this service.  The buildout now using reCaptcha by default.
+ [David]
+- Adding a viewlet manager specifically for our site actions so we 
+ don't need to be using CSS hacks any more.  CSS at 100% width now
+ works entirely.  Yay!
+ [David]
+- Updating site actions drop down menu to support "target" for links
+ [David]
+- Updating more CSS to look even better with drop down menus
+ [David]
+- Forcing the dropdown.css file in the JS registry to be available for
+ logged out users too because of our Site Actions drop down.
+ [David]
+- Making the Author page "Edit" link edit one's profile
+ [David]
+- Adding special aspects to drop-down menus at top right (About Me and
+ Get Support links)
+ [David]
+- Providing custom version of PloneFormGen main view due to theirs
+ being borked in 1.6.0b4
+ [David]
+- Updating various style elements (eg JCU colours, styling, livesearch,
+ positioning, margins, site actions menu, logos, alignment, sizes, etc)
+ [David] 
+- Changing site actions into a menu like the personal tools
+ [David]
+- Updated path_bar to not show if we only have Home in the breadcrumbs
+ [David]
+- Updated various viewlets to bring into line with Plone 4 (eg logo)
+ [David]
+- Removed various viewlets as Plone 4 provides the same as default 
+ (eg global sections)
+ [David]
+- Added wrapper within the footer structure for margin to apply 
+ [David]
+- Replaced old CSS with that from Sunburst theme; still needs customisation
+ [David]
+- Removed main_template customisations and our theme now extends off 
+ Sunburst to get divs OOTB rather than tables
+ [David]
+- Upgrading theming functionality into custom plone_layout view to
+ eliminate the need to hack the main_template again.  Using overrides.zcml now.
+ [David]
+- Reworking for Plone 4
 
 1.1.2 (2010-08-02)
 ------------------
 
-    - Updated CSS for accordion with TinyMCE
-    [David]
-    - Added @@simple_view for Plone Topic and Folder.  This view uses
-      a metal macro call to simply extend off the existing standard view
-      for folder listings.
-    [David]
-    - Simple views now utilise collective.fastview to load the 
-      collective.leadimage images for content.
-    [David]
+- Updated CSS for accordion with TinyMCE
+ [David]
+- Added @@simple_view for Plone Topic and Folder.  This view uses
+ a metal macro call to simply extend off the existing standard view
+ for folder listings.
+ [David]
+- Simple views now utilise collective.fastview to load the 
+ collective.leadimage images for content.
+ [David]
 
 1.1 (2010-07-28)
 ------------------
 
-    - Added jQuery Tools tab views for folders and topics
-      with AJAX and plain supported views.
-    [David]
-    - Included extra support for the above with JCU's main theme colours
-    [David]
-    - Created @@simple_view for Page content in the theme; for use with
-      the AJAX tabbed view
-    [David]
+- Added jQuery Tools tab views for folders and topics
+ with AJAX and plain supported views.
+ [David]
+- Included extra support for the above with JCU's main theme colours
+ [David]
+- Created @@simple_view for Page content in the theme; for use with
+ the AJAX tabbed view
+ [David]
 
 1.0.1 (2010-07-xx)
 ------------------
 
-    - Refactored theme_settings view into specific 'views' file
-    [David]
-    - Slight optimisation to the theme traversal script.  Avoids waking
-      the parent object if we don't have to.
-    [David]
-    - Fixed issue with portlet assignments and theming (TypeError)
-    [David]
-    - Fixed issue with missing JCU theme action (tab) 
-    [David]
-    - Adding CSS for z3c.form action elements
-    [David]
+- Refactored theme_settings view into specific 'views' file
+ [David]
+- Slight optimisation to the theme traversal script.  Avoids waking
+ the parent object if we don't have to.
+ [David]
+- Fixed issue with portlet assignments and theming (TypeError)
+ [David]
+- Fixed issue with missing JCU theme action (tab) 
+ [David]
+- Adding CSS for z3c.form action elements
+ [David]
 
 1.0 (2010-06-01)
 ------------------
 
-    - Redesigned the site to conform with the new JCU look and feel 
-    [David]
-    - Updated discussion styles to add very light borders 
-    [David]
-    - Added basic ability to theme different areas of site with different
-      JCU colours and gradients 
-    [David]
+- Redesigned the site to conform with the new JCU look and feel 
+ [David]
+- Updated discussion styles to add very light borders 
+ [David]
+- Added basic ability to theme different areas of site with different
+ JCU colours and gradients 
+ [David]
 
 0.2.1 (2008-09-11)
 ------------------
 
-    - Removed unicode character from footer
+- Removed unicode character from footer
 
 0.2 (2008-09-06)
 ------------------
 
-    - Added more gradients
-    - Reset font size
-    - Made portlets solid blue, forms buttons now have solid backgrounds.
+- Added more gradients
+- Reset font size
+- Made portlets solid blue, forms buttons now have solid backgrounds.
 
 0.1 (2008-08-29)
 ------------------
 
-    - Initial package structure.
-      [zopeskel]
+- Initial package structure.
+ [zopeskel]
 

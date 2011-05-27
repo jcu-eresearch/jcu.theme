@@ -31,4 +31,14 @@
       profile="jcu.theme:default"
       />
 
+     <genericsetup:upgradeStep
+      title="Make theme tab only available to managers"
+      description=""
+      source="23"
+      destination="24"
+      handler="jcu.theme.setuphandlers.upgrade_actions"
+      sortkey="1"
+      profile="jcu.theme:default"
+      />
+
 </configure>

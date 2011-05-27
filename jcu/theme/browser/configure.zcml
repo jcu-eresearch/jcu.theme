@@ -169,7 +169,7 @@
 	for="Products.CMFCore.interfaces._content.IDynamicType"
         name="edit_theming_settings"
 	class=".themesettingsform.ThemeSettingsFormView"
-	permission="cmf.ModifyPortalContent"
+	permission="cmf.ManagePortal"
 	/>
 
     <!-- Collage page view resources -->
