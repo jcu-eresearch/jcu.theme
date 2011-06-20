@@ -1,10 +1,11 @@
 Change History
 ==============
 
-1.5.11 (unreleased)
+1.5.11 (2011-06-20)
 -------------------
 
-- Nothing changed yet.
+- Updating login form for Plone 4.1rc2.  Previous compatibility is unknown.
+  [David]
 
 
 1.5.10 (2011-05-27)
