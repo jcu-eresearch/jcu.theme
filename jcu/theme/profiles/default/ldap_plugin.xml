@@ -1,18 +1,16 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"  ?>
 <ldapplugins>
 
-        <ldapplugin title="Plone managed LDAP" id="ldap-plugin" meta_type="Plone LDAP plugin" update="True">
+        <ldapplugin title="Plone managed LDAP" id="ldap-plugin" meta_type="Plone LDAP plugin" update="False">
 
+            <cache value="RAMCache"/>
             <interface value="IAuthenticationPlugin"/>
-            <interface value="ICredentialsResetPlugin"/>
             <interface value="IGroupEnumerationPlugin"/>
             <interface value="IGroupIntrospection"/>
-            <interface value="IGroupManagement"/>
             <interface value="IGroupsPlugin"/>
             <interface value="IPropertiesPlugin"/>
             <interface value="IRoleEnumerationPlugin"/>
             <interface value="IRolesPlugin"/>
-            <interface value="IUserAdderPlugin"/>
             <interface value="IUserEnumerationPlugin"/>
             <plugin_property id="prefix" type="string" mode="w" value=""/>
             <plugin_property id="title" type="string" mode="wd" value="Plone managed LDAP"/>
@@ -75,12 +73,6 @@
                     <item id="friendly_name" value="Email address"/>
                     <item id="multivalued" value="False"/>
                 </attr>
-                <attr id="cn">
-                    <item id="public_name" value="fullname"/>
-                    <item id="ldap_name" value="cn"/>
-                    <item id="friendly_name" value="Canonical Name"/>
-                    <item id="multivalued" value="False"/>
-                </attr>
                 <attr id="sn">
                     <item id="public_name" value=""/>
                     <item id="ldap_name" value="sn"/>
@@ -91,6 +83,12 @@
                     <item id="public_name" value=""/>
                     <item id="ldap_name" value="uid"/>
                     <item id="friendly_name" value="User id"/>
+                    <item id="multivalued" value="False"/>
+                </attr>
+                <attr id="cn">
+                    <item id="public_name" value="fullname"/>
+                    <item id="ldap_name" value="cn"/>
+                    <item id="friendly_name" value="Canonical Name"/>
                     <item id="multivalued" value="False"/>
                 </attr>
             </schema>

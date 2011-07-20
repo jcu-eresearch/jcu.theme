@@ -54,10 +54,16 @@ def setupVarious(context):
                         'IUserManagement',
                        ]
         for interface in deactivation:
-            plugins.deactivatePlugin(
-                plugins._getInterfaceFromName(interface),
-                'ldap-plugin',
-            )
+            try:
+                plugins.deactivatePlugin(
+                    plugins._getInterfaceFromName(interface),
+                    'ldap-plugin',
+                )
+            except:
+                #Changes since plone.app.ldap 1.2.4 mean this is going to
+                #fail.  Not a bad thing though to check!
+                site.plone_log("JCU LDAP: Couldn't deactivate %s interface" \
+                               % interface)
         ldap_plugin = acl_users['ldap-plugin']
         ldap_acl_users = ldap_plugin.acl_users
         ldap_acl_users.read_only = True
@@ -66,6 +72,7 @@ def setupVarious(context):
         site.plone_log('LDAP plugin settings configured.')
     except:
         site.plone_log('Could not configure LDAP plugin settings.')
+        raise
 
     #We can import plone.app.caching profiles (we have already via
     #metadata.xml) but we need to manually turn it on.

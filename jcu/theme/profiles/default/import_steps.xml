@@ -6,6 +6,7 @@
                title="JCU Theme: miscellaneous import steps">
     <dependency step="metadata" />
     <dependency step="skins" />
+    <dependency step="ldap-settings-import" />
     Various import steps that are not handled by GS import/export
     handlers.
   </import-step>
