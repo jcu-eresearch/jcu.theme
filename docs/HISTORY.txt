@@ -1,7 +1,7 @@
 Change History
 ==============
 
-1.5.12 (2011-07-20)
+1.5.12 (unreleased)
 -------------------
 
 - Enable caching for LDAP and acl_users via plone.app.ldap GS profile
