@@ -4,8 +4,16 @@ Change History
 1.5.12 (unreleased)
 -------------------
 
-- Nothing changed yet.
-
+- Enable caching for LDAP and acl_users via plone.app.ldap GS profile
+  [David]
+- Fix issue with importing LDAP against plone.app.ldap 1.2.5+ (interfaces
+  are automatically disabled unless otherwise specified)
+  [David]
+- Adding cache paramter to LDAP GenericSetup profile to use RAMCache
+  [David]
+- Removing custom search_form from this theme.  It conflicts with Plone 4.1rc3
+  and we don't need the customisation any more.
+  [David]
 
 1.5.11 (2011-06-20)
 -------------------
