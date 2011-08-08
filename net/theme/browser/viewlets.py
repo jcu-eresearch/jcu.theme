@@ -32,9 +32,9 @@ class NetLogoViewlet(BaseLogoViewlet):
                                             name=u'plone_portal_state')
         portal = portal_state.portal()
 
-        self.home_url = portal.restrictedTraverse('base_properties').homelink
+        self.home_url = portal_state.navigation_root_url() 
 
-        sitelogoName = portal.restrictedTraverse('base_properties').sitelogoName
+        sitelogoName = portal.restrictedTraverse('base_properties').logoName
         self.sitelogo_tag = portal.restrictedTraverse(sitelogoName).tag()
 
 class NetFooterViewlet(ViewletBase):
