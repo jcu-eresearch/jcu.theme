@@ -87,7 +87,7 @@ def setupVarious(context):
         settings = registry.forInterface(ICacheSettings)
         settings.enabled = True
         ploneSettings = registry.forInterface(IPloneCacheSettings)
-        ploneSettings.enableCompression = True
+        ploneSettings.enableCompression = False
         purgingSettings = registry.forInterface(ICachePurgingSettings)
         purgingSettings.enabled = False
 
