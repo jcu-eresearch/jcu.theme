@@ -31,9 +31,8 @@
 	name="plone.global_sections"
 	manager=".interfaces.IPortalTop"
 	class="plone.app.layout.viewlets.common.GlobalSectionsViewlet"
-    	permission="zope2.View"
-    />
-
+	permission="zope2.View"
+    	/>
 
      <browser:viewlet
          name="jcu.footer"

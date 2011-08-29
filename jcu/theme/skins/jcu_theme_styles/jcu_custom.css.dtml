@@ -170,11 +170,11 @@ position:relative;
 :first-child+html #portal-top {z-index: 9999;}
 * html #portal-top {z-index:9999;}
 
-:first-child+html #portal-logo {margin-top:-1em;}
-* html #portal-logo {margin-top:-1em;}
+:first-child+html #global-logo {margin-top:-1em;}
+* html #global-logo {margin-top:-1em;}
 
-:first-child+html #site-logo {margin-top:0;}
-* html #site-logo {margin-top:0;}
+:first-child+html #portal-logo {margin-top:0;}
+* html #portal-logo {margin-top:0;}
 
 
 * html dl.portlet ul.navTree li.navTreeCurrentNode {padding-left: 1em;}

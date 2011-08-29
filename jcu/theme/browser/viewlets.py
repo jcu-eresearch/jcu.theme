@@ -11,7 +11,7 @@ class LogoViewlet(common.LogoViewlet):
         portal = self.portal_state.portal()
         #XXX This needs to either be rendered in the page template etc
         self.home_url = "http://www.jcu.edu.au/"
-        self.sitelogo_tag = portal.restrictedTraverse('sitelogo.png').tag()
+        self.global_logo_tag = portal.restrictedTraverse('globallogo.png').tag()
 
 
 class PathBarViewlet(common.PathBarViewlet):

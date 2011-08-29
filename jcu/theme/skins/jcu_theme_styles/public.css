@@ -123,7 +123,7 @@ q {
     z-index: 2;
 }
 
-#portal-logo, #site-logo {
+#global-logo, #portal-logo {
     display: -moz-inline-stack;
     display: inline-block;
     margin:0.75em 1em 1em 0;
@@ -131,7 +131,7 @@ q {
     zoom: 1;
     *display: inline;
 }
-#site-logo {
+#portal-logo {
     margin-top: 1.25em; 
 }
 

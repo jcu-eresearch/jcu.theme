@@ -10,6 +10,11 @@ Change History
   [davidjb]
 - Update mailhost SMTP address to hostrelay.jcu.edu.au
   [davidjb]
+- *Backwards incompatibility*: changed portal logo to be our site logo rather
+  than the JCU logo ('sitelogo.png' in sites needs to be renamed to 'logo.png')
+  to maintain functionality.  'globallogo.png' is now the JCU logo (easily
+  customisable for other locations.
+  [davidjb]
 
 
 1.5.12 (2011-07-20)
