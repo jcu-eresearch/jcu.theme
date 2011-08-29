@@ -27,6 +27,7 @@ setup(name='jcu.theme',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'Products.CMFPlone>=4.1',
           'plone.app.z3cform',
           'zope.annotation',
           'Products.Collage',
