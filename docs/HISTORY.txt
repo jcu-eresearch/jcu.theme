@@ -8,6 +8,8 @@ Change History
   a webserver, which all sites should, then we're wasting compute resources
   gzipping on the Zope site.
   [davidjb]
+- Update mailhost SMTP address to hostrelay.jcu.edu.au
+  [davidjb]
 
 
 1.5.12 (2011-07-20)

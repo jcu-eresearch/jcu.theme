@@ -25,7 +25,7 @@ def setupVarious(context):
     try:
         site.MailHost.manage_makeChanges(
             title='Mail server settings for outgoing mail',
-            smtp_host='smtp.jcu.edu.au',
+            smtp_host='hostrelay.jcu.edu.au',
             smtp_port='25',
             smtp_queue=True,
             smtp_queue_directory='/tmp/mailhost'
@@ -97,11 +97,15 @@ def setupVarious(context):
         site.plone_log('Could not configure plone.app.caching settings.')
 
 
-def upgrade_actions(context, logger=None):
-    """Re-import the portal action settings.
+def run_import_step(context, step, logger=None):
+    """Re-import some specified import step for Generic Setup.
     """
-    #Run the actions setup
     setup = getToolByName(context, 'portal_setup')
-    setup.runImportStepFromProfile(PROFILE_ID, 'actions')
+    setup.runImportStepFromProfile(PROFILE_ID, step)
     return
 
+def upgrade_actions(context, logger=None):
+    run_import_step(context, 'actions')
+
+def upgrade_mailhost(context, logger=None):
+    run_import_step(context, 'mailhost')
