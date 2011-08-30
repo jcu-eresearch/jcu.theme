@@ -44,7 +44,7 @@
      <genericsetup:upgradeStep
       title="Update mailhost settings"
       description=""
-      source="25"
+      source="*"
       destination="26"
       handler="jcu.theme.setuphandlers.upgrade_mailhost"
       sortkey="1"
