@@ -4,6 +4,7 @@ from plone.app.layout.viewlets import common
 class FooterViewlet(common.FooterViewlet):
     index = ViewPageTemplateFile('templates/footer.pt')
 
+
 class LogoViewlet(common.LogoViewlet):
     render = ViewPageTemplateFile('templates/logo.pt')
 
