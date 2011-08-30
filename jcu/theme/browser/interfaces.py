@@ -12,5 +12,5 @@ class IThemeSpecific(IDefaultPloneLayer):
 
 class IPortalTop(IViewletManager):
     """Special portal top viewlet manager specifically for elements
-       that need to have 100% width withint Plone 4's div layout
+       that need to have 100% width within Plone 4's div layout
     """

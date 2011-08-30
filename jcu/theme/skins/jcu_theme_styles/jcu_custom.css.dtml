@@ -113,6 +113,11 @@
 .jcu-red #portal-personaltools dd { background: #ED2028; }
 */
 
+#portal-footer-wrapper { 
+float:none; 
+display:inline-block;
+}
+
 #site-title {
 color: #0066CC;
 font-size: 1.4em;

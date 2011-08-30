@@ -32,7 +32,7 @@
               </li>
               <li>
                     <a href=""
-                   tal:attributes="href string:${portal_url}/prefs_group_details?${view/groupquery}"
+                   tal:attributes="href string:${portal_url}/@@usergroup-groupdetails?${view/groupquery}"
                        i18n:translate="label_group_properties">Group Properties</a>
               </li>
               <li>
@@ -176,7 +176,7 @@
                                   </tal:block>
                                   <tal:block tal:condition="python: view.isGroup(this_user)">
                                       <img src="group.png" alt="" />
-                                      <a href="" tal:attributes="href python:'prefs_group_details?' + view.makeQuery(groupname=this_user.getGroupName())">
+                                      <a href="" tal:attributes="href python:'@@usergroup-groupdetails?' + view.makeQuery(groupname=this_user.getGroupName())">
                                           <span tal:replace="this_user/getGroupTitleOrName | default" />
                                           (<span tal:replace="this_user/id | default" />)
                                       </a>
@@ -239,26 +239,21 @@
                             </a>
                         </div>
 
-                        <p>
                         <input class="context"
                                 type="submit"
                                 name="form.button.Add"
                                 value="Add selected groups and users to this group"
                                 tal:condition="batch"
                                 i18n:attributes="value label_add_users_to_group;" />
-                         </p>
+
                     </tal:addusers>
 
-
-
                     <h2 i18n:translate="heading_groupmembers_current">Current group members</h2>
-                    <table class="listing" summary="Group Members Listing"
-                         id="group-member-listing"
-                          tal:condition="view/groupMembers">
-                          <thead>
+                      <table class="listing" summary="Group Members Listing"
+                         tal:condition="view/groupMembers">
 
                           <tr>
-                              <th class="nosort">
+                              <th>
                                   <input class="noborder"
                                          type="checkbox"
                                          src="select_all_icon.png"
@@ -273,8 +268,6 @@
                               <th i18n:translate="listingheader_user_name">User name</th>
                               <th i18n:translate="listingheader_email_address">E-mail Address</th>
                           </tr>
-                      </thead>
-                      <tbody>
 
                           <tal:block tal:repeat="this_user view/groupMembers">
                             <tr tal:condition="python:this_user is not None"
@@ -292,7 +285,7 @@
                                 <tal:block tal:condition="python: view.isGroup(this_user)">
                                   <td>
                                     <img src="group.png" alt="" />
-                                    <a href="" tal:attributes="href python:'prefs_group_details?' + view.makeQuery(groupname=this_user.getGroupName())" >
+                                    <a href="" tal:attributes="href python:'@@usergroup-groupdetails?' + view.makeQuery(groupname=this_user.getGroupName())" >
                                       <span tal:replace="this_user/getGroupTitleOrName | default" />
                                       (<span tal:replace="this_user/id" />)
                                     </a>
@@ -322,7 +315,6 @@
                                 </td>
                             </tr>
                           </tal:block>
-                        </tbody>
                       </table>
 
 

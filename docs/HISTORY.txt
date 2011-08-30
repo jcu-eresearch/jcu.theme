@@ -15,6 +15,8 @@ Change History
   to maintain functionality.  'globallogo.png' is now the JCU logo (easily
   customisable for other locations.
   [davidjb]
+- Update for Plone 4.1 (templates, forms, CSS)
+  [davidjb]
 - Add new permissions declaration for Products.CMFCore as required for Plone
   4.1 and above. 
   [davidjb]
