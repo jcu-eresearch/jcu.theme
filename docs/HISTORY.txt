@@ -4,6 +4,8 @@ Change History
 1.6 (unreleased)
 ----------------
 
+- Rework the footer and colophon to use the Deco.gs grid layout system.
+  [davidjb]
 - Disable Gzip compression for our Plone sites by default.  If they sit behind
   a webserver, which all sites should, then we're wasting compute resources
   gzipping on the Zope site.

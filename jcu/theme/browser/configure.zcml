@@ -38,8 +38,8 @@
          name="jcu.footer"
          manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
          layer=".interfaces.IThemeSpecific"
-	 template="templates/footer.pt"
-         permission="zope2.View"
+	 class=".viewlets.FooterViewlet"
+         permission="zope2.Public"
          />
 
      <browser:viewlet

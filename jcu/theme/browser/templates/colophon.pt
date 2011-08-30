@@ -1,4 +1,5 @@
 <div id="portal-colophon"
+     class="cell width-1:2 position-1:2"
      metal:define-macro="colophon"
      i18n:domain="plone">
 <metal:slot define-slot="colophon" />
