@@ -514,6 +514,7 @@ dl.portlet ul.navTree li.navTreeCurrentNode {
 /* Special case of #content - TinyMCE */
 body#content {
     margin: 1em;
+    font-size: 81%;
 }
 
 #content h1 {

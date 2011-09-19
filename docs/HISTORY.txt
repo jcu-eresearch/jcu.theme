@@ -4,6 +4,8 @@ Change History
 1.6 (unreleased)
 ----------------
 
+- Fix long-standing issue of TinyMCE font-size being too large.
+  [davidjb]
 - Rework the footer and colophon to use the Deco.gs grid layout system.
   [davidjb]
 - Disable Gzip compression for our Plone sites by default.  If they sit behind
