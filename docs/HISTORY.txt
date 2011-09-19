@@ -4,6 +4,9 @@ Change History
 1.6 (unreleased)
 ----------------
 
+- Update zcml permissions on public theme elements to be zope.Public; they
+  shouldn't need to be zope2.View
+  [davidjb]
 - Fix long-standing issue of TinyMCE font-size being too large.
   [davidjb]
 - Rework the footer and colophon to use the Deco.gs grid layout system.

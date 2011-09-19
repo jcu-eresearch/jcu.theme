@@ -31,7 +31,7 @@
 	name="plone.global_sections"
 	manager=".interfaces.IPortalTop"
 	class="plone.app.layout.viewlets.common.GlobalSectionsViewlet"
-	permission="zope2.View"
+	permission="zope.Public"
     	/>
 
      <browser:viewlet
@@ -39,7 +39,7 @@
          manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
          layer=".interfaces.IThemeSpecific"
 	 class=".viewlets.FooterViewlet"
-         permission="zope2.Public"
+         permission="zope.Public"
          />
 
      <browser:viewlet
@@ -57,7 +57,7 @@
         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
         class=".viewlets.LogoViewlet"
         layer=".interfaces.IThemeSpecific"
-        permission="zope2.View"
+        permission="zope.Public"
 	/>
 
     <browser:viewlet
@@ -65,7 +65,7 @@
 	manager="plone.app.layout.viewlets.interfaces.IAboveContent"
 	class=".viewlets.PathBarViewlet"
         layer=".interfaces.IThemeSpecific"
-	permission="zope2.View"
+	permission="zope.Public"
 	/>
 
     <browser:viewlet
@@ -73,7 +73,7 @@
 	manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
 	class=".viewlets.SiteActionsViewlet"
 	layer=".interfaces.IThemeSpecific"
-	permission="zope2.View"
+	permission="zope.Public"
        />
 
 
