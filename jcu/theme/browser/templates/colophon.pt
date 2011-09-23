@@ -12,8 +12,8 @@
           height="24"
           title="JCU eResearch Centre"
           alt="JCU eResearch Centre"
-          src="eresearch-logo-sml.gif"
-          tal:attributes="src string:${here/portal_url}/eresearch-logo-sml.gif"
+          src="eresearch-logo-sml.png"
+          tal:attributes="src string:${here/portal_url}/eresearch-logo-sml.png"
     /></a> &nbsp;
     <a href="http://eresearch.jcu.edu.au">
        Designed and developed by JCU eResearch Centre
