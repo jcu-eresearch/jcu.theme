@@ -4,12 +4,6 @@ Change History
 1.6.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
-
-1.7 (unreleased)
-----------------
-
 - Optimising images within package.
   [davidjb]
 
