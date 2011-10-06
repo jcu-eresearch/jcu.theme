@@ -5,7 +5,6 @@
     min-width: inherit;
     margin:0;
 }
-
 #portal-column-one, 
 #portal-column-two,
 #portal-column-content { 
@@ -21,7 +20,7 @@
     margin: 0.5em 0 0;
 }
 #portal-top {
-    font-size: 180%;
+	font-size: 180%;
 }
 #portal-personaltools {
     margin-bottom: 0.4em;
@@ -38,7 +37,7 @@
     text-align: right;
 }
 #portal-searchbox input {
-    font-size: 100% !important;
+	font-size: 100% !important;
 }
 #portal-searchbox .searchSection,
 #portal-searchbox .searchButton {
@@ -48,38 +47,39 @@
     width:6em;
 }
 #content-views a {
-    font-size: 150%;
-    line-height: 2em !important;
-    padding: 0.5em;
+	font-size: 150%;
+	line-height: 2em !important;
+	padding: 0.5em;
 }
 #content li.formTab a {
-    font-size: 140%;
-    line-height: 2em !important;
-    padding: 0.25em;
+	font-size: 140%;
+	line-height: 2em !important;
+	padding: 0.25em;
 }
 #edit-bar {
-    min-height: 5em;
+	min-height: 5em;
 }
 
 #contentActionMenus a {
-    width: 100%;
-    line-height: 2em !important;
-    font-size: 150%;
+	width: 100%;
+	line-height: 2em !important;
+	font-size: 150%;
 }
 
+
 input, textarea {
-    font-size: 140% !important;
+	font-size: 140% !important;
 }
 div.managePortletsLink,
 a.managePortletsFallback {
-    font-size: 140%;
+	font-size: 140%;
 }
 div.overlay {
-    font-size: 120%;
+	font-size: 120%;
 }
 div.overlay-iframe,
 div.overlay-ajax {
-    width: 90%;
+	width: 90%;
 }
 
 #portal-footer, #portal-colophon {

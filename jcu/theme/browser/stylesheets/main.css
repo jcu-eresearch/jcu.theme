@@ -1,5 +1,10 @@
 /* Stylesheet for the 'JCU Theme' Plone theme */
 
+div.action { 
+  display: -moz-inline-stack;
+  display: inline-block;
+}
+
 #collage .two-columns-verylargeleft .block_1 {
     width: 69%;
 }

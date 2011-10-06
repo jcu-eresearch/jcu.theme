@@ -4,7 +4,10 @@ Change History
 1.6.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Merging CSS with updated styles from plonetheme.sunburst 1.1.5 (Plone 4.1).
+  Future upgrades to Plone need to see these style changes merged in to avoid
+  missing new features.
+  [davidjb]
 
 
 1.6.1 (2011-09-26)

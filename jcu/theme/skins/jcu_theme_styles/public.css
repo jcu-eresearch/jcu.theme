@@ -22,6 +22,7 @@
 a { outline: none; }
 table { border-spacing: 0; }
 img { vertical-align: text-bottom; }
+iframe { border-width: 0; border-style:none; }
 
 
 /* @end */
@@ -123,7 +124,8 @@ q {
     z-index: 2;
 }
 
-#global-logo, #portal-logo {
+#global-logo,
+#portal-logo {
     display: -moz-inline-stack;
     display: inline-block;
     margin:0.75em 1em 1em 0;
@@ -138,7 +140,7 @@ q {
 #portal-globalnav {
     clear: both;
     font-size: 85%;
-    background:#F6F2E6;
+    background:#f6f2e6;
     /* ensure top navigation dont touches portlets, content etc.. #10491 */
     width: 100%;
     margin:0.5em 0;
@@ -163,6 +165,9 @@ q {
 #portal-globalnav a:hover {
     background: #eee6cf;
     color: #436976;
+}
+#portal-globalnav .selected a:hover {
+    background: #f6f2e6;
 }
 
 #portal-siteactions,
@@ -213,6 +218,10 @@ q {
     font-size: 80%;
 }
 
+#portal-searchbox form {
+    white-space: nowrap;
+}
+
 #portal-searchbox label {
     font-weight: normal;
 }
@@ -251,30 +260,34 @@ input.searchField {
 
 /* @group LiveSearch */
 
-.LSResult {
+.LSResult,
+#LSResult {
     position: absolute;
     right: 0;
+    background: White;
     margin: -1.5em 0 0 -7em;
 }
+
 .portlet .LSResult {
     left: 0;
     right: auto;
     margin: 0;
 }
 
-.LSResult fieldset {
-    padding: 0;
+.LSResult fieldset,
+#LSResult fieldset {
+    padding: 1em 0 0;
     border: 0.1em solid #eee;
-    margin:1em 0 0;
-    background: white;
+    margin: 1em 0 0;
 }
 
 #livesearchLegend {
-    background-color:White;
-    padding:0 0.5em 0.5em;
+    background-color: #eee;
+    padding:0.3em;
 }
 
-.LSResult .LSDescr {
+.LSresult .LSDescr,
+#LSResult .LSDescr {
     font-size: 85%;
     color: #666;
     display: -moz-inline-stack;
@@ -285,7 +298,7 @@ input.searchField {
 .LSRow,
 #LSNothingFound {
     display: block;
-    padding: 0 0 0.25em 1.25em;
+    padding: 0.5em 1em;
     white-space: normal;
     width:28em;
 }
@@ -301,7 +314,8 @@ input.searchField {
 
 #portal-breadcrumbs {
     font-size: 80%;
-    margin: 0 0 0.5em 0.25em;
+    margin-bottom: 0.5em;
+    margin-left: 0.25em;
 }
 #portal-breadcrumbs a {
     border-bottom: none;
@@ -312,32 +326,16 @@ input.searchField {
 #breadcrumbs-you-are-here {
     display:none;
 }
-/*.breadcrumbSeparator {
-    background-image:url('nulook_bullet.gif');
-    background-position:0 top;
-    background-repeat:no-repeat;
-    display: -moz-inline-stack;
-    display:inline-block;
-    font-size:120%;
-    height:7px;
-    line-height:0.4em;
-    margin:0 0.2em;
-    overflow:hidden;
-    padding:0 0 0 5px;
-    width:0;
-}*/
+
 /* @end */
 
 
 
 
 
-/* @group Site actions 
+/* @group Site actions */
 
 #portal-siteactions {
-    font-size: 85%;
-    padding: 0.25em 0;
-    float:right;
     display:inline-block;
 }
 #portal-siteactions li {
@@ -347,7 +345,7 @@ input.searchField {
     color: #9E9270;
 }
 
- @end */
+/* @end */
 
 /* @group Listings */
 
@@ -391,6 +389,9 @@ div.portletAssignments div.portletHeader {
     padding: 0.42em 1em 0.42em 0;
     border-bottom: 1px dotted #999;
     line-height: normal;
+}
+dl.portlet dt.hiddenStructure {
+    padding: 0;
 }
 div.portletAssignments {
     font-size: 0.8em;
@@ -466,6 +467,7 @@ a.managePortletsFallback {
 dl.portlet ul.navTree li a {
     border: none;
     display: block;
+    zoom: 1;
 }
 
 dl.portlet ul.navTree li a:hover {
@@ -533,8 +535,10 @@ dl.portlet {
     margin-bottom: 1em;
 }
 
-#content ol,
-#content ul { margin-bottom: 1em; }
+#content ul,
+#content ol {
+   margin-bottom: 1em;
+}
 
 #content a:link,
 dl.portlet a:link {
@@ -564,7 +568,7 @@ dl.portlet a:hover {
     text-align: right;
 }
 
-#category a.link-category {
+#category a.link-category, span.selectedTag {
     color: black;
     padding: 0.25em 0.5em;
     background: #ddd;
@@ -586,17 +590,14 @@ dl.portlet a:hover {
     margin-left: 2em;
 }
 
-dl.portlet ul {
-    margin-left: 0.75em !important;
-}
-
-#content ol {
+#content ol,
+dl.portlet ol {
     list-style-type: decimal;
     margin-left: 2em;
 }
 
+dl.portlet ul,
 dl.portlet ol {
-    list-style-type: decimal;
     margin-left: 0.75em !important;
 }
 
@@ -613,7 +614,7 @@ dl.portlet li {
     margin-right: 0;
 }
 #content dd {
-    margin: 0 0 0.5em 0.75em;
+    margin: 0 0 1em 2em;
 }
 #content li > ul,
 #content dd > ul,
@@ -627,7 +628,7 @@ dl.portlet li {
     padding: 1em;
     overflow-x: auto;
     font-size: 90%;
-    margin: 1em 0;
+    margin-bottom: 1em;
     line-height: 1.25em;
 }
 #content pre.python {
@@ -642,7 +643,6 @@ dl.portlet li {
     font-size: 85%;
     display: block;
     color: #666;
-    margin-bottom:0.5em;
 }
 
 #content .discreet,
@@ -692,8 +692,8 @@ width: 110px;
 #content .documentDescription,
 #content #description {
     color: #333;
-    margin: 0.25em 0;
-    font:bold 1.1em Arial,Tahoma,FreeSans,sans-serif; 
+    margin-left: 0;
+    font:bold 1.25em Arial,Tahoma,FreeSans,sans-serif; 
 }
 
 #content img.tileImage,
@@ -757,11 +757,22 @@ table.listing th.listingCheckbox {
     text-align: center;
 }
 
+
+table.listing {
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+table.listing .top {
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
 table.listing th {
     text-align: left;
     color: #666;
     border: 0.1em solid #e7e7e7;
-    border-style: solid none none;
+    border-style: solid solid none;
+    background: #ddd;
 }
 table.listing tr.odd th {
     border: 0.1em solid #fff;
@@ -782,11 +793,12 @@ table.listing tbody tr td {
 table.listing tbody tr.odd td {
     background: #eee;
 }
+table.listing td {
+    border-right: 1px solid #ddd;
+}
 table.listing a {
-    line-height: 2em;
     border: none;
-    /*display: -moz-inline-stack;
-    display: inline-block;*/
+    display: inline-block;
     border-bottom: none !important;
 }
 
@@ -886,14 +898,20 @@ dl.warning {
 dl.warning dt {
     background-color: #d80;
 }
-dl.warning dd {
-    background-color: #fd7;
-}
 dl.error {
     border-color: #d00;
 }
 dl.error dt {
     background-color: #d00;
+}
+dl.warning {
+    border-color: #d80;
+}
+dl.warning dd {
+    background-color: #fd7;
+}
+dl.error {
+    border-color: red;
 }
 dl.error dd {
     background-color: #fdc;
@@ -924,10 +942,10 @@ dl.error dd {
 }
 #edit-bar {
     background-color: #75ad0a;
-    border: 0.3em solid #75ad0a;
+    border: 0.25em solid #75ad0a;
     font-size: 80%;
     min-height: 2em;
-    margin: 0 0 1em;
+    margin-bottom: 1em;
     padding-top: 0.05em;
 }
 #content-views {
@@ -1069,10 +1087,7 @@ dl.error dd {
     background-color: White !important;
     color: #666;
 }
-
-#contentActionMenus dl.actionMenu span.noMenuAction,
-#contentActionMenus dl.actionMenu a,
-#contentActionMenus dl.actionMenu div {
+#contentActionMenus dl.actionMenu {
     line-height: 2em;
 }
 
@@ -1428,12 +1443,10 @@ input.searchPage {
 
 .image-left {
    float: left;
-   clear: both;
    margin: 0.5em 1em 0.5em 0;
 }
 .image-right {
    float: right;
-   clear: both;
    margin: 0.5em;
 }
 .image-inline {
@@ -1515,6 +1528,7 @@ fieldset,
 }
 
 /* Emulates the styling from the h1 tag */
+#content .field input[type="text"][name$=".title"],
 #archetypes-fieldname-title input {
     font-family: Arial,Tahoma,FreeSans,sans-serif;
     line-height: 125%;
@@ -1525,16 +1539,17 @@ fieldset,
 }
 
 /* Emulates styling from the description's view */
+#content .field textarea[name$=".description"],
 #archetypes-fieldname-description textarea#description {
     font-family: Arial,FreeSans,sans-serif;
     color:#666666;
-    font-size:1em;
+    font-size:1.25em;
     font-weight: bold;
 }
 
-div.action { display: -moz-inline-stack; display: inline-block; }
+
 div.formControls {
-    margin: 1em 0;
+    margin: 1em;
 }
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -1592,13 +1607,18 @@ dl.enableFormTabbing dd {
     margin-bottom: 1em;
 }
 .field input[type="text"] {
-    /*width: 100%;*/
+   width: 20em;
 }
+.field input[type="text"][size] {
+   width: auto;
+}
+.field input[type="text"][name$=".title"],
 input#title {
     width: 100%;
 }
+.field.error input[type="text"][name$=".title"],
 .error input#title {
-    width:99%;
+    width: 99%;
 }
 
 .fieldRequired {
@@ -1619,7 +1639,7 @@ input#title {
     color: #555;
     margin: 0 0 0.2em 0;
 }
-div.error {
+div.field.error {
     background-color: #fdc;
     border:  1px solid red;
     padding: 0.5em;
@@ -1647,14 +1667,31 @@ textarea#form\.description {
     width: 99%;
 }
 table.listing tbody tr.odd.selected td,
+table.listing tbody tr.odd.dragging td,
+tr.dragging,
 tr.selected {
     background-color: #ffa;
+}
+table.listing tbody tr.odd.error td,
+tr.error {
+    background-color: #fdc;
+}
+.multi-widget-field {
+    padding-left: 0.5em;
+    border-left: 1.5em solid #DDD;
+}
+
+.multi-widget-checkbox {
+    margin-left: -2em;
+    margin-right: 0.5em;
+    width: 1.5em;
+    display: inline-block;
 }
 
 /* @group Login form */
 
-body.template-logged_out #login-form,
-body.template-login_form #login-form,
+body.template-logged_out #content,
+body.template-login_form #content,
 .pb-ajax #login-form {
     text-align: center;
 }
@@ -1720,9 +1757,11 @@ dl.toc dd ol {
     line-height: 2em;
     margin-bottom: 2em;
 }
+
 #portal-footer-internal-wrapper {
     margin:0 0 0 1em;
 }
+
 #portal-colophon {
     font-size: 70%;
     text-align: center;
@@ -1822,7 +1861,7 @@ dl.toc dd ol {
 /* @group Invisibles */
 
 .hiddenStructure {
-    display: none;
+    display: block;
     background: transparent;
     background-image: none; /* safari bug */
     border: none;
@@ -1896,7 +1935,7 @@ div.overlay div.close {
     overflow-y: auto;
 }
 
-.pb-ajax, .pb-image {
+.pb-ajax, .pb-image, .overlay iframe {
     background-color: #fff;
     border: 1px solid #999;
     white-space: normal;
@@ -2086,8 +2125,6 @@ div.overlay .formControls a {
     background: no-repeat transparent 0px -860px url(contenttypes-sprite.png);
 }
 
-
-
 .icons-on .contenttype-document,
 .icons-on .contenttype-event,
 .icons-on .contenttype-folder,
@@ -2100,7 +2137,76 @@ div.overlay .formControls a {
     line-height: 2em;
     display: -moz-inline-stack;
     display: inline-block;
+    *display: block;
     padding-left: 20px !important;
 }
 
+/* @end */
+
+/* @group jQuery Tag multiple selector */
+.optionsBox {
+    overflow-y: auto;
+    border: solid 1px #999999;
+    background: #FFFFFF;
+    height: 14em;
+    width: 100%;
+}
+.optionsBox LABEL {
+    padding: 2px 0 0 0;
+    display: block;
+    line-height: 1em;
+    font-weight: normal;
+}
+.optionsBox input{
+    vertical-align: middle;
+    margin: 1px 4px 4px 6px;
+}
+.optionsBox LABEL.checked {
+    background-color: #EEEEEE;
+}
+.optionsBox LABEL.hover {
+    background-color: #777777;
+    color: #FFFFFF;
+}
+#archetypes-fieldname-subject .formHelp {
+    font-weight: normal;
+}
+#existingTagsSection {
+    position: relative;
+    margin-left: 3em;
+}
+#existingTags {
+    float: left;
+    width: 50%;
+}
+#content #existingTags dd {
+    margin-bottom: 1px;
+    margin-left: 0;
+}
+#content #selectedTags, #content #newTags {
+    margin-bottom: 0;
+    margin-left: 0;
+}
+#content #selectedTagsSection {
+    margin-left: 3em;
+    float: left;
+    width: 43%;
+    margin-bottom: 0;
+}
+#newTagsSection {
+    width: 48%;
+    margin-left: 3em;
+}
+#content p.selectedTag {
+    margin-bottom: .4em;
+}
+#existingTagsTitle, #newTagsTitle {
+    float: left;
+}
+#existingTagsHelp, #newTagsHelp {
+    float: right;
+}
+#noTagsSelected, #oneOrMoreTagsSelected {
+    display: none;
+}
 /* @end */
