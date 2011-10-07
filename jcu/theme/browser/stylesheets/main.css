@@ -5,6 +5,10 @@ div.action {
   display: inline-block;
 }
 
+#sortingUI #choice_custom_field {
+  display:none;
+}
+
 #collage .two-columns-verylargeleft .block_1 {
     width: 69%;
 }
