@@ -7,7 +7,7 @@ version = file(os.path.join(_home_dir, 'version.txt'), 'r').read().strip()
 setup(name='jcu.theme',
       version=version,
       description="A Plone theme based on the JCU style",
-      long_description=open("README.txt").read() + "\n" +
+      long_description=open("README.rst").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://www.python.org/pypi
       #?%3Aaction=list_classifiers
