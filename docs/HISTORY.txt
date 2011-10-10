@@ -4,13 +4,15 @@ Change History
 1.6.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Adding user name for previous log message.
+  [davidjb]
 
 
 1.6.3 (2011-10-07)
 ------------------
 
 - Brown bag release - missing README.rst file.
+  [davidjb]
 
 
 1.6.2 (2011-10-07)
