@@ -4,7 +4,9 @@ Change History
 1.6.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Updating tabbed folder spinner views with folder_listing template from
+  Plone 4.1.1.
+  [davidjb]
 
 
 1.6.5 (2011-10-11)
