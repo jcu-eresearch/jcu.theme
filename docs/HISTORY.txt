@@ -4,7 +4,8 @@ Change History
 1.6.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Improving tabbed spinner view with changes to CSS.
+  [davidjb]
 
 
 1.6.4 (2011-10-10)
