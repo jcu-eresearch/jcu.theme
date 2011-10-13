@@ -7,6 +7,9 @@ Change History
 - Updating tabbed folder spinner views with folder_listing template from
   Plone 4.1.1.
   [davidjb]
+- Minor CSS updates and fixes. Notably fixes the '1px' portlet header issues
+  where a single pixel was shown as a hidden portlet title.
+  [davidjb]
 
 
 1.6.5 (2011-10-11)
