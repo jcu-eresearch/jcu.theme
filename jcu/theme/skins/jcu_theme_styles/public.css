@@ -392,6 +392,7 @@ div.portletAssignments div.portletHeader {
 }
 dl.portlet dt.hiddenStructure {
     padding: 0;
+    border-bottom: medium none;
 }
 div.portletAssignments {
     font-size: 0.8em;
