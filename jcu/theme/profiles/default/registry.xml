@@ -1,0 +1,30 @@
+<registry>
+  <!-- Configuration for plone.app.discussion -->
+  <record name="plone.app.discussion.interfaces.IDiscussionSettings.anonymous_comments">
+    <value>False</value>
+  </record>
+  <record name="plone.app.discussion.interfaces.IDiscussionSettings.captcha">
+    <value>disabled</value>
+  </record>
+  <record name="plone.app.discussion.interfaces.IDiscussionSettings.globally_enabled">
+    <value>True</value>
+  </record>
+  <record name="plone.app.discussion.interfaces.IDiscussionSettings.moderation_enabled">
+    <value>False</value>
+  </record>
+  <record name="plone.app.discussion.interfaces.IDiscussionSettings.moderator_email">
+    <value />
+  </record>
+  <record name="plone.app.discussion.interfaces.IDiscussionSettings.moderator_notification_enabled">
+    <value>False</value>
+  </record>
+  <record name="plone.app.discussion.interfaces.IDiscussionSettings.show_commenter_image">
+    <value>True</value>
+  </record>
+  <record name="plone.app.discussion.interfaces.IDiscussionSettings.text_transform">
+    <value>text/x-web-intelligent</value>
+  </record>
+  <record name="plone.app.discussion.interfaces.IDiscussionSettings.user_notification_enabled">
+    <value>True</value>
+  </record>
+</registry>

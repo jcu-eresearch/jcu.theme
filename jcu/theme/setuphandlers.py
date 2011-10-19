@@ -109,3 +109,6 @@ def upgrade_actions(context, logger=None):
 
 def upgrade_mailhost(context, logger=None):
     run_import_step(context, 'mailhost')
+
+def upgrade_registry(context, logger=None):
+    run_import_step(context, 'plone.app.registry')

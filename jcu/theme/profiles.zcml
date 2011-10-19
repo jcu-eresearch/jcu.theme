@@ -51,4 +51,14 @@
       profile="jcu.theme:default"
       />
 
+     <genericsetup:upgradeStep
+      title="Update plone.app.registry for plone.app.discussion settings"
+      description=""
+      source="*"
+      destination="27"
+      handler="jcu.theme.setuphandlers.upgrade_registry"
+      sortkey="1"
+      profile="jcu.theme:default"
+      />
+
 </configure>
