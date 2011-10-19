@@ -1,4 +1,18 @@
 <registry>
+
+  <!-- Configuration for plone.app.caching
+       We import the existing profile, but need to manually turn caching on.
+  -->
+  <record name="plone.caching.interfaces.ICacheSettings.enabled">
+    <value>True</value>
+  </record>
+  <record name="plone.app.caching.interfaces.IPloneCacheSettings.enableCompression">
+    <value>False</value>
+  </record>
+  <record name="plone.cachepurging.interfaces.ICachePurgingSettings.enabled">
+    <value>False</value>
+  </record>
+
   <!-- Configuration for plone.app.discussion -->
   <record name="plone.app.discussion.interfaces.IDiscussionSettings.anonymous_comments">
     <value>False</value>

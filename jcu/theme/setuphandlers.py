@@ -34,16 +34,6 @@ def setupVarious(context):
     except:
         site.plone_log('Could not reconfigure MailHost for queuing.')
 
-    #Set up our reCAPTCHA keys for forms, etc
-    try:
-        from collective.recaptcha.settings import getRecaptchaSettings
-        settings = getRecaptchaSettings()
-        settings.public_key = u'6Ld5c78SAAAAAJH6NdN69ZYiXGrYcs9MLrvjY08U'
-        settings.private_key = u'6Ld5c78SAAAAAGJpMrcbF_vAzeVRNWCjIWFZPZfs'
-        site.plone_log('reCAPTCHA keys configured.')
-    except:
-        site.plone_log('Could not configure reCAPTCHA keys.')
-
     #Customise the parts of the LDAP plugin our GS doesn't touch yet.
     try:
         acl_users = site.acl_users
@@ -73,29 +63,6 @@ def setupVarious(context):
     except:
         site.plone_log('Could not configure LDAP plugin settings.')
         raise
-
-    #We can import plone.app.caching profiles (we have already via
-    #metadata.xml) but we need to manually turn it on.
-    try:
-        from zope.component import getUtility
-        from plone.registry.interfaces import IRegistry
-        from plone.caching.interfaces import ICacheSettings
-        from plone.app.caching.interfaces import IPloneCacheSettings
-        from plone.cachepurging.interfaces import ICachePurgingSettings
-
-        registry = getUtility(IRegistry)
-        settings = registry.forInterface(ICacheSettings)
-        settings.enabled = True
-        ploneSettings = registry.forInterface(IPloneCacheSettings)
-        ploneSettings.enableCompression = False
-        purgingSettings = registry.forInterface(ICachePurgingSettings)
-        purgingSettings.enabled = False
-
-        site.plone_log('plone.app.caching settings configured.  Caching and \
-                       compression are now active.')
-    except:
-        site.plone_log('Could not configure plone.app.caching settings.')
-
 
 def run_import_step(context, step, logger=None):
     """Re-import some specified import step for Generic Setup.

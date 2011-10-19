@@ -4,6 +4,8 @@ Change History
 1.6.6 (unreleased)
 ------------------
 
+- Changing plone.app.caching setting instantiation to use registry.xml import
+  [davidjb]
 - Adding support for plone.app.discussion settings for Plone 4.1+
   [davidjb]
 - Updating tabbed folder spinner views with folder_listing template from
