@@ -33,6 +33,7 @@ setup(name='jcu.theme',
           'Products.Collage',
           'collective.contentleadimage',
           'collective.fastview',
+          'plone.app.discussion',
           'Products.TinyMCE>=1.2.3',
           # -*- Extra requirements: -*-
       ],
