@@ -239,7 +239,7 @@ background-image: url(&dtml-portal_url;/slider_arrow_left.gif) !important;
 background-image: url(&dtml-portal_url;/slider_arrow_right.gif) !important;
 }
 
-#collage #slider .slide p img {
+#slider.slider-702be0af3b097cfa8345cf69a62e29b3 .slide p img {
 position:relative;
 top:-100px;
 }
