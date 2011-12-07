@@ -692,9 +692,11 @@ width: 110px;
 
 #content .documentDescription,
 #content #description {
-    color: #333;
+    color: #555;
     margin-left: 0;
-    font:bold 1.25em Arial,Tahoma,FreeSans,sans-serif; 
+    font:bold 1.25em Arial,Tahoma,FreeSans,sans-serif;
+    margin-bottom: 0.75em;
+    margin-top: 0.75em; 
 }
 
 #content img.tileImage,
