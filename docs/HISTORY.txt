@@ -4,6 +4,8 @@ Change History
 1.6.8 (unreleased)
 ------------------
 
+- Fix issue with colophon and footer on mobile devices.
+  [davidjb]
 - Avoid the portal-footer being double-wrapped in divs. This isn't necessary.
   [davidjb]
 - Adjust content description colour and margins.

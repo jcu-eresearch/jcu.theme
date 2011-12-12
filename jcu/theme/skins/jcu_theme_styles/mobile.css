@@ -5,6 +5,7 @@
     min-width: inherit;
     margin:0;
 }
+#portal-footer-wrapper div.cell,
 #portal-column-one, 
 #portal-column-two,
 #portal-column-content { 
@@ -83,12 +84,10 @@ div.overlay-ajax {
 }
 
 #portal-footer, #portal-colophon {
-    float:none;
-    width:auto;
     margin-bottom:1em;
     font-size:50%;
     text-align:center;
-    line-height:inherit;
+    line-height: inherit;
 }
 #fieldset-openid-login label, #login-form label {
     text-align:left;
