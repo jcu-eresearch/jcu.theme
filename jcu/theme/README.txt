@@ -1,45 +1,36 @@
 Introduction
 ============
 
-This is a full-blown functional test. The emphasis here is on testing what
-the user may input and see, and the system is largely tested as a black box.
-We use PloneTestCase to set up this test as well, so we have a full Plone site
-to play with. We *can* inspect the state of the portal, e.g. using
-self.portal and self.folder, but it is often frowned upon since you are not
-treating the system as a black box. Also, if you, for example, log in or set
-roles using calls like self.setRoles(), these are not reflected in the test
-browser, which runs as a separate session.
+Some helpers:
 
-Being a doctest, we can tell a story here.
-
-    >>> import StringIO
+    >>> portal = layer['portal']
 
 First, we must perform some setup. We use the testbrowser that is shipped
 with Five, as this provides proper Zope 2 integration. Most of the
 documentation, though, is in the underlying zope.testbrower package.
 
-    >>> from Products.Five.testbrowser import Browser
-    >>> browser = Browser()
+    >>> from plone.testing.z2 import Browser
+    >>> browser = Browser(layer['app'])
     >>> browser.handleErrors = False
-    >>> portal_url = self.portal.absolute_url()
+    >>> portal_url = portal.absolute_url()
     >>> login_url = portal_url + '/login_form'
 
 The following is useful when writing and debugging testbrowser tests. It lets
 us see all error messages in the error_log.
 
-    >>> self.portal.error_log._ignored_exceptions = ()
+    >>> portal.error_log._ignored_exceptions = ()
 
 With that in place, we can go to the portal front page and log in. We will
 do this using the default user from PloneTestCase:
 
-    >>> from Products.PloneTestCase.setup import portal_owner, default_password
+    >>> from plone.app.testing.interfaces import SITE_OWNER_NAME, SITE_OWNER_PASSWORD
 
     >>> browser.open(login_url)
 
 We have the login portlet, so let's use that.
 
-    >>> browser.getControl(name='__ac_name').value = portal_owner
-    >>> browser.getControl(name='__ac_password').value = default_password
+    >>> browser.getControl(name='__ac_name').value = SITE_OWNER_NAME
+    >>> browser.getControl(name='__ac_password').value = SITE_OWNER_PASSWORD
     >>> browser.getControl(name='submit').click()
 
 Here, we set the value of the fields on the login form and then simulate a
@@ -88,18 +79,18 @@ Check for custom portal action links; visible only when logged on.
 
     >>> browser.getLink('Get Support')
     <Link text='Get Support' url='http://eresearch.jcu.edu.au/support'>
-    >>> browser.getLink('About me')
-    <Link text='About me' url='http://nohost/plone/author/portal_owner'>
+    >>> browser.getLink('About Me')
+    <Link text='About Me' url='http://nohost/plone/author/...
 
 Viewlets
 --------
 
 Check the presence of our viewlets.  We customise the logo to have 2 images.
 
-    >>> browser.getLink(id='portal-logo')
+    >>> browser.getLink(id='global-logo')
     <Link text='[IMG]' url='http://www.jcu.edu.au/'>
-    >>> browser.getLink(id='site-logo')
-    <Link text='[IMG]' url='http://nohost/plone'>
+    >>> browser.getLink(id='portal-logo')
+    <Link text='...[IMG]...' url='http://nohost/plone'>
 
 We customise the site actions to be a second menu.
 
@@ -116,14 +107,13 @@ Check for the footer and colophon.
     True
     >>> 'Designed and developed by JCU eResearch Centre' in browser.contents
     True
+    >>> browser.contents.find('portal-footer-wrapper') > 0
+    True
 
 Check our ordering for the viewlets
 
     >>> browser.contents.find('portal-siteactions-wrapper') > \
     ... browser.contents.find('portal-personaltools-wrapper')
-    True
-    >>> browser.contents.find('portal-footer') > \
-    ... browser.contents.find('portal-colophon')
     True
 
 Custom Theming
@@ -170,7 +160,7 @@ view).
 
 This isn't the actual container, so check we're reporting this.
 
-    >>> adjusting_msg = 'You are adjusting the theming for a default view'
+    >>> adjusting_msg = 'adjusting the theming for a default view'
     >>> adjusting_msg in browser.contents
     True
     >>> go_here_link = browser.getLink('go here')
@@ -239,7 +229,7 @@ We can change our setting too.
  
     >>> browser.getControl('Apply').click()
     >>> print tagContents('body', browser.contents)
-    class="template-edit_theming_settings ...jcu-red"...
+    class="...jcu-red"...
     >>> print settings.theme_name
     jcu-red
 
@@ -252,7 +242,7 @@ area, where we should have our current theme applied already.
 
     >>> browser.getLink('Users').click()
     >>> print tagContents('body', browser.contents)
-    class="template-member_search_form ...jcu-red"...
+    class="...jcu-red"...
 
 And we can override our settings on another context.  Let's try changing
 the theme for our Users area.
@@ -264,7 +254,7 @@ We shouldn't have any value set yet, because we're inheriting.
 
     >>> list_control.value
     ['None']
-    >>> '<dt>Inherited setting</dt>\n             <dd>jcu-red</dd>' in browser.contents
+    >>> '<span>jcu-red</span>, inherited from:' in browser.contents
     True
 
 Change the theme and have a look at the difference in body class.
@@ -278,7 +268,7 @@ Change the theme and have a look at the difference in body class.
     >>> print tagContents('body', browser.contents)
     class="template-edit_theming_settings ...jcu-green"...
 
-    >>> "Inherited setting" not in browser.contents
+    >>> "Effective inherited setting" not in browser.contents
     True
 
     >>> local_settings = IThemeSettingsManager(portal.Members)
@@ -320,5 +310,5 @@ out (or not visible, as the case may be).
     True
 
     >>> browser.getLink('Log in')
-    <Link text='Log in' url='http://nohost/plone/login_form'>
+    <Link text='Log in' url='http://nohost/plone/...'>
 

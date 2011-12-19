@@ -4,16 +4,18 @@
     xmlns:cmf="http://namespaces.zope.org/cmf"
     i18n_domain="jcu.theme">
 
-   <five:registerPackage package="." initialize=".initialize" />
+    <!--   <five:registerPackage package="." initialize=".initialize" />-->
 
    <include package="Products.CMFCore" file="permissions.zcml" />
    <include package="zope.annotation" />
-   <include package="plone.app.z3cform" />
+   <include package="plone.app.caching" />
    <include package="plone.app.ldap" />
+   <include package="plone.app.z3cform" />
    <include package="collective.fastview" />
    <include package="collective.contentleadimage" />
    <include package="Products.Collage" />
    <include package="Products.OpenXml" />
+   <include package="Products.RedirectionTool" />
 
    <include package=".browser" />
    <!-- includeOverrides package="jcu.theme" file="overrides.zcml" -->
