@@ -38,6 +38,12 @@ setup(name='jcu.theme',
           'Products.TinyMCE>=1.2.3',
           # -*- Extra requirements: -*-
       ],
+      extras_require={
+          'test': [
+              'plone.app.testing',
+              'unittest2',
+          ],
+      },
       entry_points="""
       # -*- Entry points: -*-
 
