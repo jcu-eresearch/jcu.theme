@@ -4,6 +4,8 @@ Change History
 1.6.9 (unreleased)
 ------------------
 
+- Added Jenkins (buildout.jenkins) configuration for CI-testing.
+  [davidjb]
 - Switching unit tests to use plone.app.testing rather than old-style tests. 
   [davidjb]
 
