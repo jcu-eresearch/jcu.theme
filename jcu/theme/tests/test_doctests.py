@@ -15,8 +15,7 @@ def test_suite():
             doctest.DocFileSuite(
                 docfile,
                 package=package,
-                optionflags=doctest.REPORT_ONLY_FIRST_FAILURE | \
-                            doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS),
+                optionflags=doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS),
             layer=testing.JCU_THEME_FUNCTIONAL_TESTING,
         ) for (docfile, package) in DOCFILES
     ])
