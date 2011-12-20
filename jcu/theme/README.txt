@@ -299,12 +299,54 @@ Test logout and check theming whilst logged out.
     >>> browser.getLink('Users').click()
     >>> print tagContents('body', browser.contents)
     class="...jcu-green"...
+
+Checking setting removal
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Log back into the portal.
+
+    >>> browser.open(login_url)
+    >>> browser.getControl(name='__ac_name').value = SITE_OWNER_NAME
+    >>> browser.getControl(name='__ac_password').value = SITE_OWNER_PASSWORD
+    >>> browser.getControl(name='submit').click()
+
+Vist the Theming page for our Members folder.
+
+    >>> browser.getLink('Users').click()
+    >>> browser.getLink('Theme').click()
+
+Check settings are still present
+
+    >>> local_settings = IThemeSettingsManager(portal.Members)
+    >>> print local_settings.theme_name
+    jcu-green
+    >>> print local_settings.ignore_selection
+    False
+
+Delete the settings
+
+    >>> browser.getControl('Delete Settings').click()
+    >>> 'Theme settings deleted' in browser.contents
+    True
+
+Check this against our settings manager
+
+    >>> local_settings = IThemeSettingsManager(portal.Members)
+    >>> not local_settings.theme_name
+    True
+    >>> not local_settings.ignore_selection
+    True
+
    
 Logged out aspects
 ------------------
 
 Check a couple of final aspects that should be visible if you're logged
 out (or not visible, as the case may be).
+
+    >>> browser.getLink('Log out').click()
+    >>> 'You are now logged out' in browser.contents
+    True
 
     >>> 'Get Support' not in browser.contents
     True
