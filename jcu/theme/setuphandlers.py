@@ -3,7 +3,7 @@ from Products.CMFCore.utils import getToolByName
 
 PROFILE_ID = 'profile-jcu.theme:default'
 
-def setupVarious(context):
+def setupVarious(context, site=None):
     """
     Set up various aspects of Plone that we can't set up using
     GenericSetup profiles (yet).  These aspects should be removed
@@ -19,7 +19,7 @@ def setupVarious(context):
         return
 
     # Add additional setup code here
-    site = getSite()
+    site = site or getSite()
 
     #Set up the new Plone 4 MailHost for queuing
     try:
@@ -78,14 +78,21 @@ def run_import_step(context, step, logger=None):
     """Re-import some specified import step for Generic Setup.
     """
     setup = getToolByName(context, 'portal_setup')
-    setup.runImportStepFromProfile(PROFILE_ID, step)
-    return
+    return setup.runImportStepFromProfile(PROFILE_ID, step)
 
-def upgrade_actions(context, logger=None):
-    run_import_step(context, 'actions')
+#Define all our upgrade functions in a simple, DRY fashion.
+_upgrade_functions = [
+    ('actions', 'actions'),
+    ('mailhost', 'mailhost'),
+    ('registry', 'plone.app.registry')
+]
 
-def upgrade_mailhost(context, logger=None):
-    run_import_step(context, 'mailhost')
+_function_template = """
+def upgrade_%s(context, logger=None, return_values=False):
+    result = run_import_step(context, '%s')
+    if return_values: return result
+"""
 
-def upgrade_registry(context, logger=None):
-    run_import_step(context, 'plone.app.registry')
+for spec in _upgrade_functions:
+    exec _function_template % spec
+

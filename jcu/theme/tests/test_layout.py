@@ -1,9 +1,9 @@
 import unittest2 as unittest
-from jcu.theme.testing import JCU_THEME_INTEGRATION_TESTING
+from jcu.theme.testing import JCU_THEME_FUNCTIONAL_TESTING
 
 class IntegrationTest(unittest.TestCase):
 
-    layer = JCU_THEME_INTEGRATION_TESTING
+    layer = JCU_THEME_FUNCTIONAL_TESTING
 
     def test_theme_for_context(self):
         from jcu.theme.browser.layout import getThemeForContext
