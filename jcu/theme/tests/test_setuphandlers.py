@@ -18,7 +18,6 @@ class DummySite:
     def plone_log(self, message):
         self.messages.append(message)
 
-
 class IntegrationTest(unittest.TestCase):
 
     layer = JCU_THEME_FUNCTIONAL_TESTING
@@ -53,3 +52,4 @@ class IntegrationTest(unittest.TestCase):
         for upgrade in upgrades:
             upgrade_function = getattr(setuphandlers, 'upgrade_%s' % upgrade)
             self.assertIsNotNone(upgrade_function(portal, return_values=True))
+

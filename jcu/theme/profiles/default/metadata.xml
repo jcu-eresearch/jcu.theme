@@ -8,6 +8,7 @@
    <dependency>profile-plone.app.caching:default</dependency>
    <dependency>profile-plone.app.caching:without-caching-proxy</dependency>
    <dependency>profile-plone.app.discussion:default</dependency>
+   <dependency>profile-plone.formwidget.recaptcha:default</dependency>
    <dependency>profile-Products.OpenXml:default</dependency>
    <dependency>profile-Products.RedirectionTool:default</dependency>
  </dependencies>
