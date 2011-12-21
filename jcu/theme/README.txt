@@ -1,7 +1,10 @@
 Introduction
 ============
 
-Some helpers:
+Let's define some helpers first.
+
+    >>> def tagContents(tag, haystack):
+    ...     return haystack.partition('<%s' % tag)[2].partition('>')[0].strip()
 
     >>> portal = layer['portal']
 
@@ -26,6 +29,21 @@ do this using the default user from PloneTestCase:
     >>> from plone.app.testing.interfaces import SITE_OWNER_NAME, SITE_OWNER_PASSWORD
 
     >>> browser.open(login_url)
+
+Pre-login tests
+---------------
+
+Check a couple of final aspects that should be visible if you're logged
+out (or not visible, as the case may be).
+
+    >>> 'Get Support' not in browser.contents
+    True
+
+    >>> browser.getLink('Log in')
+    <Link text='Log in' url='http://nohost/plone/...'>
+
+Login
+-----
 
 We have the login portlet, so let's use that.
 
@@ -52,11 +70,6 @@ Jump over to the homepage.
 
 Theme tests
 ===========
-
-Let's define some helpers first.
-
-    >>> def tagContents(tag, haystack):
-    ...     return haystack.partition('<%s' % tag)[2].partition('>')[0].strip()
 
 Our product should be installed, so check that we can see various elements
 of our theme.
@@ -153,10 +166,20 @@ view).
     True
     >>> browser.getControl('Apply')
     <SubmitControl name='form.buttons.apply' type='submit'>
-    >>> browser.getControl('Cancel')
+    >>> cancel_button = browser.getControl('Cancel')
+    >>> cancel_button
     <SubmitControl name='form.buttons.cancel' type='submit'>
     >>> browser.getControl('Delete Settings')
     <SubmitControl name='form.buttons.44656c6574652053657474696e6773' type='submit'>
+
+Test what happens when we click onto the Cancel button. We should no longer
+be on the theming page but back at our context's page.  Keep in mind that
+our context is the front page here, not the portal.
+
+    >>> cancel_button.click()
+    >>> browser.url == portal['front-page'].absolute_url()
+    True
+    >>> browser.getLink('Theme').click()
 
 This isn't the actual container, so check we're reporting this.
 
@@ -175,8 +198,18 @@ We shouldn't get that message we had before and should now be at the root.
 
     >>> adjusting_msg not in browser.contents
     True
-    >>> browser.url == 'http://nohost/plone/@@edit_theming_settings'
+    >>> browser.url == '%s/@@edit_theming_settings' % portal.absolute_url()
     True
+
+Check clicking the cancel button at the root. This should take us back to the
+root, rather than any given context.
+
+    >>> browser.getControl('Cancel').click()
+    >>> browser.url == portal.absolute_url()
+    True
+    >>> browser.getLink('Theme').click()
+    >>> browser.getLink('go here').click()
+
 
 Setting the theme
 ~~~~~~~~~~~~~~~~~
@@ -338,19 +371,4 @@ Check this against our settings manager
     True
 
    
-Logged out aspects
-------------------
-
-Check a couple of final aspects that should be visible if you're logged
-out (or not visible, as the case may be).
-
-    >>> browser.getLink('Log out').click()
-    >>> 'You are now logged out' in browser.contents
-    True
-
-    >>> 'Get Support' not in browser.contents
-    True
-
-    >>> browser.getLink('Log in')
-    <Link text='Log in' url='http://nohost/plone/...'>
 

@@ -1,3 +1,4 @@
+from Acquisition import aq_parent
 from plone.app.layout.globals.layout import LayoutPolicy
 from Products.CMFCore.interfaces._content import ISiteRoot
 
@@ -10,7 +11,7 @@ def getThemeForContext(context):
 
     #Loop while we don't have a theme name yet, traversing up to the
     #parents of our context
-    while theme_name is None:
+    while theme_name is None and current_aq is not None:
         try:
             theme_values = IThemeSettingsManager(current_aq).theme_values()
 
@@ -29,9 +30,9 @@ def getThemeForContext(context):
             theme_name = theme_name or ''
             break
         else:
-            current_aq = current_aq.aq_parent
+            current_aq = aq_parent(current_aq)
 
-    return {'theme_name': theme_name, 'context': current_aq}
+    return {'theme_name': theme_name or '', 'context': current_aq}
 
 class JCULayoutPolicy(LayoutPolicy):
     """A view that gives access to various layout related functions.
