@@ -16,7 +16,7 @@ def test_suite():
                 docfile,
                 package=package,
                 optionflags=doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS),
-            layer=testing.JCU_THEME_FUNCTIONAL_TESTING,
+            layer=testing.JCU_THEME_INTEGRATION_TESTING,
         ) for (docfile, package) in DOCFILES
     ])
     return suite
