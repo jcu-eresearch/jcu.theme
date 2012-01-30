@@ -4,6 +4,8 @@ Change History
 1.6.9 (unreleased)
 ------------------
 
+- Changing mobile scaling to allow for zooming in.
+  [davidjb]
 - Improving testing coverage towards 100%.
   [davidjb]
 - Added Jenkins (buildout.jenkins) configuration for CI-testing.
