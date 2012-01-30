@@ -21,7 +21,7 @@
     margin: 0.5em 0 0;
 }
 #portal-top {
-	font-size: 180%;
+    font-size: 180%;
 }
 #portal-personaltools {
     margin-bottom: 0.4em;
@@ -38,7 +38,7 @@
     text-align: right;
 }
 #portal-searchbox input {
-	font-size: 100% !important;
+    font-size: 100% !important;
 }
 #portal-searchbox .searchSection,
 #portal-searchbox .searchButton {
@@ -91,4 +91,8 @@ div.overlay-ajax {
 }
 #fieldset-openid-login label, #login-form label {
     text-align:left;
+}
+#collage .collage-column .column-block {
+    width: 100% !important;
+    clear: both;
 }

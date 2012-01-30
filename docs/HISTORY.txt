@@ -4,6 +4,8 @@ Change History
 1.6.9 (unreleased)
 ------------------
 
+- Ensuring collages style somewhat okay on devices with smaller widths.
+  [davidjb]
 - Changing mobile scaling to allow for zooming in.
   [davidjb]
 - Improving testing coverage towards 100%.
