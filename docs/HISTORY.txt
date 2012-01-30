@@ -1,7 +1,7 @@
 Change History
 ==============
 
-1.6.9 (unreleased)
+1.6.9 (2012-01-31)
 ------------------
 
 - Ensuring collages style somewhat okay on devices with smaller widths.
