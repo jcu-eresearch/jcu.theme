@@ -16,7 +16,7 @@
     name="usergroup-groupmembership"
     for="Products.CMFPlone.interfaces.IPloneSiteRoot"
     class="plone.app.controlpanel.usergroups.GroupMembershipControlPanel"
-    permission="zope2.ManageUsers"
+    permission="plone.app.controlpanel.UsersAndGroups"
     template="browser/templates/usergroups_groupmembership.pt"
     />
 
