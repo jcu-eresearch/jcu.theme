@@ -1123,7 +1123,7 @@ dl.error dd {
     padding: 0 0.25em;
 }
 
-dl.actionMenu {
+dl.actionMenu, ul.actionMenu {
     float: right;
     white-space: nowrap;
     position: relative;

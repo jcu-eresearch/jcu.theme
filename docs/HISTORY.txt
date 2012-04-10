@@ -6,6 +6,9 @@ Change History
 
 - Fixing permissions for group membership to work with Plone 4.1+.
   [davidjb]
+- Fix minor change to non-auth login menu on Plone 4.2+ with change of
+  anonymous personal tools from dl to ul.
+  [davidjb]
 
 
 1.6.9 (2012-01-31)
