@@ -25,7 +25,6 @@ from persistent.dict import PersistentDict
 from jcu.theme.config import THEMES, THEME_ANNOTATIONS_KEY as KEY
 from jcu.theme import _
 
-
 class IThemeSettingsManager(interface.Interface):
     theme_name = schema.Choice(title=_(u"Theme Name"),
             description=_(u"Select the CSS class to be used in this section."),
