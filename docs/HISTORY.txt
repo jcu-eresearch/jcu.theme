@@ -4,6 +4,9 @@ Change History
 1.6.10 (unreleased)
 -------------------
 
+- Fix issue with Google Calendar entries being duplicated in external method.
+  Seems Google fixed their issue.
+  [davidjb]
 - Updating JCU footer.
   [davidjb]
 - Fixing permissions for group membership to work with Plone 4.1+.
