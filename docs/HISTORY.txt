@@ -1,7 +1,7 @@
 Change History
 ==============
 
-1.6.10 (unreleased)
+1.6.10 (2012-04-30)
 -------------------
 
 - Fix issue with Google Calendar entries being duplicated in external method.
