@@ -1,8 +1,8 @@
 Change History
 ==============
 
-1.6.11 (unreleased)
--------------------
+1.7 (unreleased)
+----------------
 
 - Using setup_requires with setuptools-git to ensure we don't need
   a MANIFEST.in file.
