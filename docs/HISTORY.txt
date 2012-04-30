@@ -4,7 +4,9 @@ Change History
 1.6.11 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Using setup_requires with setuptools-git to ensure we don't need
+  a MANIFEST.in file.
+  [davidjb]
 
 
 1.6.10 (2012-04-30)
