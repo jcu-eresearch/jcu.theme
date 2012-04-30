@@ -4,6 +4,9 @@ Change History
 1.7 (unreleased)
 ----------------
 
+- Updating for Plone 4.2. Older versions of Plone should use older versions
+  of this theme.
+  [davidjb]
 - Using setup_requires with setuptools-git to ensure we don't need
   a MANIFEST.in file.
   [davidjb]

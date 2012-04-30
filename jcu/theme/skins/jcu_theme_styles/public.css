@@ -30,7 +30,7 @@ iframe { border-width: 0; border-style:none; }
 /* @group Basics */
 
 body {
-    font: 90% Arial,Verdana,Tahoma,sans-serif;
+    font: 100% Arial, FreeSans, sans-serif;
     background: url('bg_grey_gradient.png') repeat-x center top White;
     color: Black;
     /* width: 58em; margin: 1em auto; */
@@ -52,13 +52,13 @@ h1, h2, h3, h4, h5, h6, .mce_h2, .mce_h3 {
     line-height: 1.5em;
 }
 h1, h2 {
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
 }
 h1 {
-    font-size: 2.1em;
+    font-size: 2em;
 }
 h2 {
-    font-size: 1.4em;
+    font-size: 1.5em;
 }
 .mce_h2,
 h2 {
@@ -74,7 +74,7 @@ h3 {
     font-weight: bold;
 }
 h4 {
-    font-size: 1.1em;
+    font-size: 1.25em;
 }
 h5 {
     font-size: 1em;
@@ -133,13 +133,19 @@ q {
     zoom: 1;
     *display: inline;
 }
+/* removes extra space above logo in IE6 and IE7 */
+/* .ie6 and .ie7 is set on <html> by Modernizr library */
+.ie6 #portal-logo,
+.ie7 #portal-logo {
+    margin-top: 0;
+}
 #portal-logo {
     margin-top: 1.25em; 
 }
 
 #portal-globalnav {
     clear: both;
-    font-size: 85%;
+    font-size: 80%;
     background:#f6f2e6;
     /* ensure top navigation dont touches portlets, content etc.. #10491 */
     width: 100%;
@@ -179,7 +185,7 @@ q {
     top: 0;
     right: 0;
     padding: 0.25em 0.5em;
-    font-size: 80%;
+    font-size: 75%;
     border-bottom-right-radius: 0.5em;
     border-bottom-left-radius: 0.5em;
     -webkit-border-bottom-right-radius: 0.5em;
@@ -484,13 +490,13 @@ dl.portletNavigationTree dd.portletItem ul.navTree {
 }
 
 dl.portlet ul.navTreeLevel0 > .navTreeItem {
-    padding: 0 1em;
+    padding: 0.25em 1em;
     border-bottom: 0.1em dotted #ddd;
     line-height: 2em;
 }
 
 dl.portlet ul.navTreeLevel1 .navTreeItem {
-    padding-left: 1em;
+    padding-left: 0.5em;
     line-height: 2em;
 }
 
@@ -500,7 +506,7 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 }
 
 dl.portlet ul.navTree li.navTreeCurrentNode {
-    background: url('arrow-grey-left.png') no-repeat scroll 0 0.5em transparent;
+    background: url('arrow-grey-left.png') no-repeat scroll 0 0.75em transparent;
 }
 
 /* @end */
@@ -510,14 +516,13 @@ dl.portlet ul.navTree li.navTreeCurrentNode {
 #content {
     line-height: 1.5em;
     clear: both;
-    font-size: 90%;
+    font-size: 80%;
     margin: 1em 0.25em 2em 0.25em;
 }
 
 /* Special case of #content - TinyMCE */
 body#content {
     margin: 1em;
-    font-size: 81%;
 }
 
 #content h1 {
@@ -604,7 +609,6 @@ dl.portlet ol {
 
 #content li,
 dl.portlet li {
-    margin-bottom: 0.25em;
     line-height: 1.5em;
     display: list-item;
 }
@@ -692,9 +696,9 @@ width: 110px;
 
 #content .documentDescription,
 #content #description {
-    color: #555;
+    color: #666;
     margin-left: 0;
-    font:bold 1.25em Arial,Tahoma,FreeSans,sans-serif;
+    font: bold 1.25em "Helvetica Neue", Arial, FreeSans, sans-serif;
     margin-bottom: 0.75em;
     margin-top: 0.75em; 
 }
@@ -1410,7 +1414,6 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 .highlightedSearchTerm {
    background-color: #ffa;
 }
-
 dl.searchResults .highlightedSearchTerm {
     background-color: transparent;
     font-weight: bold;
@@ -1431,12 +1434,97 @@ dl.searchResults .highlightedSearchTerm {
 
 /* @group Search results page */
 
-form.searchPage {
-    text-align:center;
+fieldset#search-field {
+    border: none !important;
+    text-align: center;
 }
-
 input.searchPage {
     font-size:200% !important;
+}
+#rss-subscription {
+	float: left;
+	line-height: 3em;
+}
+#search-results-bar .actionMenuContent {
+    margin-top: 1em;
+    padding: 0;
+}
+#search-filter {
+    background: #ddd;
+    margin: 0;
+    padding: 0;
+}
+#content #search-filter fieldset {
+    border: none !important;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+#content #search-filter legend {
+    background: transparent;
+    font-size: 1.1em;
+    padding: 0.5em 0.9em;
+    font-weight: bold;
+}
+#search-filter .field {
+    background: #eee;
+    padding: 1em 1.5em;
+    margin: 0;
+}
+#search-filter .field label {
+    font-weight: normal;
+}
+#search-filter .formControls {
+    text-align:center
+}
+#search-results-wrapper {
+    margin-top: 1em;
+}
+form.searchPage h1.documentFirstHeading {
+    font-weight:normal; 
+    letter-spacing:0;
+	float: left;
+	margin-right: 0.8em;
+}
+form.searchPage h1.documentFirstHeading .highlightedSearchTerm {
+    background: transparent !important;
+}
+#search-results-bar > * {
+    float: left;
+}
+#searchResultsSort{ 
+	float:right;
+}
+#search-results-bar {
+    position: relative;
+    z-index: 1;
+    float: left;
+    width: 100%;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;    
+    padding: 1em 0;
+}
+#search-results-bar dl.actionMenu {
+    margin-bottom: 0;
+}
+#search-results-bar dd.actionMenuContent {
+    margin-left: 0;
+    padding-left: 0;
+}
+#search-results-bar dt.actionMenuHeader a {
+    border-bottom: none;
+}
+#search-results-bar dt.actionMenuHeader a::after {
+	content: " ▼";
+}
+#search-results {
+    padding: 1em;
+}
+.searchResults {
+    margin-top: 0;
+}
+#ajax-search-res {
+    display: none;
 }
 
 /* @end */
@@ -1533,10 +1621,10 @@ fieldset,
 /* Emulates the styling from the h1 tag */
 #content .field input[type="text"][name$=".title"],
 #archetypes-fieldname-title input {
-    font-family: Arial,Tahoma,FreeSans,sans-serif;
+    font-family: "Helvetica Neue", Arial, FreeSans, sans-serif;
     line-height: 125%;
     color: Black;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.05em;
     margin: inherit -0.05em;
     font-size: 2em; /* 26px equiv */
 }
@@ -1546,7 +1634,7 @@ fieldset,
 #archetypes-fieldname-description textarea#description {
     font-family: Arial,FreeSans,sans-serif;
     color:#666666;
-    font-size:1.1em;
+    font-size:1.25em;
     font-weight: bold;
 }
 
@@ -1874,6 +1962,12 @@ dl.toc dd ol {
     margin: -0.1em 0 0 -0.1em;
     width: 1px;
 }
+/* ensures hidden elements don't take up space */
+/* .ie6 is set on <html> by Modernizr library */
+.ie6 .hiddenStructure,
+.ie7 .hiddenStructure {
+    position: absolute;
+}
 
 #content .visualNoMarker {
     list-style:none;
@@ -2000,37 +2094,37 @@ div.overlay .formControls a {
 
 /* @group Content History */
 
-#content-history #history dd {
+#history dd {
 }
 
-#content-history div.historyRecord {
+div.historyRecord {
     margin-bottom: 1em;
 }
 
 
-#content-history div.historyTools ul {
+div.historyTools ul {
     float: right;
     margin: 0.5em 1em;
 }
 
-#content-history div.historyTools ul li {
+div.historyTools ul li {
     display: inline;
     padding: 0 0.015em;
 }
 
-#content-history div.historyTools ul li a{
+div.historyTools ul li a{
     border-bottom: none;
 }
 
-#content-history div.historyTools form {
+div.historyTools form {
     display: inline;
 }
 
-#content-history .historyAction {
+.historyAction {
 
 }
 
-#content-history .historyByLine {
+.historyByLine {
     background: #ddd;
     padding: 0.5em;
     border-top-right-radius: 0.5em;
@@ -2041,31 +2135,31 @@ div.overlay .formControls a {
     -moz-border-radius-topright: 0.5em;
 }
 
-#content-history div.historyLinks {
+div.historyLinks {
     float: right;
     clear: right;
     margin: 0.5em 1em 0 0;
 }
 
 
-#content-history div.historyComment {
+div.historyComment {
     padding: 0.5em 1em;
     border: 1px solid #ddd;
 }
 
-#content-history div.historyComment p {
+div.historyComment p {
     margin: 0;
     padding-top: 1px;
 }
 
-#content-history a.historyComparePrevious {
+a.historyComparePrevious {
     border-top: 1px dotted #ccc;
     display: block;
     margin-top: 3em;
     text-align: center;
 }
 
-#content-history a.historyComparePrevious span {
+a.historyComparePrevious span {
     background-color: white;
     position: relative;
     top: -0.75em;
@@ -2116,6 +2210,9 @@ div.overlay .formControls a {
 .icons-on .contenttype-plone-site {
     background: no-repeat transparent 0px -1508px url(contenttypes-sprite.png);
 }
+.icons-on .contenttype-collection {
+    background: no-repeat transparent 0px -1724px url(contenttypes-sprite.png);
+}
 .icons-on .contenttype-topic {
     background: no-repeat transparent 0px -1724px url(contenttypes-sprite.png);
 }
@@ -2134,6 +2231,7 @@ div.overlay .formControls a {
 .icons-on .contenttype-link,
 .icons-on .contenttype-news-item,
 .icons-on .contenttype-plone-site,
+.icons-on .contenttype-collection,
 .icons-on .contenttype-topic,
 .icons-on #plone-contentmenu-factories .contenttype-file,
 .icons-on #plone-contentmenu-factories .contenttype-image {
@@ -2154,6 +2252,11 @@ div.overlay .formControls a {
     height: 14em;
     width: 100%;
 }
+/* IE7: fixes super-wide div for JavaScript Tag selector */
+/* .ie7 is set on <html> by Modernizr library */
+.ie7 div.optionsBox {
+    width: 50%;
+}
 .optionsBox LABEL {
     padding: 2px 0 0 0;
     display: block;
@@ -2163,6 +2266,11 @@ div.overlay .formControls a {
 .optionsBox input{
     vertical-align: middle;
     margin: 1px 4px 4px 6px;
+}
+/* IE7: fixes super-wide div for JavaScript Tag selector */
+/* .ie7 is set on <html> by Modernizr library */
+.ie7 .optionsBox input {
+    margin: 0px;
 }
 .optionsBox LABEL.checked {
     background-color: #EEEEEE;

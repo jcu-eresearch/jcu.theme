@@ -4,7 +4,6 @@
         <ldapplugin title="Plone managed LDAP" id="ldap-plugin" meta_type="Plone LDAP plugin" update="False">
 
             <cache value="RAMCache"/>
-            <interface value="IAuthenticationPlugin"/>
             <interface value="IGroupEnumerationPlugin"/>
             <interface value="IGroupIntrospection"/>
             <interface value="IGroupsPlugin"/>

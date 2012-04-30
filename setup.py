@@ -31,7 +31,7 @@ setup(name='jcu.theme',
       install_requires=[
           'setuptools',
           'zope.annotation',
-          'Products.CMFPlone>=4.1',
+          'Products.CMFPlone>=4.2b2',
           'plone.app.caching',
           'plone.app.discussion',
           'plone.app.ldap',
@@ -44,6 +44,7 @@ setup(name='jcu.theme',
           'collective.contentleadimage',
           'collective.fastview',
           'collective.recaptcha',
+          'collective.castle',
           # -*- Extra requirements: -*-
       ],
       extras_require={

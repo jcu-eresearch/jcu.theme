@@ -48,7 +48,8 @@ def setupVarious(context, site=None):
     try:
         acl_users = site.acl_users
         plugins = acl_users.plugins
-        deactivation = ['ICredentialsResetPlugin',
+        deactivation = ['IAuthenticationPlugin',
+                        'ICredentialsResetPlugin',
                         'IGroupManagement',
                         'IUserAdderPlugin',
                         'IUserManagement',
@@ -73,6 +74,9 @@ def setupVarious(context, site=None):
     except:
         site.plone_log('Could not configure LDAP plugin settings.')
         raise
+
+def switch_to_cas(context):
+    pass
 
 def run_import_step(context, step, logger=None):
     """Re-import some specified import step for Generic Setup.

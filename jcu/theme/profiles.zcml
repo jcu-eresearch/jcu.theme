@@ -71,4 +71,14 @@
       profile="jcu.theme:default"
       />
 
+     <genericsetup:upgradeStep
+      title="Change auth to using collective.castle and disable LDAP auth"
+      description=""
+      source="*"
+      destination="29"
+      handler="jcu.theme.setuphandlers.switch_to_cas"
+      sortkey="1"
+      profile="jcu.theme:default"
+      />
+
 </configure>

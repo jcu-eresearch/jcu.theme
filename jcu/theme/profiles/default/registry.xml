@@ -1,5 +1,20 @@
 <registry>
 
+  <!-- Configuration for collective.castle (CAS)
+  -->
+  <record name="collective.castle.interfaces.ICAS4PASPluginSchema.login_url">
+    <value>https://cas.secure.jcu.edu.au/cas/login</value>
+  </record>
+  <record name="collective.castle.interfaces.ICAS4PASPluginSchema.logout_url">
+    <value>https://cas.secure.jcu.edu.au/cas/logout</value>
+  </record>
+  <record name="collective.castle.interfaces.ICAS4PASPluginSchema.session_var">
+    <value>__ac</value>
+  </record>
+  <record name="collective.castle.interfaces.ICAS4PASPluginSchema.validate_url">
+    <value>https://cas.secure.jcu.edu.au/cas/validate</value>
+  </record>
+
   <!-- Configuration for plone.app.caching
        We import the existing profile, but need to manually turn caching on.
   -->

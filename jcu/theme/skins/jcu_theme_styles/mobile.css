@@ -31,7 +31,8 @@
     margin:0;
 }
 #portal-globalnav li a {
-    min-width: 3em !important;
+	min-width: 3em !important;
+	padding:0.5em 1.5em 1em 0.5em;
 }
 #portal-searchbox {
     margin: 0 0 0.5em;
