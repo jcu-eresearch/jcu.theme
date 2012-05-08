@@ -44,7 +44,7 @@ setup(name='jcu.theme',
           'collective.contentleadimage',
           'collective.fastview',
           'collective.recaptcha',
-          'collective.castle',
+          'collective.castle>=1.3dev',
           # -*- Extra requirements: -*-
       ],
       extras_require={
