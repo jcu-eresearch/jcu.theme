@@ -43,4 +43,5 @@ also merge changes to these in too::
     meld ./Products/CMFPlone/skins/plone_login/logged_out.cpt ./jcu/theme/skins/jcu_theme_custom_templates/logged_out.cpt
 
 If there are further new customisations, you need to add them here so people
-know what to merge in.
+know what to merge in.  Where possible, attempt to push changes back to the
+Plone and other communities to avoid extra maintenance efforts.
