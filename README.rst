@@ -40,6 +40,7 @@ also merge changes to these in too::
     meld plone/app/layout/viewlets/ jcu/theme/browser/templates/
     meld ./plone/app/controlpanel/usergroups_groupmembership.pt jcu/theme/browser/templates/usergroups_groupmembership.pt
     meld ./Products/CMFPlone/skins/plone_login/login_form.cpt ./jcu/theme/skins/jcu_theme_custom_templates/login_form.cpt
+    meld ./Products/CMFPlone/skins/plone_login/logged_out.cpt ./jcu/theme/skins/jcu_theme_custom_templates/logged_out.cpt
 
 If there are further new customisations, you need to add them here so people
 know what to merge in.

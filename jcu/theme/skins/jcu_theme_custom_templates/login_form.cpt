@@ -70,13 +70,13 @@
                 Since cookie authentication is disabled, cookie-based login is not available.
             </div>
 
+                <div id="login-form">
             <form tal:attributes="action python:context.absolute_url()+'/'+template.id"
-                  class="enableAutoFocus"
+                  class="enableFormTabbing enableAutoFocus"
                   method="post"
                   id="login_form"
                   tal:condition="use_normal">
 
-                <div id="login-form">
 
                     <input type="hidden"
                         name="came_from"
@@ -118,6 +118,34 @@
                     <input type="hidden" name="cookies_enabled" id="cookies_enabled" value="" />
                     <input type="hidden" name="login_name" id="login_name" value="" />
                     <input type="hidden" name="pwd_empty" id="pwd_empty" value="0" />
+                    
+                    <fieldset id="fieldset-jcu">
+                        <legend id="fieldsetlegend-jcu">JCU</legend>
+                        
+                        <h2>JCU Single Sign-On</h2>
+
+                        <p>Login with your JCU credentials.</p>
+
+                        <div class="formControls">
+
+                            <input class="context"
+                                   type="submit"
+                                   name="submit"
+                                   value="Log in"
+                                   tal:attributes="onclick string:window.location.href = '${context/castle_login_url}';; return false;;"
+                                   i18n:attributes="value label_log_in;"
+                                   />
+
+                        </div>
+                    
+                    </fieldset>
+                    
+                    <fieldset id="fieldset-local">
+                        <legend id="fieldsetlegend-local">Local</legend>
+                        
+                    <h2>Local Log-in</h2>
+
+                    <p>Login with your site credentials local to this Plone site.</p>
 
                     <div class="field"
                          tal:define="error python:errors.get(ac_name, None);"
@@ -201,10 +229,10 @@
                                />
 
                     </div>
-
-                </div>
+                  </fieldset>
 
             </form>
+                </div>
 
             <form tal:attributes="action external_login_url"
                   class="enableAutoFocus"
@@ -280,10 +308,6 @@
                     Forgot your password?
                 </strong>
                 <p class="discreet"
-                   tal:condition="python:exists('context/acl_users/ldap-plugin')">
-                    If you login with your JCU credentials and have forgotten your password, please contact InfoHelp.
-                </p>
-                <p class="discreet"
                    i18n:translate="help_password_retrieval">
                     If you have forgotten your local site account password,
                     <span i18n:name="click_here">
@@ -301,7 +325,7 @@
 
                 <p class="discreet" 
                    tal:condition="python:exists('context/acl_users/ldap-plugin')">
-                    If you have a JCU account, try this first.  You may not need to create a new account here.
+                    If you have a JCU account, try Single Sign-On (SSO) first.  You may not need to create a new account here.
                 </p>
 
                 <p i18n:translate="description_no_account">
