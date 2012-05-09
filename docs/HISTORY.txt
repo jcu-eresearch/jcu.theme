@@ -4,6 +4,14 @@ Change History
 1.7 (unreleased)
 ----------------
 
+- Switching authentication for Plone sites over to use JCU CAS. LDAP is still
+  used for enumerating users and groups, however. CAS is simply used for
+  authentication.  Old sites should see their LDAP plugins disabled for
+  authentication upon upgrade.
+  [davidjb]
+- Monkey patch Products.CAS4PAS to hide 'error' messages on each request.
+  This will be fixed soon and should be removed accordingly when repaired.
+  [davidjb]
 - Updating for Plone 4.2. Older versions of Plone should use older versions
   of this theme.
   [davidjb]
