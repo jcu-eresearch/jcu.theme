@@ -51,6 +51,7 @@ setup(name='jcu.theme',
           'test': [
               'plone.app.testing',
               'unittest2',
+              'ipdb',
           ],
       },
       entry_points="""
