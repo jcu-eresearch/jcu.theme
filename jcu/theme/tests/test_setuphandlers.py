@@ -33,7 +33,6 @@ class IntegrationTest(unittest.TestCase):
     def test_borked_configuration(self):
         """This test looks for error messages from the setuphandler config."""
         expected_errors = ['Could not reconfigure MailHost for queuing.',
-                           'Could not configure reCAPTCHA keys.',
                            'Could not configure LDAP plugin settings.',
                           ]
         dummysite = DummySite()
@@ -44,6 +43,13 @@ class IntegrationTest(unittest.TestCase):
             pass
 
         self.assertEqual(dummysite.messages, expected_errors)
+
+    def test_recaptcha(self):
+        """Test to ensure recaptcha settings were configured correctly."""
+        from collective.recaptcha.settings import getRecaptchaSettings
+        settings = getRecaptchaSettings()
+        self.assertIn(settings.public_key, '6Ld')
+        self.assertIn(settings.private_key, '6Ld')
 
     def test_upgrades(self):
         portal = self.layer['portal']

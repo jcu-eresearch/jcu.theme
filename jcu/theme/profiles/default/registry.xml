@@ -59,4 +59,12 @@
   <record name="plone.app.discussion.interfaces.IDiscussionSettings.user_notification_enabled">
     <value>True</value>
   </record>
+
+  <!-- Configuration for ReCaptcha -->
+  <record name="plone.formwidget.recaptcha.interfaces.IReCaptchaSettings.private_key">
+    <value>6Ld5c78SAAAAAGJpMrcbF_vAzeVRNWCjIWFZPZfs</value>
+  </record>
+  <record name="plone.formwidget.recaptcha.interfaces.IReCaptchaSettings.public_key">
+    <value>6Ld5c78SAAAAAJH6NdN69ZYiXGrYcs9MLrvjY08U</value>
+  </record>
 </registry>

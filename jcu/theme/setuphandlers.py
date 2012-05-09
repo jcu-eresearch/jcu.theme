@@ -34,16 +34,6 @@ def setupVarious(context, site=None):
     except:
         site.plone_log('Could not reconfigure MailHost for queuing.')
 
-    #Set up our reCAPTCHA keys for forms, etc
-    try:
-        from collective.recaptcha.settings import getRecaptchaSettings
-        settings = getRecaptchaSettings()
-        settings.public_key = u'6Ld5c78SAAAAAJH6NdN69ZYiXGrYcs9MLrvjY08U'
-        settings.private_key = u'6Ld5c78SAAAAAGJpMrcbF_vAzeVRNWCjIWFZPZfs'
-        site.plone_log('reCAPTCHA keys configured.')
-    except:
-        site.plone_log('Could not configure reCAPTCHA keys.')
-
     #Customise the parts of the LDAP plugin our GS doesn't touch yet.
     try:
         acl_users = site.acl_users
