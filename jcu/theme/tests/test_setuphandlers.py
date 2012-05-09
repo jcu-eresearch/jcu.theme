@@ -48,8 +48,8 @@ class IntegrationTest(unittest.TestCase):
         """Test to ensure recaptcha settings were configured correctly."""
         from collective.recaptcha.settings import getRecaptchaSettings
         settings = getRecaptchaSettings()
-        self.assertIn(settings.public_key, '6Ld')
-        self.assertIn(settings.private_key, '6Ld')
+        self.assertIn('6Ld', settings.public_key)
+        self.assertIn('6Ld', settings.private_key)
 
     def test_upgrades(self):
         portal = self.layer['portal']
