@@ -129,6 +129,19 @@ Check our ordering for the viewlets
     ... browser.contents.find('portal-personaltools-wrapper')
     True
 
+SSO Login
+---------
+
+Ensure that our JCU SSO is visible on the login page.
+
+    >>> browser.open(portal_url + '/login_form')
+    >>> 'onclick="window.location.href = \'https://cas.secure.jcu.edu.au/cas/login?service=http' in browser.contents
+    True
+
+Return to relevant page.
+
+    >>> browser.open(portal_url)
+
 Custom Theming
 --------------
 
