@@ -7,7 +7,7 @@
       name="default"
       title="Explore Theme"
       directory="profiles/default"
-      description='Extension profile for the "Explore Theme" Plone theme.'
+      description='Extension profile for the "Explore" Plone theme.'
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
@@ -15,7 +15,7 @@
       name="uninstall"
       title="Explore Theme Uninstall Profile"
       directory="profiles/uninstall"
-      description='Removes the "Explore Theme" Plone theme.'
+      description='Removes the "Explore" Plone theme.'
       provides="Products.GenericSetup.interfaces.EXTENSION"
       for="Products.CMFPlone.interfaces.IPloneSiteRoot"
       />
