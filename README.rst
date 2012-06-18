@@ -4,7 +4,7 @@ jcu.theme Package Readme
 Overview
 --------
 
-A Plone theme based on the JCU style.  This version only works on Plone 4.1
+A Plone theme based on the JCU style.  This version only works on Plone 4.2
 and above from now on.
 
 Keeping up with Plone
