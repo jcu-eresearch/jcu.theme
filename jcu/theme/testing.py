@@ -1,6 +1,7 @@
 from plone.app.testing import PloneSandboxLayer, PLONE_FIXTURE, login, logout
 from plone.app.testing import IntegrationTesting, FunctionalTesting
 from plone.app.testing.interfaces import SITE_OWNER_NAME
+from plone.testing.z2 import installProduct
 
 
 class JCUThemeLayer(PloneSandboxLayer):
@@ -8,6 +9,7 @@ class JCUThemeLayer(PloneSandboxLayer):
     defaultBases = (PLONE_FIXTURE,)
 
     def setUpZope(self, app, configurationContext):
+        installProduct(app, 'Products.CAS4PAS')
         # Load ZCML
         import jcu.theme
         self.loadZCML(package=jcu.theme, context=configurationContext)

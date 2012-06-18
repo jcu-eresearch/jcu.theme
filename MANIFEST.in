@@ -1,5 +1,0 @@
-include *.txt
-include *.rst
-recursive-include docs *
-recursive-include jcu *
-global-exclude *py[co], *mo

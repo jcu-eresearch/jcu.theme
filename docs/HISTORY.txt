@@ -1,10 +1,39 @@
 Change History
 ==============
 
-1.6.10 (unreleased)
+1.7 (unreleased)
+----------------
+
+- Switching authentication for Plone sites over to use JCU CAS. LDAP is still
+  used for enumerating users and groups, however. CAS is simply used for
+  authentication.  Old sites should see their LDAP plugins disabled for
+  authentication upon upgrade.
+  [davidjb]
+- Added unit tests to ensure that CAS login will be working.
+  [davidjb]
+- Monkey patch Products.CAS4PAS to hide 'error' messages on each request.
+  This will be fixed soon and should be removed accordingly when repaired.
+  [davidjb]
+- Updating for Plone 4.2. Older versions of Plone should use older versions
+  of this theme.
+  [davidjb]
+- Using setup_requires with setuptools-git to ensure we don't need
+  a MANIFEST.in file.
+  [davidjb]
+
+
+1.6.10 (2012-04-30)
 -------------------
 
+- Fix issue with Google Calendar entries being duplicated in external method.
+  Seems Google fixed their issue.
+  [davidjb]
+- Updating JCU footer.
+  [davidjb]
 - Fixing permissions for group membership to work with Plone 4.1+.
+  [davidjb]
+- Fix minor change to non-auth login menu on Plone 4.2+ with change of
+  anonymous personal tools from dl to ul.
   [davidjb]
 
 

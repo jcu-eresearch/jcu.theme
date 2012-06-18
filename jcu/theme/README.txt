@@ -49,7 +49,7 @@ We have the login portlet, so let's use that.
 
     >>> browser.getControl(name='__ac_name').value = SITE_OWNER_NAME
     >>> browser.getControl(name='__ac_password').value = SITE_OWNER_PASSWORD
-    >>> browser.getControl(name='submit').click()
+    >>> browser.getControl('Log in', index=0).click()
 
 Here, we set the value of the fields on the login form and then simulate a
 submit click.
@@ -128,6 +128,19 @@ Check our ordering for the viewlets
     >>> browser.contents.find('portal-siteactions-wrapper') > \
     ... browser.contents.find('portal-personaltools-wrapper')
     True
+
+SSO Login
+---------
+
+Ensure that our JCU SSO is visible on the login page.
+
+    >>> browser.open(portal_url + '/login_form')
+    >>> 'onclick="window.location.href = \'https://cas.secure.jcu.edu.au/cas/login?service=http' in browser.contents
+    True
+
+Return to relevant page.
+
+    >>> browser.open(portal_url)
 
 Custom Theming
 --------------
@@ -341,7 +354,7 @@ Log back into the portal.
     >>> browser.open(login_url)
     >>> browser.getControl(name='__ac_name').value = SITE_OWNER_NAME
     >>> browser.getControl(name='__ac_password').value = SITE_OWNER_PASSWORD
-    >>> browser.getControl(name='submit').click()
+    >>> browser.getControl('Log in', index=0).click()
 
 Vist the Theming page for our Members folder.
 

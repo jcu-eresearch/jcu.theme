@@ -2,12 +2,11 @@
      i18n:domain="plone"
      class="cell width-1:2 position-0"
      id="portal-footer">
-
     <p>Copyright &copy; 1995 to <tal:year tal:content="view/year" />, James Cook University. All rights reserved. ABN 46253211955</p>
-    <p>Member of <a href="http://www.irua.edu.au">Innovative Research Universities</a></p>
+    <p>Member of <a href="http://www.iru.edu.au">Innovative Research Universities</a></p>
     <p><a href="http://www.jcu.edu.au/app/feedback/">Feedback</a>&nbsp;|&nbsp;
-       <a href="http://www.jcu.edu.au/top/JCUPRD_013723">Terms of use</a>&nbsp;|&nbsp;
-       <a href="http://www.jcu.edu.au/top/JCUPRD_013722">Privacy statement</a>&nbsp;|&nbsp;
-       <a href="http://cricos.deewr.gov.au/Institution/InstitutionDetails.aspx?ProviderID=117">CRICOS Provider Code:00117J</a>
+    <a href="http://www.jcu.edu.au/top/JCUPRD_013723">Terms of use</a>&nbsp;|&nbsp;
+    <a href="http://www.jcu.edu.au/top/JCUPRD_013722">Privacy statement</a>&nbsp;|&nbsp;
+    <a href="http://cricos.deewr.gov.au/Institution/InstitutionDetails.aspx?ProviderID=117">CRICOS Provider Code:00117J</a>
     </p>
 </div>

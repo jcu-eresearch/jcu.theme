@@ -1,5 +1,23 @@
 <registry>
 
+  <!-- Configuration for collective.castle (CAS)
+  -->
+  <record name="collective.castle.interfaces.ICAS4PASPluginSchema.login_url">
+    <value>https://cas.secure.jcu.edu.au/cas/login</value>
+  </record>
+  <record name="collective.castle.interfaces.ICAS4PASPluginSchema.logout_url">
+    <value>https://cas.secure.jcu.edu.au/cas/logout</value>
+  </record>
+  <record name="collective.castle.interfaces.ICAS4PASPluginSchema.session_var">
+    <value>__ac</value>
+  </record>
+  <record name="collective.castle.interfaces.ICAS4PASPluginSchema.validate_url">
+    <value>https://cas.secure.jcu.edu.au/cas/validate</value>
+  </record>
+  <record name="collective.castle.interfaces.ICAS4PASPluginSchema.users_require_role">
+    <value>True</value>
+  </record>
+
   <!-- Configuration for plone.app.caching
        We import the existing profile, but need to manually turn caching on.
   -->
@@ -40,5 +58,13 @@
   </record>
   <record name="plone.app.discussion.interfaces.IDiscussionSettings.user_notification_enabled">
     <value>True</value>
+  </record>
+
+  <!-- Configuration for ReCaptcha -->
+  <record name="plone.formwidget.recaptcha.interfaces.IReCaptchaSettings.private_key">
+    <value>6Ld5c78SAAAAAGJpMrcbF_vAzeVRNWCjIWFZPZfs</value>
+  </record>
+  <record name="plone.formwidget.recaptcha.interfaces.IReCaptchaSettings.public_key">
+    <value>6Ld5c78SAAAAAJH6NdN69ZYiXGrYcs9MLrvjY08U</value>
   </record>
 </registry>

@@ -78,6 +78,18 @@
     <property name="permissions"/>
     <property name="visible">True</property>
   </object>
+  <object name="login">
+    <property name="visible">True</property>
+  </object>
+  <object name="castle_login">
+    <property name="visible">False</property>
+  </object>
+  <object name="logout">
+    <property name="visible">True</property>
+  </object>
+  <object name="castle_logout">
+    <property name="visible">False</property>
+  </object>
  </object>
 
 </object>

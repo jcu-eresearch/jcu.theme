@@ -25,10 +25,13 @@ setup(name='jcu.theme',
       namespace_packages=['jcu'],
       include_package_data=True,
       zip_safe=False,
+      setup_requires=[
+          'setuptools-git',
+      ],
       install_requires=[
           'setuptools',
           'zope.annotation',
-          'Products.CMFPlone>=4.1',
+          'Products.CMFPlone>=4.2b2',
           'plone.app.caching',
           'plone.app.discussion',
           'plone.app.ldap',
@@ -41,12 +44,14 @@ setup(name='jcu.theme',
           'collective.contentleadimage',
           'collective.fastview',
           'collective.recaptcha',
+          'collective.castle>=1.3dev',
           # -*- Extra requirements: -*-
       ],
       extras_require={
           'test': [
               'plone.app.testing',
               'unittest2',
+              'ipdb',
           ],
       },
       entry_points="""
