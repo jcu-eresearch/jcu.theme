@@ -345,7 +345,7 @@ input.searchField {
     display:inline-block;
 }
 #portal-siteactions li {
-    margin-right: 0.5em;
+    display:block;
 }
 #portal-siteactions li a:hover {
     color: #9E9270;

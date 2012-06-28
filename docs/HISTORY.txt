@@ -9,6 +9,8 @@ Change History
   authentication.  Old sites should see their LDAP plugins disabled for
   authentication upon upgrade.
   [davidjb]
+- Fix theme for drop-down menu for Help (site actions).
+  [davidjb]
 - Added unit tests to ensure that CAS login will be working.
   [davidjb]
 - Monkey patch Products.CAS4PAS to hide 'error' messages on each request.
